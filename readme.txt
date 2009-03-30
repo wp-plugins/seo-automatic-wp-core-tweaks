@@ -12,8 +12,6 @@ Extends built-in features of Wordpress and combines common plugins into one.
 
 Extends built-in features of Wordpress and combines common plugins into one. Core Tweaks was initially designed for quickening the installation process of new blogs, but is excellent for existing blogs also.
 
-(DDSitemapGen is temporarily removed until the language file inclusion is worked out.)
-
 == Installation ==
 
 1. Unzip the download
