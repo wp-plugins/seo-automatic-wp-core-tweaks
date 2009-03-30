@@ -1,9 +1,12 @@
 <?php
 //Set install about page to Home
 if (($_REQUEST['action'] == "changecore") && ($_REQUEST['page_2'] == "ON")) {
-	if ( (!$wpdb->query("UPDATE $wpdb->posts SET post_title = '".$_REQUEST['about_page']."' WHERE ID = '2'")) && (!$wpdb->query("UPDATE $wpdb->posts SET post_name = '".strtolower($_REQUEST['about_page'])."' WHERE ID = '2'"))) {
+	if (!$wpdb->query("UPDATE $wpdb->posts SET post_title = '".$_REQUEST['about_page']."' WHERE ID = '2'")) {
 		echo "<p>Default page name couldn't be changed. Perhaps it is already the name you want.</p>";
 	} else {
+		if (!$wpdb->query("UPDATE $wpdb->posts SET post_name = '".strtolower($_REQUEST['about_page'])."' WHERE ID = '2'")) { 
+			echo "<p>Slug was not changed.</p>";
+		}
 		echo "<p>Default page name has been set to ".$_REQUEST['about_page']." and the slug set to ".strtolower($_REQUEST['about_page']).".</p>";
 	}
 } elseif (($_REQUEST['action'] == "changecore") && ($_REQUEST['page_2'] != "ON")) {
