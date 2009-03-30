@@ -11,8 +11,8 @@ $cat_1 = $_REQUEST['cat_1'];
 $cat_2 = $_REQUEST['cat_2'];
 $cat_1_nice = str_replace(" ", "-", $cat_1);
 $cat_2_nice = str_replace(" ", "-", $cat_2);
-$cat_1_nice = strtolower($cat_1);
-$cat_2_nice = strtolower($cat_2);
+$cat_1_nice = strtolower($cat_1_nice);
+$cat_2_nice = strtolower($cat_2_nice);
 
 //Set the default post category name
 if ((isset($_POST['submit'])) && ($_REQUEST['d_post'] == "ON")) { 
