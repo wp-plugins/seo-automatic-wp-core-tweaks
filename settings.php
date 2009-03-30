@@ -1,5 +1,5 @@
 <div class="wrap">
-<div style="float: right; margin-right: 200px;"><b><a href="?page=sc-wp-core-tweaks/help.php">Core Tweaks Help</a></b></div>
+<div style="float: right; margin-right: 200px;"><b><a href="?page=seo-automatic-wp-core-tweaks/help.php">Core Tweaks Help</a></b></div>
 <h1>Core Tweaks</h1>
 
 <?php

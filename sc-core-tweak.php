@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: SEO Automatic WP_Core_Tweaks Plugin
+Plugin Name: SEO Automatic WP Core Tweaks
 Plugin URI: http://www.seoautomatic.com/plugins/wp-core-tweaks/
 Description: Conceived by Scott Hendison and programmed by Heather Barger for Search Commander, Inc. to automate proper WP setup. It also extends the built-in features of WordPress menu management, an and combines several common plugins into one.  See <a href="/wp-admin/options-general.php?page=sc-wp-core-tweaks/settings.php">Settings > Core Tweaks</a> for options.
-Version: 1.2
+Version: 1.3
 */
 //error_reporting(E_ALL);
 //if(!function_exists('myErrorHandler')){
@@ -50,12 +50,13 @@ function sc_settings() {
 }
 
 function core_menu() {
+//		if ((function_exists('autoseo_add_pages')) || (function_exists('affiliate_menu')) || (function_exists('aw_paypal_add_pages'))) {
 	if (function_exists('autoseo_add_pages')){
 		add_submenu_page('seo-automatic-options', 'Core Tweaks', 'Core Tweaks', 'activate_plugins', dirname(__FILE__) . '/settings.php', 'sc_settings');	}
 	else{
-		add_menu_page('SEO Automatic by Search Commander, Inc.', 'SEO Automatic', 'activate_plugins', dirname(__FILE__) . '/index.php', 'sc_index','http://www.seoautomatic.com/favicon.ico');
-		add_submenu_page(dirname(__FILE__) . '/index.php', 'Core Tweaks', 'Core Tweaks', 'activate_plugins', dirname(__FILE__) . '/settings.php', 'sc_settings');
-	}
+		add_menu_page('SEO Automatic by Search Commander, Inc.', 'SEO Automatic', 'activate_plugins', 'seo-automatic-options', 'sc_index','http://www.seoautomatic.com/favicon.ico');
+		add_submenu_page('seo-automatic-options', 'Admin', 'Admin', 'activate_plugins', 'seo-automatic-options', 'sc_index');
+		add_submenu_page('seo-automatic-options', 'Core Tweaks', 'Core Tweaks', 'activate_plugins', dirname(__FILE__) . '/settings.php', 'sc_settings');	}
 }
 
 add_action('admin_menu', 'core_menu');

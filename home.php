@@ -1,15 +1,21 @@
 <div class="wrap">
 <h1>SEO Automatic Admin Area</h1>
-<p>You can access any of your modules from the site menu options or:</p>
+<p>SEO Automatic is more than one plugin, it's a proven system for getting the most out of WordPress.</p>
+<p>You can access any of your modules from the menu added to the bottom right of your WP-admin, and here is what you've got installed...</p>
 <?php
 if (function_exists('autoseo_add_pages')){
 	echo "<a href=\"?page=seo-automatic-options\">SEO Automatic</a><br />";
 }
 if (function_exists('sc_settings')) {
-	echo "<a href=\"?page=sc-wp-core-tweaks/settings.php\">Core Tweaks</a><br />";
+	echo "<a href=\"?page=seo-automatic-wp-core-tweaks/settings.php\">Core Tweaks</a><br />";
 }
 if (function_exists('affiliate_menu')) {
-	echo "<a href=\"?page=affiliate/admin/index.php\">Affiliate Site Generator</a><br />";
+	echo "<a href=\"?page=affiliate/files/admin/index.php\">Affiliate Site Generator</a><br />";
+}
+if (function_exists('aw_paypal_add_pages')){
+	echo "<a href=\"?page=paypal-credits-options\">PayPal Credits</a><br />".
+	"<a href=\"?page=paypal-manage-users\">Manage Users</a><br />".
+	"<a href=\"?page=import-users\">Import Users</a><br />";
 }
 ?>
 <p>Please check out the entire suite of SEO automatic plugins here - <a target="_blank" href="http://www.seoautomatic.com/plugins/">http://www.seoautomatic.com/plugins/</a></p>
