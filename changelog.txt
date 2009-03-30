@@ -1,0 +1,7 @@
+Change Log
+
+02/06/2009
+Corrected Cheatin' Huh message, but need more testing by beta testers to be sure since this requires a fresh wordpress install.
+Added ability to change blog description/tagline.
+Added attempt to create uploads folder and set permission to 777. (Will work depending on what your hosting server allows.)
+Added uncheck option for the organize uploads by month/year.
