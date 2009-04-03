@@ -103,4 +103,5 @@ function remove_generator() {
 }
 
 add_filter('the_generator', 'remove_generator');
+//
 ?>
