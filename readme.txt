@@ -16,7 +16,7 @@ Primarily for use in new WP installations, the steps are based on an employee ch
 
 Almost everything is covered, from changing the permalink structure to deleting the "Hello World" sample post & comment, and all the options are accessible from a single one page.
 
-It also extends the built-in features of Wordpress and combines 5 other useful plugins into this one, including Page Order, Page Link Manager, Post teaser, Canonical URL’s, and Dagon Design Sitemap Generator.
+It also extends the built-in features of Wordpress and combines 5 other useful plugins into this one, including Page Order, Page Link Manager, Post teaser, Canonical URL's, and Dagon Design Sitemap Generator.
 
 == Installation ==
 
