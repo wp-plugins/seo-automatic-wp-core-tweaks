@@ -44,7 +44,7 @@ Read the error note at the top. You should find a plugin name in the error. Deac
 
 == Screenshots ==
 
-1. screenshot-core-tweaks.jpg - `/trunk/core-tweaks-screenshot.jpg`
+<img src="/trunk/core-tweaks-screenshot.jpg" />
 
 == Features ==
 
