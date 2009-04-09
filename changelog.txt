@@ -1,0 +1,23 @@
+Change Log
+
+03/25/09
+1. Page link manager is upgraded to 1.0b.
+2. Cleaning up file structure of plugin zip.
+3. New initial admin user can be added.
+4. H1 hack now auto changes the_title() to single_post_title() so that the h1 hack of changeH1 in the custom metas will work easily.
+
+03/17/09
+1. Robot meta tag is added to the header.
+2. Auto creation of sitemap page for DDSiteMap Gen and removed from navigation menu.
+3. Auto creation of a robots.txt file in the blog root.
+
+03/16/09
+1. Added change of H2 to H1 tags for current theme.
+2. Canonical Plugin now integrated.
+3. Dagon Design Sitemap Generator integrated.
+
+02/06/2009
+Corrected Cheatin' Huh message, but need more testing by beta testers to be sure since this requires a fresh wordpress install.
+Added ability to change blog description/tagline.
+Added attempt to create uploads folder and set permission to 777. (Will work depending on what your hosting server allows.)
+Added uncheck option for the organize uploads by month/year.
