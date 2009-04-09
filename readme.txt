@@ -1,25 +1,32 @@
-=== Searchcommander WP_CORE_TWEAKS ===
+=== SEO Automatic WP_CORE_TWEAKS ===
 Contributors: Heather Barger & Scott Hendison
 Donate link: 
 Tags: installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
 Requires at least: 2.7
 Tested up to: 2.7
-Stable tag: 1.1
+Stable tag: 1.4
 
 Extends built-in features of Wordpress and combines common plugins into one.
 
 == Description ==
 
-Extends built-in features of Wordpress and combines common plugins into one. Core Tweaks was initially designed for quickening the installation process of new blogs, but is excellent for existing blogs also.
+This plug-in completely automates the "proper" setup of your WordPress blog for search engine optimization.
+
+Primarily for use in new WP installations, the steps are based on an employee checklist from Search Commander, Inc. for setting up new blogs.
+
+Almost everything is covered, from changing the permalink structure to deleting the "Hello World" sample post & comment, and all the options are accessible from a single one page.
+
+It also extends the built-in features of Wordpress and combines 5 other useful plugins into this one, including Page Order, Page Link Manager, Post teaser, Canonical URL’s, and Dagon Design Sitemap Generator.
 
 == Installation ==
 
 1. Unzip the download
 2. Upload the entire folder: `sc-wp-core-tweaks` to the `/wp-content/plugins/` directory
-3. If you are currently using any of the plugins included in sc-wp-core-tweaks, it's highly recommended to deactivate them before activating core tweaks.
+3. DEACTIVATE any active plugins before use.
 3. Activate the plugin through the 'Plugins' menu in Wordpress
 4. Set options in SEO Automatic > Core Tweaks for changing the Wordpress preinstalled installation options.
 5. Post Teaser, Page Link Manager, Page Order, Canonical, and Dagon Design Sitemap Generator will automatically be installed with this plugin and can be found in the normal locations and used the same as always.
+6. Reactivate other plugins as required.
 
 == Frequently Asked Questions ==
 
@@ -37,7 +44,7 @@ Read the error note at the top. You should find a plugin name in the error. Deac
 
 == Screenshots ==
 
-1. screenshot-core-tweaks.jpg - `/trunk/screenshot-core-tweaks.jpg`
+1. screenshot-core-tweaks.jpg - `http://pdxtc.com/images/core-tweaks-screenshot.jpg`
 
 == Features ==
 
