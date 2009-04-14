@@ -70,10 +70,10 @@ class post_teaser {
 				$new_options['count_separator'] = str_replace('&', '&amp;', $new_options['count_separator']);
 				$new_options['zero_counts'] = $new_options['zero_counts'] ? '1' : '0';
 				update_option('post_teaser', $new_options);
-				header('Location: ' . get_settings('siteurl') . '/wp-admin/options-general.php?page=sc-core-tweaks/post-teaser.php&saved=true');
+				header('Location: ' . get_settings('siteurl') . '/wp-admin/options-general.php?page=seo-automatic-wp-core-tweaks/post-teaser.php&saved=true');
 			} elseif (isset($_POST['submit_reset'])) {
 				update_option('post_teaser', $this->default_options);
-				header('Location: ' . get_settings('siteurl') . '/wp-admin/options-general.php?page=sc-core-tweaks/post-teaser.php&saved=true');
+				header('Location: ' . get_settings('siteurl') . '/wp-admin/options-general.php?page=seo-automatic-wp-core-tweaks/post-teaser.php&saved=true');
 			}
 			die;
 		}
