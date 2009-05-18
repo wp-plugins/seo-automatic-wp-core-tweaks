@@ -44,7 +44,7 @@ Read the error note at the top. You should find a plugin name in the error. Deac
 
 == Screenshots ==
 
-`/trunk/screenshot-1.jpg`
+`../screenshot-1.jpg`
 
 == Features ==
 
