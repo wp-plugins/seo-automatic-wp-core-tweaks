@@ -1,7 +1,7 @@
 === SEO Automatic WP_CORE_TWEAKS ===
 Contributors: Heather Barger & Scott Hendison
 Donate link: 
-Tags: installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
+Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
 Requires at least: 2.7
 Tested up to: 2.7.1
 Stable tag: 1.4
@@ -44,7 +44,7 @@ Read the error note at the top. You should find a plugin name in the error. Deac
 
 == Screenshots ==
 
-http://wordpress.org/extend/plugins/seo-automatic-wp-core-tweaks/screenshot-1.jpg
+1. Core Tweaks Admin Area
 
 == Features ==
 
