@@ -6,55 +6,28 @@ $robotsFile = ABSPATH."robots.txt";
 if (file_exists($robotsFile)) {
 	echo "Robots.txt file already exists.";
 } else {
-	$sitemap = get_bloginfo('url');
-	if (substr($sitemap, -1) != '/') {
-		$sitemap.="/";
-	}
-	$sitemap .= "sitemap.xml";
+//	$sitemap = get_bloginfo('url');
+//	if (substr($sitemap, -1) != '/') {
+//		$sitemap.="/";
+//	}
+//	$sitemap .= "sitemap.xml";
 	$fh = fopen($robotsFile, 'w');
 	$stringData = "
-# - Go ahead and take it. This robots file for Wordpress was brought to you by GetWordpressed.com. 
+   # Robots file created by SEO Automatic WP_Core Tweaks plugin http://www.seoautomatic.com
+   # Sorry if this overwrote your robots file, but hey, you left the box checked!
+   # I recommend using full url for XML sitemap path 
 
-Sitemap: ".$sitemap."
+Sitemap: /sitemap.xml
 
 User-agent: *
+
 Disallow: /wp-admin
+Disallow: /wp-includes/
+Disallow: /feed/
+Disallow: /trackback/
+Disallow: /cgi-bin/
+Disallow: /ANY-FOLDER-YOU-WANT/";
 
-User-agent: *
-Disallow: /wp-includes
-
-User-agent: *
-Disallow: /wp-content/plugins
-
-User-agent: *
-Disallow: /wp-content-cache
-
-User-agent: *
-Disallow: /wp-content/themes
-
-User-agent: *
-Disallow: /trackback
-
-User-agent: *
-Disallow: /search
-
-User-agent: *
-Disallow: /rss
-
-User-agent: *
-Disallow: /cgi-bin
-
-User-agent: *
-Disallow: /webalizer
-
-User-agent: *
-Disallow: /awstats
-
-User-agent: *
-Disallow: /images
-
-User-agent: *
-Disallow: /modlogan";
 	fwrite($fh, $stringData);
 	fclose($fh);
 	if (file_exists($robotsFile)) {
