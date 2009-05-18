@@ -44,7 +44,7 @@ Read the error note at the top. You should find a plugin name in the error. Deac
 
 == Screenshots ==
 
-`../screenshot-1.jpg`
+http://wordpress.org/extend/plugins/seo-automatic-wp-core-tweaks/screenshot-1.jpg
 
 == Features ==
 
