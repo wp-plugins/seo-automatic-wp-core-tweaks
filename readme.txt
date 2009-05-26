@@ -69,7 +69,7 @@ Integrates the Post Teaser plugin - allows you to show snippets of posts on cate
 
 Integrates Dagon site Map generator - allows a snippit of code to be added, in order to create a static sitemap.
 
-=From one admin screen, click a button and make any or all of these changes...=
+<b>From one admin screen, click a button and make any or all of these changes...</b>
 
 1. Change default post category name from "Uncategorized"
 2. Changes the default blogroll category name from "Blogroll"
