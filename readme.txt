@@ -37,23 +37,23 @@ Designed as a new "setup assistant", this plug-in should be installed before any
 
 == Frequently Asked Questions ==
 
-=What is this plugin for?=
+= What is this plugin for? =
 
 It will add a new Admin menu item, "SEO Automatic", with a sub-menu named "Core Tweaks".
 
 This plugin saves a lot of time properly setting up a new Wordpress installation by allowing one page access for the things that must be changed for every installation, and combines functionality of several other plugins.
 
-=What if I already have a Wordpress site up and running?=
+= What if I already have a Wordpress site up and running? =
 
 Then this plugin won't save you nearly as much time, but will combine several useful plugins into one. Deactivate any plugins that are turned on, and be sure to UNcheck any options in the admin panel that you may have already completed, or don't need to change.
 
-=What if I forgot to deactivate one of the included plugins first?=
+= What if I forgot to deactivate one of the included plugins first? =
 
 Then you are probably getting a fatal error when trying to activate. Read the error note details.
 
 You should find a plugin name in the error. Deactivate it and try activating Core Tweaks again. Core Tweaks cannot automatically deactivate them for you for security reasons.
 
-=What if I need more help?=
+= What if I need more help? =
 Please visit the Core Tweaks <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">Support Forum</a>.
 
 == Screenshots ==
@@ -69,7 +69,7 @@ Integrates the Post Teaser plugin - allows you to show snippets of posts on cate
 
 Integrates Dagon site Map generator - allows a snippit of code to be added, in order to create a static sitemap.
 
-<b>From one admin screen, click a button and make any or all of these changes...</b>
+= From one admin screen, click a button and make any or all of these changes... =
 
 1. Change default post category name from "Uncategorized"
 2. Changes the default blogroll category name from "Blogroll"
