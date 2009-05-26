@@ -2,6 +2,11 @@ Change Log
 
 05/18/09
 1. Updated robots.txt file contents.
+2. Screenshot at repository is working now.
+3. Removed all theme related tweaks except the H1 Hack.
+4. Updated home page and style of plugin admin area.
+5. Reorganized results for easier viewing of success and errored items.
+6. Added deselect all checkboxes option.
 
 03/25/09
 1. Page link manager is upgraded to 1.0b.

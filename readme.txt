@@ -14,11 +14,17 @@ This plug-in completely automates the "proper" setup of your WordPress blog for 
 
 Primarily for use in new WP installations, the steps are based on an employee checklist from Search Commander, Inc. for setting up new blogs.
 
-Almost everything is covered, from changing the permalink structure to deleting the "Hello World" sample post & comment, and all the options are accessible from a single one page.
+Almost everything is covered, from changing the permalink structure to deleting the "Hello World" sample post & comment, and all the options are accessible from one single page.
 
 It also extends the built-in features of Wordpress and combines 5 other useful plugins into this one, including Page Order, Page Link Manager, Post teaser, Canonical URL's, and Dagon Design Sitemap Generator.
 
+This plug-in is designed to be a companion to other plugins like All in one SEO or Headspace, and is not intended as a replacement.
+
+This plug-in should be installed before any others, because it automates the proper setup of Word press. To be sure things work properly, it's best to deactivate any plugins that you may have already activated.
+
 == Installation ==
+
+Designed as a new "setup assistant", this plug-in should be installed before any others. If you've added other plugins, be sure to deactivate them to avoid potential conflicts.
 
 1. Unzip the download
 2. Upload the entire folder: `sc-wp-core-tweaks` to the `/wp-content/plugins/` directory
@@ -26,63 +32,57 @@ It also extends the built-in features of Wordpress and combines 5 other useful p
 3. Activate the plugin through the 'Plugins' menu in Wordpress
 4. Set options in SEO Automatic > Core Tweaks for changing the Wordpress preinstalled installation options.
 5. Post Teaser, Page Link Manager, Page Order, Canonical, and Dagon Design Sitemap Generator will automatically be installed with this plugin and can be found in the normal locations and used the same as always.
-6. Reactivate other plugins as required.
+6. Be sure to UNCHECK anything you may have already done manually, or anything you don't want changed to our recommendations.
+7. Reactivate other plugins as required.
 
 == Frequently Asked Questions ==
 
-= What is this plugin for? =
+=What is this plugin for?=
 
-Adds a new menu, "SEO Automatic", and a sub-menu named "Core Tweaks". This plugin saves a lot of time properly setting up a new Wordpress installation by allowing instant access for the things that must be changed for every installation. It also combines functionality of several other plugins.
+It will add a new Admin menu item, "SEO Automatic", with a sub-menu named "Core Tweaks".
 
-= What if I already have a Wordpress site up and running? =
+This plugin saves a lot of time properly setting up a new Wordpress installation by allowing one page access for the things that must be changed for every installation, and combines functionality of several other plugins.
 
-Then this plugin won't save you nearly as much time, but will combine several useful plugins into one.
+=What if I already have a Wordpress site up and running?=
 
-= What if I forgot to deactivate one of the included plugins first? Or I'm getting a fatal error when trying to activate. =
+Then this plugin won't save you nearly as much time, but will combine several useful plugins into one. Deactivate any plugins that are turned on, and be sure to UNcheck any options in the admin panel that you may have already completed, or don't need to change.
 
-Read the error note at the top. You should find a plugin name in the error. Deactivate it and try activating Core Tweaks again. Core Tweaks tries to automatically deactivate them for you, but can't always successfully turn them all off.
+=What if I forgot to deactivate one of the included plugins first?=
+
+Then you are probably getting a fatal error when trying to activate. Read the error note details.
+
+You should find a plugin name in the error. Deactivate it and try activating Core Tweaks again. Core Tweaks cannot automatically deactivate them for you for security reasons.
+
+=What if I need more help?=
+Please visit the Core Tweaks <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">Support Forum</a>.
 
 == Screenshots ==
 
 1. Core Tweaks Admin Area
 
 == Features ==
+Integrates the Page Order plugin - now the WP menu may be ordered
 
-1. Page Order for menu now available in WP
-2. Page Link Manager allows choice to not display page on menu
-3. Post Teaser shows snippet of posts on category, archive and main pages
-4. Change default post category name from "Uncategorized"
-5. Change default blogroll category name from "Blogroll"
-6. Delete default "Hello World" post
-7. Delete default comment on the Hello World post
-8. Change permalink structure to custom setting recommended by Scott & others
-9. Sets the Main Blog Email for convenience
-10. Sets the Admin User's Email for convenience
-11. Change the name of the default page that Wordpress adds from "About".
-12. Set that default page to the static front page of the blog if using WP as a CMS
-13. Add and sets the page for displaying the posts for convenience
-14. Change article feed to summary (if desired)
-15. Remove all the blogroll links that are auto-installed by Wordpress
+Integrates the Page Link Manager plugin - allows the choice to not display any page on the menu and allows for independent options in the menu widget.
 
-Added with version 1.0b
+Integrates the Post Teaser plugin - allows you to show snippets of posts on category, archive and main pages
 
-* Page link manager is upgraded to 1.0b.
-* Cleaning up file structure of plugin zip.
-* New initial admin user can be added.
-* H1 hack now auto changes the_title() to single_post_title() so that the h1 hack of changeH1 in the custom metas will work easily.
-* Robot meta tag is added to the header.
-* Auto creation of sitemap page for DDSiteMap Gen and removed from navigation menu.
-* Auto creation of a robots.txt file in the blog root.
-* Added change of H2 to H1 tags for current theme.
-* Canonical Plugin now integrated.
-* Dagon Design Sitemap Generator integrated.
+Integrates Dagon site Map generator - allows a snippit of code to be added, in order to create a static sitemap.
 
-Added with version 0.9b
+=From one admin screen, click a button and make any or all of these changes...=
 
-* Corrected Cheatin' Huh? message, but need more testing by beta testers to be sure since this requires a fresh wordpress install.
-* Added ability to change blog description/tagline.
-* Added attempt to create uploads folder and set permission to 777. (Will work depending on what your hosting server allows.)
-* Added uncheck option for the organize uploads by month/year.
+1. Change default post category name from "Uncategorized"
+2. Changes the default blogroll category name from "Blogroll"
+3. Delete default "Hello World" post
+4. Delete default comment on the Hello World post
+5. Change permalink structure to custom setting
+6. Sets the Main Blog Email
+7. Sets the Admin User's Email
+8. Change the name of the default page that Wordpress adds from "About" .
+9. Set that default page to the static front page of the blog if using WP as a CMS
+10. Add and sets the page for displaying the posts for convenience
+11. Change the article feed to summary
+12. Remove all the blogroll links that are auto-installed by Wordpress
 
 [SEO Automatic Plugins](http://www.seoautomatic.com/plugins/ "Other plugins from SEO Automatic") 
 [SEO Automatic Core Tweaks](http://www.seoautomatic.com/plugins/wp-core-tweaks/ "Core Tweaks Homepage") 

@@ -1,26 +1,27 @@
 <?php
 //Delete hello world post
 
-$cat_set3 = "<input type=\"checkbox\" name=\"helloworldpost\" value=\"ON\" checked> Delete default \"Hello World\" post.";
-
+if ($_REQUEST['action'] == "changecore") {
 	$post_id = 1;
 	$post = & get_post($post_id);
-
-if (($_REQUEST['action'] == "changecore") && ($_REQUEST['helloworldpost'] == "ON")) {
-	if ( $post->post_type == 'attachment' ) {
-		if ( ! wp_delete_attachment($post_id) ) {
-			$cat_set3 = "Default post could not be deleted. Perhaps it was already removed?";
+	 if ($_REQUEST['helloworldpost'] == "ON") {
+		if ( $post->post_type == 'attachment' ) {
+			if ( ! wp_delete_attachment($post_id) ) {
+				$fail .= "<li>Default post could not be deleted. Perhaps it was already removed?</li>";
+			} else {
+				$success .= "<li>Default post deleted (typically name Hello World)</li>";
+			}
 		} else {
-			$cat_set3 = "Default post deleted (typically name Hello World)";
+			if ( !wp_delete_post($post_id) ) {
+				$fail .= "<li>Default post could not be deleted. Perhaps it was already removed?</li>";
+			} else {
+				$success .= "<li>Default post deleted (typically name Hello World)</li>";
+			}
 		}
 	} else {
-		if ( !wp_delete_post($post_id) ) {
-			$cat_set3 = "Default post could not be deleted. Perhaps it was already removed?";
-		} else {
-			$cat_set3 = "Default post deleted (typically name Hello World)";
-		}
+		$notused .= "<li>Default post removal.</li>";
 	}
-} elseif (($_REQUEST['action'] == "changecore") && ($_REQUEST['helloworldpost'] != "ON")) {
-	$cat_set3 = "Default post was not selected to change.";
+} else {
+	$options .= "<li><input type=\"checkbox\" name=\"helloworldpost\" value=\"ON\" checked> Delete default \"Hello World\" post.</li>";
 }
 ?>

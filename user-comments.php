@@ -1,13 +1,16 @@
 <?php
-if (($_REQUEST['action'] == "changecore") && ($_REQUEST['default_comment_status'] == "ON")) {
-	if ( !update_option('default_comment_status','closed') ) {
-		echo "<p>Commenting could not be turned off. Perhaps it already is?</p>";
+//Turn off post commenting
+if ($_REQUEST['action'] == "changecore") {
+	 if ($_REQUEST['default_comment_status'] == "ON") {
+		if ( !update_option('default_comment_status','closed') ) {
+			$fail .= "<li>Commenting could not be turned off. Perhaps it already is?</li>";
+		} else {
+			$success .= "<li>Commenting has been turned off.</li>";
+		}
 	} else {
-		echo "<p>Commenting has been turned off.</p>";
+		$notused .= "<li>Turn off comment posting.</li>";
 	}
-} elseif (($_REQUEST['action'] == "changecore") && ($_REQUEST['default_comment_status'] != "ON")) {
-	echo "<p>Posting to comments has not been changed.</p>";
 } else {
+	$options .= '<li><input name="default_comment_status" type="checkbox" value="ON" /> Do not allow people to post comments on articles.</li>';
+}
 ?>
-<p><input name="default_comment_status" type="checkbox" value="ON" checked /> <?php _e('Do not allow people to post comments on the article') ?></p>
-<?php } ?>
