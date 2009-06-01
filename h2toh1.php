@@ -1,10 +1,6 @@
 <?php
 // Change H2 tags to H1 in the current theme.
 
-if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li><b>Your theme files must have at least 766 file permission.<br />If selecting this option changes your font to a size you dislike, the adjustment must be made in your sytlesheet.<br />Ex: <code>h1 { font-size: 12px; }</code></b></li>';
-}
-
 if ($_REQUEST['action'] == "changecore") {
 	 if ($_REQUEST['change_h2_h1'] == "ON") {
 		$pageFile = get_single_template();
@@ -59,7 +55,7 @@ if ($_REQUEST['action'] == "changecore") {
 // Change H1 tags back to H2 in the current theme.
 
 if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li><b>Remember, this will change ALL of your H1 tags back to H2.</b></li>';
+	$options .= '<li><b>If selecting the option above changes your font to a size you dislike, the adjustment must be made in your sytlesheet.<br />Ex: <code>h1 { font-size: 12px; }</code><br />Or use this option to change back.</b></li>';
 }
 
 if ($_REQUEST['action'] == "changecore") {

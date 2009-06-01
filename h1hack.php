@@ -2,7 +2,7 @@
 // Changes the_title() to single_post_title() in page.php and single.php so the h1 hack can work.
 
 if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li>&nbsp;</li><li><b>Your theme files must have at least 766 file permission.</b></li>';
+	$options .= '<li>&nbsp;</li><li><b>Your theme files must have at least 766 file permission.<br />Premium WordPress themes sometimes have programmed "SEO options" that may prevent these items from working properly. Please consult your theme provider for support</b></li>';
 }
 
 if ($_REQUEST['action'] == "changecore") {
@@ -53,10 +53,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>H1 Hack.</li>";
 	}
 } else {
-	$options .= '<li><input name="add_h1hack" type="checkbox" value="ON" /> Change the_title() to single_post_title() for the H1 Hack to work in your theme.</li>';
+	$options .= '<li><input name="add_h1hack" type="checkbox" value="ON" /> Want the ability to change your H1 tag regardless of the page name? We\'ve added an <a href="http://www.getwordpressed.com/seo/h1-hack-for-wordpress-pages/" rel="nofollow" target="_blank">H1 hack</a> - <b>In order for this to work, replace your title tag in header.php with <code>&lt;title&gt;&lt;?php wp_title(\'\'); if (!is_home() &amp;&amp; !is_front_page()) { print(" | "); } bloginfo(\'name\'); ?&gt;&lt;/title&gt;</code> first.</b></li>';
 } 
 
-if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li>&nbsp;</li>';
-}
 ?>

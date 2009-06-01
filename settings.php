@@ -135,12 +135,6 @@ include('emails.php');
 //Change blog email and admin user email
 include('edit-page-info.php');
 
-//Change Add H1 Hack
-include('h1hack.php');
-
-//Change H2 to H1 in current theme
-include('h2toh1.php');
-
 //Misc items - blogroll, feed summary, blog tagline
 include('misc.php');
 
@@ -149,6 +143,12 @@ include('sitemap-page.php');
 
 //Add robots.txt file
 include('robots.php');
+
+//Change Add H1 Hack
+include('h1hack.php');
+
+//Change H2 to H1 in current theme
+include('h2toh1.php');
 
 ?>
 
