@@ -1,5 +1,4 @@
 <?php
-// Change H2 tags to H1 in the current theme.
 // Changes the_title() to single_post_title() in page.php and single.php so the h1 hack can work.
 
 if ($_REQUEST['action'] != "changecore") {

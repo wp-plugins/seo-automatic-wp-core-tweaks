@@ -3,7 +3,7 @@
 Plugin Name: SEO Automatic WP Core Tweaks
 Plugin URI: http://www.seoautomatic.com/plugins/wp-core-tweaks/
 Description: Conceived by Scott Hendison and programmed by Heather Barger for Search Commander, Inc. to automate proper WP setup. It also extends the built-in features of WordPress menu management, an and combines several common plugins into one.  See <a href="?page=seo-automatic-wp-core-tweaks/settings.php">Settings > Core Tweaks</a> for options.
-Version: 1.7
+Version: 1.8
 */
 //error_reporting(E_ALL);
 //if(!function_exists('myErrorHandler')){
@@ -54,7 +54,7 @@ function core_menu() {
 	if (function_exists('autoseo_add_pages')){
 		add_submenu_page('seo-automatic-options', 'Core Tweaks', 'Core Tweaks', 'activate_plugins', dirname(__FILE__) . '/settings.php', 'sc_settings');	}
 	else{
-		add_menu_page('SEO Automatic by Search Commander, Inc.', 'SEO Automatic', 'activate_plugins', 'seo-automatic-options', 'sc_index','http://www.seoautomatic.com/salogoletters.jpg');
+		add_menu_page('SEO Automatic by Search Commander, Inc.', 'SEO Automatic', 'activate_plugins', 'seo-automatic-options', 'sc_index','http://www.seoautomatic.com/favicon.ico');
 		add_submenu_page('seo-automatic-options', 'Admin', 'Admin', 'activate_plugins', 'seo-automatic-options', 'sc_index');
 		add_submenu_page('seo-automatic-options', 'Core Tweaks', 'Core Tweaks', 'activate_plugins', dirname(__FILE__) . '/settings.php', 'sc_settings');	}
 }
@@ -88,7 +88,7 @@ include('page-link.php');
 include('post-teaser.php');
 include('rss-extend.php');
 include('change-header.php');
-include('better-blogroll.php');
+//include('better-blogroll.php');
 include('canonical.php');
 include('sitemap-generator.php');
 include('meta_tags.php');

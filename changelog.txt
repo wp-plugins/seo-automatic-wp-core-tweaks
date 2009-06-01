@@ -1,5 +1,9 @@
 Change Log
 
+06/01/09
+1. Added the H2 to H1 theme change back in.
+2. Removed better blogroll temporarily until the issue of the links widget being removed and having to be readded is resolved.
+
 05/18/09
 1. Updated robots.txt file contents.
 2. Screenshot at repository is working now.

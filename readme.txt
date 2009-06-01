@@ -4,7 +4,7 @@ Donate link:
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
 Requires at least: 2.7
 Tested up to: 2.7.1
-Stable tag: 1.4
+Stable tag: 1.8
 
 Extends built-in features of Wordpress and combines common plugins into one.
 
@@ -83,6 +83,8 @@ Integrates Dagon site Map generator - allows a snippit of code to be added, in o
 10. Add and sets the page for displaying the posts for convenience
 11. Change the article feed to summary
 12. Remove all the blogroll links that are auto-installed by Wordpress
+
+*Note: The Better Blogroll addition has been temporarily removed due to links widget being removed and having to re-add the widget after activation. Hopefully this can be resolved and included again on the next release.
 
 [SEO Automatic Plugins](http://www.seoautomatic.com/plugins/ "Other plugins from SEO Automatic") 
 [SEO Automatic Core Tweaks](http://www.seoautomatic.com/plugins/wp-core-tweaks/ "Core Tweaks Homepage") 
