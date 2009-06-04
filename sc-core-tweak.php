@@ -95,7 +95,7 @@ include('meta_tags.php');
 
 // HOOK EM UP
 //add_action('edit_page_form', 'gdm_page_links_page_edit');
-add_action('widgets_init', 'widget_betterblogroll_init');
+//add_action('widgets_init', 'widget_betterblogroll_init');
 add_filter('single_post_title', 'changethetitle');
 add_action('init', 'wp_tabbed_rss_init', 1);
 add_action('wp_head', 'sc_core_metas');
