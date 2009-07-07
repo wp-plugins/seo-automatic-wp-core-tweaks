@@ -9,42 +9,13 @@ if (function_exists('plugins_url')) {
 	$blogpath = get_bloginfo('url');
 	if (substr($blogpath, -1) != '/') {
 		$blogpath.="/";
-	}	
+	}
+if (get_bloginfo('version') < 2.8) {
+	echo '<style>.postbox-container { float: left; } #side-sortables { padding-left: 20px; }';
+} else {
+	echo '<style>';
+}
 ?>
-<script type='text/javascript' src='<?php echo $blogpath;?>wp-includes/js/jquery/jquery.js?ver=1.2.6'></script>
-<script type='text/javascript' src='<?php echo $blogpath;?>wp-admin/js/common.js?ver=20081210'></script>
-<script type='text/javascript' src='<?php echo $blogpath;?>wp-includes/js/jquery/jquery.color.js?ver=2.0-4561'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-	wpAjax = {
-		noPerm: "You do not have permission to do that.",
-		broken: "An unidentified error has occurred."
-	}
-	try{convertEntities(wpAjax);}catch(e){};
-/* ]]> */
-</script>
-<script type='text/javascript' src='<?php echo $blogpath;?>wp-includes/js/wp-ajax-response.js?ver=20081210'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-	wpListL10n = {
-		url: "<?php echo $blogpath;?>wp-admin/admin-ajax.php"
-	}
-/* ]]> */
-</script>
-<script type='text/javascript' src='<?php echo $blogpath;?>wp-includes/js/wp-lists.js?ver=20081210'></script>
-<script type='text/javascript' src='<?php echo $blogpath;?>wp-includes/js/jquery/ui.core.js?ver=1.5.2'></script>
-<script type='text/javascript' src='<?php echo $blogpath;?>wp-includes/js/jquery/ui.resizable.js?ver=1.5.2'></script>
-<script type='text/javascript' src='<?php echo $blogpath;?>wp-includes/js/jquery/ui.sortable.js?ver=1.5.2c'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-	postboxL10n = {
-		requestFile: "<?php echo $blogpath;?>wp-admin/admin-ajax.php"
-	}
-/* ]]> */
-</script>
-<script type='text/javascript' src='<?php echo $blogpath;?>wp-admin/js/postbox.js?ver=20081210'></script>
-<script type='text/javascript' src='<?php echo $blogpath;?>wp-admin/js/dashboard.js?ver=20081210'></script>
-<style>
 .postbox .inside { padding: 8px !important; }
 #about-plugins a, #resources a {text-decoration: none;}
 #about-plugins img, #resources img {float: left; padding-right: 3px;}
@@ -53,48 +24,13 @@ if (function_exists('plugins_url')) {
 <div class="wrap">
 <br />
 <div id="dashboard-widgets-wrap">
-
 <div id='dashboard-widgets' class='metabox-holder'>
 
-<div id='side-info-column' class='inner-sidebar'>
-
-<div id='side-sortables' class='meta-box-sortables'>
-<div id="about-plugins" class="postbox " >
-<div class="handlediv" title="Click to toggle"><br /></div><h3 class='hndle'><span>About</span></h3>
-<div class="inside">
-
-<ul>
-	<li><img src="<?php echo $path;?>images/salogoletters.jpg" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/plugins/" target="_blank"> Entire Suite of Plugins</a></li>
-	<li><img src="<?php echo $path;?>images/icon-feature.jpg" alt="" /> <a href="http://www.seoautomatic.com/forum/" target="_blank">Suggestions</a></li>
-	<li><img src="<?php echo $path;?>images/icon-email.jpg" alt="" /> <a href="http://www.seoautomatic.com/category/development/feed/" target="_blank">Get Notified</a></li>
-	<li><img src="<?php echo $path;?>images/icon-forum.jpg" alt="" /> <a href="http://www.seoautomatic.com/forum/" target="_blank">Support Forum</a></li>
-	<li><img src="<?php echo $path;?>images/icon-bug.jpg" alt="" /> <a href="http://www.seoautomatic.com/forum/" target="_blank">Bug Reporting</a></li>
-	<li><form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_s-xclick" /><input type="hidden" name="hosted_button_id" value="5701868" /><input type="image" src="<?php echo $path;?>images/donate.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" /><img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"></form></li>
-</ul>
-
-</div>
-</div>
-<div id="resources" class="postbox " >
-<div class="handlediv" title="Click to toggle"><br /></div><h3 class='hndle'><span>Resources</span></h3>
-<div class="inside">
-<ul>
-	<li><img src="<?php echo $path;?>images/icon-searchcommander.ico" alt="SEO Automatic" /> <a href="http://www.searchcommander.com/seo-tools/" target="_blank"> SEO Tools</a></li>
-	<li><img src="<?php echo $path;?>images/fclogoletters.gif" alt="" /> <a href="http://www.feedcommander.com" target="_blank">RSS Feed Commander</a></li>
-	<li><img src="<?php echo $path;?>images/salogoletters.jpg" alt="" /> <a href="http://www.seoautomatic.com/instant-seo-review/" target="_blank">Instant SEO Review</a></li>
-	<li><img src="<?php echo $path;?>images/icon-wordpress.gif" alt="" /> <a href="http://www.getwordpressed.com/installation/" target="_blank">Site Matched WP Themes</a></li>
-	<li><img src="<?php echo $path;?>images/icon-searchcommander.ico" alt="" /> <a href="http://www.pdxtc.com/wp-admin/" target="_blank">Scott Hendison's Blog</a></li>
-</ul>
-</div>
-</div>
-</div></div>
-
-<div id='post-body' class="has-sidebar">
-
-<div id='dashboard-widgets-main-content' class='has-sidebar-content'>
-
+<div class='postbox-container' style='width:60%;'>
 <div id='normal-sortables' class='meta-box-sortables'>
+
 <div id="main-admin-box" class="postbox">
-<div class="handlediv" title="Click to toggle"><br /></div><h3 class='hndle'><span><img src="<?php echo $path;?>images/salogoletters.jpg" alt="SEO Automatic" /> SEO Automatic Admin</span></h3>
+<h3><span><img src="<?php echo $path;?>images/salogoletters.jpg" alt="SEO Automatic" /> SEO Automatic Admin</span></h3>
 <div class="inside">
 
 <p>SEO Automatic is more than one plugin, it's a proven system for getting the most out of WordPress, that was developed by Scott Hendison and several programmers for Search Commander, Inc.</p>
@@ -115,11 +51,14 @@ if (function_exists('aw_paypal_add_pages')){
 	"<a href=\"?page=paypal-manage-users\">Manage Users</a><br />".
 	"<a href=\"?page=import-users\">Import Users</a><br />";
 }
+if (function_exists('unf_content_filter')) {
+	echo "<a href=\"?SEO-Automatic-No-Followizer/unf-admin-menu.php\">No Followizer</a><br />";
+}
 ?>
-	</div></div>
+</div></div>
 
-<div id="wpsc_dashboard_widget" class="postbox " >
-<div class="handlediv" title="Click to toggle"><br /></div><h3 class='hndle'><span>Latest news from the SEO Automatic blog ...</span></h3>
+<div id="wpsc_dashboard_widget" class="postbox" >
+<h3><span>Latest news from the SEO Automatic blog ...</span></h3>
 <div class="inside">
 <p><div style="background-color: #e2e2e2;">
 	<?php 
@@ -130,21 +69,42 @@ if (function_exists('aw_paypal_add_pages')){
 			$results=curl_exec($ch); 
 			curl_close($ch); 
 			print("$results"); 
-	?></div></p></div>
-</div>
-
-
-</div>
+	?></div></p>
+</div></div>
 
 </div></div>
 
-</div>
+<div class='postbox-container' style='width:35%;'>
+<div id='side-sortables' class='meta-box-sortables'>
 
-<form style='display: none' method='get' action=''>
-<p>
-<input type="hidden" id="closedpostboxesnonce" name="closedpostboxesnonce" value="706589be81" /><input type="hidden" id="meta-box-order-nonce" name="meta-box-order-nonce" value="8b1c5a8607" /></p>
-</form>
-</div>
+<div id="about-plugins" class="postbox " >
+<h3><span>About</span></h3>
+<div class="inside">
+
+<ul>
+	<li><img src="<?php echo $path;?>images/salogoletters.jpg" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/plugins/" target="_blank"> Entire Suite of Plugins</a></li>
+	<li><img src="<?php echo $path;?>images/icon-feature.jpg" alt="" /> <a href="http://www.seoautomatic.com/forum/" target="_blank">Suggestions</a></li>
+	<li><img src="<?php echo $path;?>images/icon-email.jpg" alt="" /> <a href="http://www.seoautomatic.com/category/development/feed/" target="_blank">Get Notified</a></li>
+	<li><img src="<?php echo $path;?>images/icon-forum.jpg" alt="" /> <a href="http://www.seoautomatic.com/forum/" target="_blank">Support Forum</a></li>
+	<li><img src="<?php echo $path;?>images/icon-bug.jpg" alt="" /> <a href="http://www.seoautomatic.com/forum/" target="_blank">Bug Reporting</a></li>
+	<li><form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_s-xclick" /><input type="hidden" name="hosted_button_id" value="5701868" /><input type="image" src="<?php echo $path;?>images/donate.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" /><img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"></form></li>
+</ul>
+
+</div></div>
+
+<div id="resources" class="postbox" >
+<h3><span>Resources</span></h3>
+<div class="inside">
+<ul>
+	<li><img src="<?php echo $path;?>images/icon-searchcommander.ico" alt="SEO Automatic" /> <a href="http://www.searchcommander.com/seo-tools/" target="_blank"> SEO Tools</a></li>
+	<li><img src="<?php echo $path;?>images/fclogoletters.gif" alt="" /> <a href="http://www.feedcommander.com" target="_blank">RSS Feed Commander</a></li>
+	<li><img src="<?php echo $path;?>images/salogoletters.jpg" alt="" /> <a href="http://www.seoautomatic.com/instant-seo-review/" target="_blank">Instant SEO Review</a></li>
+	<li><img src="<?php echo $path;?>images/icon-wordpress.gif" alt="" /> <a href="http://www.getwordpressed.com/installation/" target="_blank">Site Matched WP Themes</a></li>
+	<li><img src="<?php echo $path;?>images/icon-searchcommander.ico" alt="" /> <a href="http://www.pdxtc.com/wp-admin/" target="_blank">Scott Hendison's Blog</a></li>
+</ul>
+</div></div>
+
+</div></div>
 <div class="clear"></div>
 </div><!-- dashboard-widgets-wrap -->
 

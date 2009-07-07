@@ -50,7 +50,7 @@ function sc_settings() {
 }
 
 function core_menu() {
-//		if ((function_exists('autoseo_add_pages')) || (function_exists('affiliate_menu')) || (function_exists('aw_paypal_add_pages'))) {
+	//if ((function_exists('autoseo_add_pages')) || (function_exists('affiliate_menu')) || (function_exists('aw_paypal_add_pages')) || (function_exists('unf_index'))) {
 	if (function_exists('autoseo_add_pages')){
 		add_submenu_page('seo-automatic-options', 'Core Tweaks', 'Core Tweaks', 'activate_plugins', dirname(__FILE__) . '/settings.php', 'sc_settings');	}
 	else{
@@ -67,21 +67,6 @@ do_action("admin_print_scripts");
 add_action('admin_menu', 'core_menu');
 
 $current_plugins = get_option('active_plugins');
-//if (in_array('page_link_manager.php', $current_plugins)) {
-//	deactivate_plugins('page_link_manager.php');
-//}
-//if (in_array('page-link-manager/page-link-manager.php', $current_plugins)) {
-//	deactivate_plugins('page-link-manager/page-link-manager.php');
-//}
-//if (in_array('my-page-order/mypageorder.php', $current_plugins)) {
-//	deactivate_plugins('my-page-order/mypageorder.php');
-//}
-//if (in_array('post-teaser.php', $current_plugins)) {
-//	deactivate_plugins('post-teaser.php.php');
-//}
-//if (in_array('sitemap-generator/sitemap-generator.php', $current_plugins)) {
-//	deactivate_plugins('sitemap-generator/sitemap-generator.php');
-//}
 
 include('page-order.php');
 include('page-link.php');
@@ -98,7 +83,6 @@ include('meta_tags.php');
 //add_action('widgets_init', 'widget_betterblogroll_init');
 add_filter('single_post_title', 'changethetitle');
 add_action('init', 'wp_tabbed_rss_init', 1);
-add_action('wp_head', 'sc_core_metas');
 
 //remove_action('wp_head', 'rsd_link');
 //remove_action('wp_head', 'wlwmanifest_link');

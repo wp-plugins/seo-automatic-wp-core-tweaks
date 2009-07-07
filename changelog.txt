@@ -1,5 +1,8 @@
 Change Log
 
+07/07/09
+1. Update admin area to display properly in WP 2.8.
+
 06/01/09
 1. Added the H2 to H1 theme change back in.
 2. Removed better blogroll temporarily until the issue of the links widget being removed and having to be readded is resolved.
