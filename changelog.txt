@@ -1,5 +1,14 @@
 Change Log
 
+08/14/09
+1. Removed Canonical plugin since it's now included in All in One SEO plugin.
+2. Better Blogroll/Links-extended was removed until it is updated by the original developers. The widget options no longer save to the database.
+3. Updated Page Order plugin to version 2.8.3.
+4. Updated Post Teaser to version 4.0.1.
+5. Updated Sitemap Generator to version 3.17.
+6. Fixed the permission errors that were being seen.
+
+
 07/07/09
 1. Update admin area to display properly in WP 2.8.
 

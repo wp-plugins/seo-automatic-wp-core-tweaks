@@ -38,7 +38,7 @@ if (get_bloginfo('version') < 2.8) {
 <p>Here are the modules you have installed:</p>
 <?php
 if (function_exists('autoseo_add_pages')){
-	echo "<a href=\"?page=seo-automatic/seo-automatic-options\">SEO Automatic</a><br />";
+	echo "<a href=\"?page=seo-automatic-plugin\">SEO Automatic</a><br />";
 }
 if (function_exists('sc_settings')) {
 	echo "<a href=\"?page=seo-automatic-wp-core-tweaks/settings.php\">Core Tweaks</a><br />";

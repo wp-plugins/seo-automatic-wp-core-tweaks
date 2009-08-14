@@ -1,9 +1,17 @@
 <?php
-//Credits for author at bottom. Thank you to http://www.geekyweekly.com (froman118@gmail.com). This plugin was integrated into a single core tweak plugin for convenience.
+/*
+My Page Order
+http://www.geekyweekly.com/mypageorder
+My Page Order allows you to set the order of pages through a drag and drop interface. The default method of setting the order page by page is extremely clumsy, especially with a large number of pages.
+2.8.3
+froman118
+http://www.geekyweekly.com
+froman118@gmail.com
+*/
 
 function mypageorder_menu()
 {   if (function_exists('add_submenu_page')) {
-        add_submenu_page(mypageorder_getTarget(), 'My Page Order', 'My Page Order', 5,"mypageorder",'mypageorder');
+        add_submenu_page(mypageorder_getTarget(), 'My Page Order', __('My Page Order', 'mypageorder'), 5,"mypageorder",'mypageorder');
     }
 }
 
@@ -25,7 +33,7 @@ function mypageorder_getTarget() {
 }
 
 add_action('admin_menu', 'mypageorder_menu');
-add_action('admin_menu', 'mypageorder_js_libs');
+add_action('admin_menu', 'mypageorder_js_libs'); 
 
 function mypageorder()
 {
@@ -102,12 +110,18 @@ if($mode == "act_OrderPages")
 	}
 </style>
 
-<script language="JavaScript">
-	jQuery("#order").sortable({ 
-		placeholder: "ui-selected", 
-		revert: false,
-		tolerance: "pointer" 
-	});
+<script type="text/javascript">
+// <![CDATA[
+
+	function mypageorderaddloadevent(){
+		jQuery("#order").sortable({ 
+			placeholder: "ui-selected", 
+			revert: false,
+			tolerance: "pointer" 
+		});
+	};
+
+	addLoadEvent(mypageorderaddloadevent);
 	
 	function orderPages() {
 		jQuery("#orderButton").css("display", "none");
@@ -121,6 +135,7 @@ if($mode == "act_OrderPages")
 		if(jQuery("#pages").val() != "")
 			location.href="<?php echo mypageorder_getTarget(); ?>?page=mypageorder&mode=dsp_OrderPages&parentID="+jQuery("#pages").val();
 	}
+// ]]>
 </script>
 <?php
 }
@@ -130,15 +145,4 @@ add_action('init', 'mypageorder_loadtranslation');
 function mypageorder_loadtranslation() {
 	load_plugin_textdomain('mypageorder', PLUGINDIR.'/'.dirname(plugin_basename(__FILE__)), dirname(plugin_basename(__FILE__)));
 }
-
-
-//My Page Order
-//http://www.geekyweekly.com/mypageorder
-//My Page Order allows you to set the order of pages through a drag and drop interface. The default method of setting the order page by page is extremely clumsy, especially with a large number of pages.
-//Version: 2.7
-//Author: froman118
-//Author URI: http://www.geekyweekly.com
-//Author Email: froman118@gmail.com
-
-
 ?>

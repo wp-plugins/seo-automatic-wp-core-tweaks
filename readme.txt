@@ -69,6 +69,8 @@ Integrates the Post Teaser plugin - allows you to show snippets of posts on cate
 
 Integrates Dagon site Map generator - allows a snippit of code to be added, in order to create a static sitemap.
 
+Adds nofollow and open in new tab options to the RSS widget.
+
 = From one admin screen, click a button and make any or all of these changes... =
 
 1. Change default post category name from "Uncategorized"
@@ -83,8 +85,6 @@ Integrates Dagon site Map generator - allows a snippit of code to be added, in o
 10. Add and sets the page for displaying the posts for convenience
 11. Change the article feed to summary
 12. Remove all the blogroll links that are auto-installed by Wordpress
-
-*Note: The Better Blogroll addition has been temporarily removed due to links widget being removed and having to re-add the widget after activation. Hopefully this can be resolved and included again on the next release.
 
 [SEO Automatic Plugins](http://www.seoautomatic.com/plugins/ "Other plugins from SEO Automatic") 
 [SEO Automatic Core Tweaks](http://www.seoautomatic.com/plugins/wp-core-tweaks/ "Core Tweaks Homepage") 
