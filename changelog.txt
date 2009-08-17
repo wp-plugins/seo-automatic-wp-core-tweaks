@@ -1,5 +1,8 @@
 Change Log
 
+08/17/08
+1. Made a correction to the DD Sitemap Generator.
+
 08/14/09
 1. Removed Canonical plugin since it's now included in All in One SEO plugin.
 2. Better Blogroll/Links-extended was removed until it is updated by the original developers. The widget options no longer save to the database.

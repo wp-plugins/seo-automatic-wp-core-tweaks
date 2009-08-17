@@ -46,8 +46,8 @@ $ddsg_lang_file = trim(get_option(ddsg_language));
 if ($ddsg_lang_file == '') {
 	$ddsg_lang_file = 'english';
 }
-include ABSPATH . 'wp-content/plugins/sitemap-generator/lang/' . $ddsg_lang_file . '.php';
 
+include ABSPATH . 'wp-content/plugins/seo-automatic-wp-core-tweaks/lang/' . $ddsg_lang_file . '.php';
 
 /* 
  * Add options page
