@@ -44,7 +44,7 @@ add_option('ddsg_xml_where', 'last');
  */
 $ddsg_lang_file = trim(get_option(ddsg_language));
 if ($ddsg_lang_file == '') {
-	$ddsg_lang_file = 'english';
+	$ddsg_lang_file = 'English';
 }
 
 include ABSPATH . 'wp-content/plugins/seo-automatic-wp-core-tweaks/lang/' . $ddsg_lang_file . '.php';
