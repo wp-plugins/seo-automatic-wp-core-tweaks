@@ -69,7 +69,7 @@ function core_menu() {
 
 
 
-do_action("admin_print_scripts");
+do_action('admin_print_scripts-seo-automatic-wp-core-tweaks');
 
 
 add_action('admin_menu', 'core_menu');
