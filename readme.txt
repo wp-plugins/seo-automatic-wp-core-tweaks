@@ -1,5 +1,5 @@
 === SEO Automatic WP_CORE_TWEAKS ===
-Contributors: Heather Barger & Scott Hendison
+Contributors: Scott Hendison & Heather Barger
 Donate link: 
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
 Requires at least: 2.7
