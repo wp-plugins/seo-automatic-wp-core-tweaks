@@ -16,7 +16,13 @@ Primarily for use in new WP installations, the steps are based on an employee ch
 
 Almost everything is covered, from changing the permalink structure to deleting the "Hello World" sample post & comment, and all the options are accessible from one single page.
 
-It also extends the built-in features of Wordpress and combines 5 other useful plugins into this one, including Page Order, Page Link Manager, Post teaser, Canonical URL's, and Dagon Design Sitemap Generator.
+It also extends the built-in features of Wordpress and combines 4 other useful plugins into this one…
+
+1. Page Order – Lets you define the order in which pages appear on the menu.
+2. Page Link Manager – Lets you define which pages appear on your menu, and which do not. 
+3. Post teaser – Shows only the title and a snippet on your category and archive pages, rather than the whole post.
+4. Dagon Design Sitemap Generator – Creates and maintains a static sitemap page.
+
 
 This plug-in is designed to be a companion to other plugins like All in one SEO or Headspace, and is not intended as a replacement.
 
