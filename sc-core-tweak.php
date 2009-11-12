@@ -3,7 +3,7 @@
 Plugin Name: SEO Automatic WP Core Tweaks
 Plugin URI: http://www.seoautomatic.com/plugins/wp-core-tweaks/
 Description: Conceived by Scott Hendison and programmed by Heather Barger for Search Commander, Inc. to automate proper WP setup. It also extends the built-in features of WordPress menu management, an and combines several common plugins into one.  See <a href="admin.php?page=seo-automatic-wp-core-tweaks/settings.php">Settings > Core Tweaks</a> for options.
-Version: 2.2
+Version: 2.3
 */
 //error_reporting(E_ALL);
 //if(!function_exists('myErrorHandler')){
@@ -54,17 +54,20 @@ function sc_help() {
 }
 
 function core_menu() {
-	//if ((function_exists('autoseo_add_pages')) || (function_exists('affiliate_menu')) || (function_exists('aw_paypal_add_pages')) || (function_exists('unf_index'))) {
-	if (function_exists('autoseo_add_pages')){
-		add_submenu_page('seo-automatic-options', 'Core Tweaks', 'Core Tweaks', 'activate_plugins', dirname(__FILE__) . '/settings.php', 'sc_settings');
-		add_submenu_page('seo-automatic-options', 'Core Tweaks Help', 'Core Tweaks Help', 'activate_plugins', dirname(__FILE__) . '/help.php', 'sc_help');
+	global $menu;
+	foreach ($menu as $i) {
+		$key = array_search('toplevel_page_seo-automatic-options', $i);
+		if ($key != '') {
+			$menu_added = true;
 		}
-	else{
+	}
+	if ($menu_added) {
+	} else {
 		add_menu_page('SEO Automatic by Search Commander, Inc.', 'SEO Automatic', 'activate_plugins', 'seo-automatic-options', 'sc_index','http://www.seoautomatic.com/favicon.ico');
 		add_submenu_page('seo-automatic-options', 'Admin', 'Admin', 'activate_plugins', 'seo-automatic-options', 'sc_index');
-		add_submenu_page('seo-automatic-options', 'Core Tweaks', 'Core Tweaks', 'activate_plugins', dirname(__FILE__) . '/settings.php', 'sc_settings');
-		add_submenu_page('seo-automatic-options', 'Core Tweaks Help', 'Core Tweaks Help', 'activate_plugins', dirname(__FILE__) . '/help.php', 'sc_help');
-		}
+	}
+	add_submenu_page('seo-automatic-options', 'Core Tweaks', 'Core Tweaks', 'activate_plugins', dirname(__FILE__) . '/settings.php', 'sc_settings');
+	add_submenu_page('seo-automatic-options', 'Core Tweaks Help', 'Core Tweaks Help', 'activate_plugins', dirname(__FILE__) . '/help.php', 'sc_help');
 }
 
 
