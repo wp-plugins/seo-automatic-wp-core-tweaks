@@ -32,7 +32,7 @@ if (get_bloginfo('version') < 2.8) {
 <div id='normal-sortables' class='meta-box-sortables'>
 
 <div id="main-admin-box" class="postbox">
-<h3><span><img src="<?php echo $path;?>images/salogoletters.jpg" alt="SEO Automatic" /> Core Tweaks Admin</span></h3>
+<h3><span><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> Core Tweaks Admin</span></h3>
 <div class="inside">
 <?php
 
@@ -103,12 +103,13 @@ count = document.corechanges.elements.length;
 <?php if ($_REQUEST['action'] != "changecore") { ?>
 <p>These setting and change recommendations are primarily used for new WP setup, and are based on an employee checklist at <a href="http://www.pdxtc.com/wpblog/wordpress/wordpress-checklist-now-a-plug-in/" target="_blank" rel="nofollow">Search Commander, Inc.</a></p><p>It is designed to compliment, not replace, either the <a href="http://wordpress.org/extend/plugins/all-in-one-seo-pack/" target="_blank" rel="nofollow">All in one SEO pack</a> or <a href="http://wordpress.org/extend/plugins/headspace2/" target="_blank" rel="nofollow">Headpace plugin</a>, and should save a lot of time on every installation.</p><p>We recommend that you have <b>no other plugins active</b> while running the Core Tweaks process.</p>
 
-<p>Notes before running:</p>
+<p><b>Notes before running:</b></p>
 
 <p>Please note that that we do recommend using this for the title tag (likely in your /themename/header.php file):
 </p><p><b><code>&lt;title&gt;&lt;?php wp_title(''); if (!is_home() && !is_front_page()) { print(" | "); } bloginfo('name'); ?&gt;&lt;/title&gt;</code></b></p><p> Aditionally, that title tag will be necessary if you plan on using the THEME SPECIFIC H1 / H2 hacks at the bottom of this screen.</p>
 
-<p>Note that the THEME SPECIFIC changes are UNchecked by default. If you plan to use them, the permissions of your themes .php files must be 777. You can always come back here later after choosing your theme - UNCHECK ALL (since you've already done it all once) then scroll to the bottom and run the H1 stuff, which allows you to do things:</p>
+<p>Note that the THEME SPECIFIC changes are UNchecked by default. If you plan to use them, the permissions of your themes .php files must be 777.</p>
+<p>You can always come back here later after choosing your theme - UNCHECK ALL (since you've already done it all once) then scroll to the bottom and run the H1 stuff, which allows you to do things:</p>
 a. Have a different headline on the page than it says on the menu item.<br />b. Have that headline be an H1 instead of an H2
 
 <p><!--<a href="javascript: CheckAll();">Select All</a> | --><a href="javascript: UncheckAll();">Deselect All</a></p>
@@ -153,40 +154,29 @@ a. Have a different headline on the page than it says on the menu item.<br />b. 
 <div class='postbox-container' style='width:35%;'>
 <div id='side-sortables' class='meta-box-sortables'>
 
-<div id="about-this-plugin" class="postbox " >
-<h3><span>Core Tweaks</span></h3>
-<div class="inside">
-<ul>
-	<li><img src="<?php echo $path;?>images/icon-help.jpg" alt="SEO Automatic" /> <a href="?page=seo-automatic-wp-core-tweaks/help.php">Core Tweaks Help</a></li>
-	<li><img src="<?php echo $path;?>images/icon-forum.jpg" alt="" /> <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">Support Forum</a></li>
-	<li><img src="<?php echo $path;?>images/icon-bug.jpg" alt="" /> <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/report-a-bug/" target="_blank">Bug Reporting</a></li>
-	<li><img src="<?php echo $path;?>images/icon-branding.jpg" alt="" /> <a href="http://www.seoautomatic.com/development/brandable-core-tweaks-plugin/" target="_blank">Remove Branding</a></li>
-</ul>
-</div></div>
-
-
 <div id="about-plugins" class="postbox " >
 <h3><span>About</span></h3>
 <div class="inside">
+<a href="http://www.seoautomatic.com/plugins/" target="_blank"><img src="http://www.seoautomatic.com/plugin-home/images/logo-powered-by.jpg" alt="SEO Automatic" width="262" height="166" /></a>
+<br />
 <ul>
-	<li><img src="<?php echo $path;?>images/salogoletters.jpg" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/plugins/" target="_blank"> Entire Suite of Plugins</a></li>
-	<li><img src="<?php echo $path;?>images/icon-feature.jpg" alt="" /> <a href="http://www.seoautomatic.com/forum/" target="_blank">Suggestions</a></li>
-	<li><img src="<?php echo $path;?>images/icon-email.jpg" alt="" /> <a href="http://www.seoautomatic.com/category/development/feed/" target="_blank">Get Notified</a></li>
-	<li><img src="<?php echo $path;?>images/icon-forum.jpg" alt="" /> <a href="http://www.seoautomatic.com/forum/" target="_blank">Support Forum</a></li>
-	<li><img src="<?php echo $path;?>images/icon-bug.jpg" alt="" /> <a href="http://www.seoautomatic.com/forum/" target="_blank">Bug Reporting</a></li>
-	<li><form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_s-xclick" /><input type="hidden" name="hosted_button_id" value="5701868" /><input type="image" src="<?php echo $path;?>images/donate.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" /><img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"></form></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/home/" target="_blank"> SEO Automatic</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.searchcommander.com/" target="_blank"> Search Commander, Inc</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/plugins/" target="_blank"> Entire Suite of Plugins</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/white-label/" target="_blank"> White Label Options</a></li>
 </ul>
+
 </div></div>
 
 <div id="resources" class="postbox" >
 <h3><span>Resources</span></h3>
 <div class="inside">
 <ul>
-	<li><img src="<?php echo $path;?>images/icon-searchcommander.ico" alt="SEO Automatic" /> <a href="http://www.searchcommander.com/seo-tools/" target="_blank"> SEO Tools</a></li>
-	<li><img src="<?php echo $path;?>images/fclogoletters.gif" alt="" /> <a href="http://www.feedcommander.com" target="_blank">RSS Feed Commander</a></li>
-	<li><img src="<?php echo $path;?>images/salogoletters.jpg" alt="" /> <a href="http://www.seoautomatic.com/instant-seo-review/" target="_blank">Instant SEO Review</a></li>
-	<li><img src="<?php echo $path;?>images/icon-wordpress.gif" alt="" /> <a href="http://www.getwordpressed.com/installation/" target="_blank">Site Matched WP Themes</a></li>
-	<li><img src="<?php echo $path;?>images/icon-searchcommander.ico" alt="" /> <a href="http://www.pdxtc.com/wpblog/" target="_blank">Scott Hendison's Blog</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="" /> <a href="http://www.pdxtc.com/wpblog/" target="_blank">Scott's Blog</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="" /> <a href="http://www.twitter.com/shendison/" target="_blank">Scott's Twitter</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="" /> <a href="http://www.seoautomatic.ourtoolbar.com/" target="_blank">Search Commander, Inc. Toolbar</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.searchcommander.com/seo-tools/" target="_blank"> SEO Automatic Tools</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="" /> <a href="http://www.getwordpressed.com/about/" target="_blank">Site Matched WP Themes</a></li>
 </ul>
 </div></div>
 
