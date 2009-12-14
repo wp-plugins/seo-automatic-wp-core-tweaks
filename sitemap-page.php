@@ -4,22 +4,28 @@
 if ($_REQUEST['action'] == "changecore") {
 	 if ($_REQUEST['add_sitemap'] == "ON") {
 	$check_page = $wpdb->get_row("SELECT * FROM `".$wpdb->posts."` WHERE `post_content` LIKE '<!-- ddsitemapgen -->' LIMIT 1",ARRAY_A);
+	if ($check_page['post_content'] == '') {
+//	$post_date =date("Y-m-d H:i:s");
+//	$post_date_gmt =gmdate("Y-m-d H:i:s");
 
-	if ($check_page == '') {
-	$post_date =date("Y-m-d H:i:s");
-	$post_date_gmt =gmdate("Y-m-d H:i:s");
-
-	  if($wp_version >= 2.1) {
-		$sql ="INSERT INTO ".$wpdb->posts."
-		(post_author, post_date, post_date_gmt, post_content, post_content_filtered, post_title, post_excerpt,  post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_parent, menu_order, post_type)
-		VALUES
-		('1', '$post_date', '$post_date_gmt', '<!-- ddsitemapgen -->', '', 'Site-Map', '', 'publish', 'closed', 'closed', '', 'site-map', '', '', '$post_date', '$post_date_gmt', '$post_parent', '0', 'page')";
-			} else {      
-		$sql ="INSERT INTO ".$wpdb->posts."
-		(post_author, post_date, post_date_gmt, post_content, post_content_filtered, post_title, post_excerpt,  post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_parent, menu_order)
-		VALUES
-		('1', '$post_date', '$post_date_gmt', '<!-- ddsitemapgen -->', '', 'Site-Map', '', 'static', 'closed', 'closed', '', 'site-map', '', '', '$post_date', '$post_date_gmt', '$post_parent', '0')";
-			}
+$info = array(
+'post_status' => 'publish', 
+'post_type' => 'page',
+'post_author' => 1,
+'ping_status' => get_option('default_ping_status'), 
+'post_parent' => 0,
+'menu_order' => 0,
+'to_ping' =>  '',
+'pinged' => '',
+'post_password' => '',
+'guid' => '',
+'post_content_filtered' => '',
+'post_excerpt' => '',
+'import_id' => 0,
+'post_name' => 'site-map',
+'post_title' => 'Site-Map',
+'post_content' => '<!-- ddsitemapgen -->');
+wp_insert_post($info);
 
 	  $wpdb->query($sql);
 	  $post_id = $wpdb->insert_id;

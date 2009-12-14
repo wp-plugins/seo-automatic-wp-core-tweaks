@@ -1,9 +1,9 @@
 <?php
 // Set the blog description/tagline
 if ($_REQUEST['action'] == "changecore") {
-	if ($_REQUEST['tagline'] == "ON") {
+	if ($_REQUEST['taglinecheck'] == "ON") {
 		$tagline = $_REQUEST['tagline'];
-		if (!update_option("blogdescription", $tagline)) {
+		if (!update_option('blogdescription', $tagline)) {
 			$fail .= "<li>The blog description/tagline, ".$tagline." could not be changed.</li>";
 		} else {
 			$success .= "<li>The blog description/tagline is: ".$tagline."</li>";
@@ -38,7 +38,7 @@ if ($_REQUEST['action'] != "changecore") {
 
 if ($_REQUEST['action'] == "changecore") {
 	 if ($_REQUEST['empty_blogroll'] == "ON") {
-		if ( (!$wpdb->query("DELETE FROM $wpdb->links WHERE link_category='0'")) ) {
+		if ( (!$wpdb->query("DELETE FROM $wpdb->links WHERE link_id != ''")) ) {
 			$fail .= "<li>Blogroll links could not be deleted.</li>";
 		} else {
 			$success .= "<li>All Blogroll links have been deleted.</li>";
