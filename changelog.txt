@@ -1,0 +1,50 @@
+Change Log
+
+08/17/08
+1. Made a correction to the DD Sitemap Generator.
+
+08/14/09
+1. Removed Canonical plugin since it's now included in All in One SEO plugin.
+2. Better Blogroll/Links-extended was removed until it is updated by the original developers. The widget options no longer save to the database.
+3. Updated Page Order plugin to version 2.8.3.
+4. Updated Post Teaser to version 4.0.1.
+5. Updated Sitemap Generator to version 3.17.
+6. Fixed the permission errors that were being seen.
+
+
+07/07/09
+1. Update admin area to display properly in WP 2.8.
+
+06/01/09
+1. Added the H2 to H1 theme change back in.
+2. Removed better blogroll temporarily until the issue of the links widget being removed and having to be readded is resolved.
+
+05/18/09
+1. Updated robots.txt file contents.
+2. Screenshot at repository is working now.
+3. Removed all theme related tweaks except the H1 Hack.
+4. Updated home page and style of plugin admin area.
+5. Reorganized results for easier viewing of success and errored items.
+6. Added deselect all checkboxes option.
+
+03/25/09
+1. Page link manager is upgraded to 1.0b.
+2. Cleaning up file structure of plugin zip.
+3. New initial admin user can be added.
+4. H1 hack now auto changes the_title() to single_post_title() so that the h1 hack of changeH1 in the custom metas will work easily.
+
+03/17/09
+1. Robot meta tag is added to the header.
+2. Auto creation of sitemap page for DDSiteMap Gen and removed from navigation menu.
+3. Auto creation of a robots.txt file in the blog root.
+
+03/16/09
+1. Added change of H2 to H1 tags for current theme.
+2. Canonical Plugin now integrated.
+3. Dagon Design Sitemap Generator integrated.
+
+02/06/2009
+Corrected Cheatin' Huh message, but need more testing by beta testers to be sure since this requires a fresh wordpress install.
+Added ability to change blog description/tagline.
+Added attempt to create uploads folder and set permission to 777. (Will work depending on what your hosting server allows.)
+Added uncheck option for the organize uploads by month/year.
