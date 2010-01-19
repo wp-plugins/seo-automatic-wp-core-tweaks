@@ -5,10 +5,10 @@ Plugin URI: http://www.seoautomatic.com/plugins/wp-core-tweaks/
 Description: Conceived by Scott Hendison and programmed by Heather Barger for Search Commander, Inc. to automate proper WP setup. It also extends the built-in features of WordPress menu management, an and combines several common plugins into one.  See <a href="admin.php?page=seo-automatic-wp-core-tweaks/settings.php">SEO Automatic > Core Tweaks</a> for options.
 Version: 2.5
 */
-//error_reporting(E_ALL);
-//if(!function_exists('myErrorHandler')){
-//function myErrorHandler($errno, $errstr, $errfile, $errline) {
-//	switch ($errno) {
+error_reporting(E_ALL);
+if(!function_exists('myErrorHandler')){
+function myErrorHandler($errno, $errstr, $errfile, $errline) {
+	switch ($errno) {
 //	case E_USER_ERROR:
 //		echo "<b>My ERROR</b> [$errno] $errstr<br />\n";
 //		echo "  Fatal error on line $errline in file $errfile";
@@ -24,22 +24,22 @@ Version: 2.5
 //	case E_USER_NOTICE:
 //		echo "<b>My NOTICE</b> [$errno] $errstr<br />\n";
 //		break;
-//
-//	default:
-//		if (substr_count($errstr, "ob_end_") > 0) {
-//		} elseif (substr_count($errstr, "Undefined index") > 0) {
-//		} elseif (substr_count($errstr, "Undefined offset") > 0) {
-//		} elseif (substr_count($errstr, "Use of undefined constant") > 0) {
-//		} else {
-//			echo "Unknown error type: [$errno] $errstr<br />\n";
-//		}
-//    }
-//
-//    /* Don't execute PHP internal error handler */
-//    return true;
-//}
-//}
-//$old_error_handler = set_error_handler("myErrorHandler");
+
+	default:
+		if (substr_count($errstr, "ob_end_") > 0) {
+		} elseif (substr_count($errstr, "Undefined index") > 0) {
+		} elseif (substr_count($errstr, "Undefined offset") > 0) {
+		} elseif (substr_count($errstr, "Use of undefined constant") > 0) {
+		} else {
+			//echo "Unknown error type: [$errno] $errstr<br />\n";
+		}
+    }
+
+    /* Don't execute PHP internal error handler */
+    return true;
+}
+}
+$old_error_handler = set_error_handler("myErrorHandler");
 
 function sc_index() {
 	include('home.php');
