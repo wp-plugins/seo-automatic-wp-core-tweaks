@@ -3,7 +3,7 @@ Contributors: Scott Hendison & Heather Barger
 Donate link: 
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
 Requires at least: 2.7
-Tested up to: 2.0.1
+Tested up to: 2.9.1
 Stable tag: 2.5
 
 Extends built-in features of Wordpress and combines common plugins into one.
