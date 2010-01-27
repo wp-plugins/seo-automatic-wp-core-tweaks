@@ -3,7 +3,7 @@
 Plugin Name: SEO Automatic WP Core Tweaks
 Plugin URI: http://www.seoautomatic.com/plugins/wp-core-tweaks/
 Description: Conceived by Scott Hendison and programmed by Heather Barger for Search Commander, Inc. to automate proper WP setup. It also extends the built-in features of WordPress menu management, an and combines several common plugins into one.  See <a href="admin.php?page=seo-automatic-wp-core-tweaks/settings.php">SEO Automatic > Core Tweaks</a> for options.
-Version: 2.5
+Version: 2.6
 */
 error_reporting(E_ALL);
 if(!function_exists('myErrorHandler')){
@@ -49,10 +49,6 @@ function sc_settings() {
 	include('settings.php');
 }
 
-function sc_help() {
-	include('help.php');
-}
-
 function core_menu() {
 	global $menu;
 	foreach ($menu as $i) {
@@ -67,14 +63,10 @@ function core_menu() {
 		add_submenu_page('seo-automatic-options', 'Admin', 'Admin', 'activate_plugins', 'seo-automatic-options', 'sc_index');
 	}
 	add_submenu_page('seo-automatic-options', 'Core Tweaks', 'Core Tweaks', 'activate_plugins', dirname(__FILE__) . '/settings.php', 'sc_settings');
-	add_submenu_page('seo-automatic-options', 'Core Tweaks Help', 'Core Tweaks Help', 'activate_plugins', dirname(__FILE__) . '/help.php', 'sc_help');
+
 }
 
-
-
 do_action('admin_print_scripts-seo-automatic-wp-core-tweaks');
-
-
 add_action('admin_menu', 'core_menu');
 
 $current_plugins = get_option('active_plugins');

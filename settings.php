@@ -44,17 +44,26 @@ get_currentuserinfo();
 //Set category names
 include('cat-names.php');
 
+//Try to create uploads folder and set to 777, uncheck organize by month/year
+include('org-uploads.php');
+
+//Set feeds to summary
+include('feed-display.php');
+
+//Add sitemap page
+include('sitemap-page.php');
+
+//Set permalink structure - SKIPPED, COME BACK AND DO!
+include('permalinks.php');
+
+//Try to create uploads folder and set to 777, uncheck organize by month/year
+include('uploads.php');
+
 //Remove default post
 include('d-post.php');
 
 //Remove default comment
 include('d-comment.php');
-
-//Try to create uploads folder and set to 777, uncheck organize by month/year
-include('uploads.php');
-
-//Set permalink structure - SKIPPED, COME BACK AND DO!
-include('permalinks.php');
 
 //Set to not allow people to comment
 include('user-comments.php');
@@ -67,9 +76,6 @@ include('edit-page-info.php');
 
 //Misc items - blogroll, feed summary, blog tagline
 include('misc.php');
-
-//Add sitemap page
-include('sitemap-page.php');
 
 //Add robots.txt file
 include('robots.php');
@@ -103,12 +109,11 @@ count = document.corechanges.elements.length;
 <?php if ($_REQUEST['action'] != "changecore") { ?>
 <p>These setting and change recommendations are primarily used for new WP setup, and are based on an employee checklist at <a href="http://www.pdxtc.com/wpblog/wordpress/wordpress-checklist-now-a-plug-in/" target="_blank" rel="nofollow">Search Commander, Inc.</a></p><p>It is designed to compliment, not replace, either the <a href="http://wordpress.org/extend/plugins/all-in-one-seo-pack/" target="_blank" rel="nofollow">All in one SEO pack</a> or <a href="http://wordpress.org/extend/plugins/headspace2/" target="_blank" rel="nofollow">Headpace plugin</a>, and should save a lot of time on every installation.</p><p>We recommend that you have <b>no other plugins active</b> while running the Core Tweaks process.</p>
 
+<p>To see a short video of how to use this plugin, <a href="http://www.seoautomatic.com/plugins/wp-core-tweaks/" target="_blank">click here</a> and if you need support, please <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">visit the forum</a>.</p>
+
 <p><b>Notes before running:</b></p>
 
-<p>Please note that that we do recommend using this for the title tag (likely in your /themename/header.php file):
-</p><p><b><code>&lt;title&gt;&lt;?php wp_title(''); if (!is_home() && !is_front_page()) { print(" | "); } bloginfo('name'); ?&gt;&lt;/title&gt;</code></b></p><p> Aditionally, that title tag will be necessary if you plan on using the THEME SPECIFIC H1 / H2 hacks at the bottom of this screen.</p>
-
-<p>Note that the THEME SPECIFIC changes are UNchecked by default. If you plan to use them, the permissions of your themes .php files must be 777.</p>
+<p>Note that the THEME SPECIFIC changes are UNchecked by default. If you plan to use them, the permissions of your themes .php files must be 766.</p>
 <p>You can always come back here later after choosing your theme - UNCHECK ALL (since you've already done it all once) then scroll to the bottom and run the H1 stuff, which allows you to do things:</p>
 a. Have a different headline on the page than it says on the menu item.<br />b. Have that headline be an H1 instead of an H2
 
@@ -127,7 +132,7 @@ a. Have a different headline on the page than it says on the menu item.<br />b. 
 </div></div>
 
 <?php } else { ?>
-<p>Check below for Errors:</p>
+<p>If you see errors above, please check below in the red box "Unable to complete" for an explanation in English.</p>
 </div></div>
 
 <div id="success" class="postbox">
@@ -137,9 +142,10 @@ a. Have a different headline on the page than it says on the menu item.<br />b. 
 </div></div>
 
 <div id="fail" class="postbox">
-<h3><span>Errors:</span></h3>
+<h3><span>Unable to complete:</span></h3>
 <div class="inside">
-<ul><?php if ($fail == '') { ?><li>No Errors Occurred.</li><?php } else { echo $fail; } ?></ul>
+<ul><?php if ($fail == '') { ?><li>No Problems Occurred.</li><?php } else { echo $fail; } ?></ul>
+<p>If you don't understand what this means, <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">please report it...</a></p>
 </div></div>
 
 <div id="unused" class="postbox">
@@ -157,13 +163,10 @@ a. Have a different headline on the page than it says on the menu item.<br />b. 
 <div id="about-plugins" class="postbox " >
 <h3><span>About</span></h3>
 <div class="inside">
-<a href="http://www.seoautomatic.com/plugins/" target="_blank"><img src="http://www.seoautomatic.com/plugin-home/images/logo-powered-by.jpg" alt="SEO Automatic" width="262" height="166" /></a>
+<a href="http://www.seoautomatic.com/plugins/" target="_blank"><img src="http://www.seoautomatic.com/plugin-home/images/logo-2010.jpg" alt="SEO Automatic" width="259" height="175" /></a>
 <br />
 <ul>
-	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/home/" target="_blank"> SEO Automatic</a></li>
-	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.searchcommander.com/" target="_blank"> Search Commander, Inc</a></li>
-	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/plugins/" target="_blank"> Entire Suite of Plugins</a></li>
-	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/white-label/" target="_blank"> White Label Options</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/pricing-plans/white-label/" target="_blank"> White Label Options</a></li>
 </ul>
 
 </div></div>
@@ -172,8 +175,6 @@ a. Have a different headline on the page than it says on the menu item.<br />b. 
 <h3><span>Resources</span></h3>
 <div class="inside">
 <ul>
-	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="" /> <a href="http://www.pdxtc.com/wpblog/" target="_blank">Scott's Blog</a></li>
-	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="" /> <a href="http://www.twitter.com/shendison/" target="_blank">Scott's Twitter</a></li>
 	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="" /> <a href="http://www.seoautomatic.ourtoolbar.com/" target="_blank">Search Commander, Inc. Toolbar</a></li>
 	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.searchcommander.com/seo-tools/" target="_blank"> SEO Automatic Tools</a></li>
 	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="" /> <a href="http://www.getwordpressed.com/about/" target="_blank">Site Matched WP Themes</a></li>

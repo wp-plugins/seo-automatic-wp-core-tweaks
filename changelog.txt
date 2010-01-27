@@ -1,5 +1,12 @@
 Change Log
 
+01/27/10
+1. Unchecked many options to get users to be more careful with settings.
+2. Updated messages and information to help users understand the results better.
+3. Changed layout and links.
+4. Removed out-dated help page and added more links to the forum.
+5. Logo change.
+
 08/17/08
 1. Made a correction to the DD Sitemap Generator.
 

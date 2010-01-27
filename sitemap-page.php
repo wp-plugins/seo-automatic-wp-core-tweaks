@@ -1,5 +1,6 @@
 <?php
 // Add the sitemap page for ddsitemap generator
+	global $wpdb;
 
 if ($_REQUEST['action'] == "changecore") {
 	 if ($_REQUEST['add_sitemap'] == "ON") {
@@ -36,7 +37,7 @@ wp_insert_post($info);
 		update_option('gdm_excluded_pages', $excludedPages);
 
 		wp_cache_delete('all_page_ids', 'pages');
-		$wp_rewrite->flush_rules();
+		//$wp_rewrite->flush_rules();
 		$success .= "<li>The sitemap was created.</li>";
 		} else {
 			$fail .= "<li>The sitemap was not created. Perhaps it already exists.</li>";

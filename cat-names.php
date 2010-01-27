@@ -1,6 +1,6 @@
 <?php
 // Change category information
-
+global $wpdb;
 //Set the default post category name
 if ($_REQUEST['action'] == "changecore") {
 	$cat_1 = $_REQUEST['cat_1'];

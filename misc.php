@@ -3,8 +3,14 @@
 if ($_REQUEST['action'] == "changecore") {
 	if ($_REQUEST['taglinecheck'] == "ON") {
 		$tagline = $_REQUEST['tagline'];
+		$currenttagline = get_bloginfo('description');
 		if (!update_option('blogdescription', $tagline)) {
-			$fail .= "<li>The blog description/tagline, ".$tagline." could not be changed.</li>";
+			if ($tagline == $currenttagline) {
+				if ($tagline == '') { $tagline = '(blank)'; }
+				$fail .= "<li>The blog description/tagline is already set to: ".$tagline."</li>";
+			} else {
+				$fail .= "<li>The blog description/tagline, ".$tagline." could not be changed.</li>";
+			}
 		} else {
 			$success .= "<li>The blog description/tagline is: ".$tagline."</li>";
 		}
@@ -13,23 +19,8 @@ if ($_REQUEST['action'] == "changecore") {
 	}
 } else {
 	$tagline = get_bloginfo('description');
-	$options .= '<li><input name="taglinecheck" type="checkbox" value="ON" checked /> Change the blog description tagline. <input name="tagline" type="text" id="tagline" value="'.$tagline.'" /></li>';
+	$options .= '<li><input name="taglinecheck" type="checkbox" value="ON" /> Change the blog description tagline. <input name="tagline" type="text" id="tagline" value="'.$tagline.'" /></li>';
 } 
-
-//Sets feed to summary
-if ($_REQUEST['action'] == "changecore") {
-	 if ($_REQUEST['feed_summary'] == "ON") {
-		if (!update_option('rss_use_excerpt','1')) {
-			$fail .= "<li>The article feed could not be set to summary. Perhaps it already is.</li>";
-		} else {
-			$success .= "<li>The article feed has been set to display summary.</li>";
-		}
-	} else {
-		$notused .= "<li>Set article feed to summary.</li>";
-	}
-} else {
-	$options .= '<li><input name="feed_summary" type="checkbox" value="ON" checked /> Set the Article feed to display summary.</li>';
-}
 
 //Empty blogroll that wp installs
 if ($_REQUEST['action'] != "changecore") {

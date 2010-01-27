@@ -14,6 +14,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Default comment removal.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" name=\"d_comment\" value=\"ON\"> Delete default comment. (Wordpress has not been adding the sample comment in recent versions, so if you choose this option, the result screen may show that the comment was not deleted but perhaps already had been.)</li>";
+	$options .= "<li><input type=\"checkbox\" name=\"d_comment\" value=\"ON\"> Delete default comment.</li>";
 }
 ?>

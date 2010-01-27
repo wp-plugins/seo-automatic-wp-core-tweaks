@@ -2,7 +2,7 @@
 // Changes the_title() to single_post_title() in page.php and single.php so the h1 hack can work.
 
 if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li>&nbsp;</li><li><b>Your theme files must have at least 766 file permission.<br />Premium WordPress themes sometimes have programmed "SEO options" that may prevent these items from working properly. Please consult your theme provider for support</b></li>';
+	$options .= '<li>&nbsp;</li><li><b><br /><u>Advanced:</u><br /></b></li><li><b>Your theme files must have at least 766 file permission.<br />Premium WordPress themes sometimes have programmed "SEO options" that may prevent these items from working properly. Please consult your theme provider for support</b></li>';
 }
 
 if ($_REQUEST['action'] == "changecore") {
