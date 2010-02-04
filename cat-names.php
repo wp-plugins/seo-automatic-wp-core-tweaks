@@ -16,7 +16,7 @@ if ($_REQUEST['action'] == "changecore") {
 			$success .= "<li>Default post category is set to ".$cat_1."</li>";
 		else
 			$success .= "<li>Default post category is set to ".$cat_1."</li>";
-			//$fail .= "<li>Default category is not changed. You either do not have sufficient permission as an admin user or an error has occured.</li>";
+			//$fail .= "<li>Default category is not changed. You either do not have sufficient permission as an admin user or an error has occured.</li> ";
 	} else {
 		$notused .= "<li>Change default post category name.</li>";
 	} 
