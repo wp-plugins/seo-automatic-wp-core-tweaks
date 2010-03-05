@@ -38,7 +38,7 @@ if ($_REQUEST['action'] == "changecore") {
 		if ( wp_update_category($default_cat_setting) )
 			$success .= "<li>Default link category is set to ".$cat_2."</li>";
 		else
-			$fail .= "<li>Default category is not changed. You either do not have sufficient permission as an admin user or an error has occured.</li>";
+			//$fail .= "<li>Default category is not changed. You either do not have sufficient permission as an admin user or an error has occured.</li>";
 	} else {
 		$notused .= "<li>Change default blogroll category name.</li>";
 	} 
