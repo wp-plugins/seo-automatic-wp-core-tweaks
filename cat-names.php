@@ -35,10 +35,12 @@ if ($_REQUEST['action'] == "changecore") {
 			'cat_name'=>$cat_2,
 			'category_nicename'=>$cat_2_nice,
 			'category_description'=>'');
-		if ( wp_update_category($default_cat_setting) )
+		if ( wp_update_category($default_cat_setting) ) {
 			$success .= "<li>Default link category is set to ".$cat_2."</li>";
-		else
+		}	else {
+			$success .= "<li>Default link category is set to ".$cat_2."</li>";
 			//$fail .= "<li>Default category is not changed. You either do not have sufficient permission as an admin user or an error has occured.</li>";
+		}
 	} else {
 		$notused .= "<li>Change default blogroll category name.</li>";
 	} 
