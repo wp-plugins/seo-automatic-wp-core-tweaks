@@ -21,6 +21,8 @@ if (get_bloginfo('version') < 2.8) {
 #about-plugins img, #resources img {float: left; padding-right: 3px;}
 #success li, #success h3 {color: #006600; }
 #fail li, #fail h3 {color: #ff0000; }
+#resources li { clear: both; }
+#about-plugins li { clear: both; }
 </style>
 
 <div class="wrap">
@@ -166,7 +168,14 @@ a. Have a different headline on the page than it says on the menu item.<br />b. 
 <a href="http://www.seoautomatic.com/plugins/" target="_blank"><img src="http://www.seoautomatic.com/plugin-home/images/logo-2010.jpg" alt="SEO Automatic" width="259" height="175" /></a>
 <br />
 <ul>
-	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/pricing-plans/white-label/" target="_blank"> White Label Options</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/pricing-plans/white-label/" target="_blank"> White Label Options</a></li>
+	<li style="margin-left: -4px;"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="5701868">
+<input type="image" src="http://www.plugin-central.org/images/donate.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" onclick="this.form.target='_blank';return true;">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</li>
 </ul>
 
 </div></div>
@@ -175,9 +184,9 @@ a. Have a different headline on the page than it says on the menu item.<br />b. 
 <h3><span>Resources</span></h3>
 <div class="inside">
 <ul>
-	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="" /> <a href="http://www.seoautomatic.ourtoolbar.com/" target="_blank">Search Commander, Inc. Toolbar</a></li>
-	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="SEO Automatic" /> <a href="http://www.searchcommander.com/seo-tools/" target="_blank"> SEO Automatic Tools</a></li>
-	<li><img src="http://www.seoautomatic.com/favicon.ico" alt="" /> <a href="http://www.getwordpressed.com/about/" target="_blank">Site Matched WP Themes</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="" /> <a href="http://www.seoautomatic.ourtoolbar.com/" target="_blank">Search Commander, Inc. Toolbar</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/unique-tools/" target="_blank"> SEO Automatic Tools</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="" /> <a href="http://www.getwordpressed.com/about/" target="_blank">Site Matched WP Themes</a></li>
 </ul>
 </div></div>
 
