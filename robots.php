@@ -5,7 +5,7 @@ if ($_REQUEST['action'] == "changecore") {
 	if ($_REQUEST['add_robots'] == "ON") {
 		$robotsFile = ABSPATH."robots.txt";
 		if (file_exists($robotsFile)) {
-			$fail .= "<li>Robots.txt file already exists.</li>";
+			$fail .= "<li>Robots.txt file already exists, so we did not overwrite it. Be sure to exclude unwanted directories manually.</li>";
 		} else {
 		//	$sitemap = get_bloginfo('url');
 		//	if (substr($sitemap, -1) != '/') {

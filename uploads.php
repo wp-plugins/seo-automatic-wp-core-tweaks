@@ -18,6 +18,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Creation of uploads folder.</li>";
 	}
 } else {
-	$options .= "<li><input name=\"uploads_folder\" type=\"checkbox\" value=\"ON\" /> Try to create the uploads folder and set to 777 permissions. <b>(Checking this box requires you to have writable permission on your wp-content folder.)</b></li>";
+	$options .= "<li><input name=\"uploads_folder\" type=\"checkbox\" value=\"ON\" /> Try to create the uploads folder and set to 777 permissions. <b>(Checking this box requires you to have writable permission on your wp-content folder. Please note that note all servers will allow the creation of the directory, so you may still need to create it manually.)</b></li>";
 } 
 ?>

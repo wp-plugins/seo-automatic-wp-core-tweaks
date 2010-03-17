@@ -113,11 +113,18 @@ count = document.corechanges.elements.length;
 
 <p>To see a short video of how to use this plugin, <a href="http://www.seoautomatic.com/plugins/wp-core-tweaks/" target="_blank">click here</a> and if you need support, please <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">visit the forum</a>.</p>
 
-<p><b>Notes before running:</b></p>
+<p><b>READ ME FIRST:</b></p>
+
+<p>Your .htaccess file must be writable. To avoid getting an error message, you should ensure that is the case before running our process here. Otherwise, simply UNcheck the "Change Permalinks" option below.</p>
+
+<p>After running, you may also reorder any static pages under the Pages > My Page Order menu item, and you'll be able to choose pages to exclude from your navigation under Tools > Page Links</p>
 
 <p>Note that the THEME SPECIFIC changes are UNchecked by default. If you plan to use them, the permissions of your themes .php files must be 766.</p>
-<p>You can always come back here later after choosing your theme - UNCHECK ALL (since you've already done it all once) then scroll to the bottom and run the H1 stuff, which allows you to do things:</p>
-a. Have a different headline on the page than it says on the menu item.<br />b. Have that headline be an H1 instead of an H2
+<p>You can always come back here later after choosing your theme - UNCHECK ALL (since you've already done it all once) then scroll to the bottom and run the H1 stuff, which allows you to change your header in two ways:</p>
+<ul>
+<li>&bull; Have that headline be an H1 instead of an H2</li>
+<li>&bull; Have a different headline on the page than it says on the menu item</li>
+</ul>
 
 <p><!--<a href="javascript: CheckAll();">Select All</a> | --><a href="javascript: UncheckAll();">Deselect All</a></p>
 

@@ -4,7 +4,7 @@ Donate link:
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
 Requires at least: 2.7
 Tested up to: 2.9.2
-Stable tag: 2.72
+Stable tag: 2.73
 
 Extends built-in features of Wordpress and combines common plugins into one.
 
@@ -58,6 +58,10 @@ Then this plugin won't save you nearly as much time, but will combine several us
 Then you are probably getting a fatal error when trying to activate. Read the error note details.
 
 You should find a plugin name in the error. Deactivate it and try activating Core Tweaks again. Core Tweaks cannot automatically deactivate them for you for security reasons.
+
+= Does core tweaks work with Windows servers? =
+
+Windows server's are not currently supported.
 
 = What if I need more help? =
 Please visit the Core Tweaks <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">Support Forum</a>.
