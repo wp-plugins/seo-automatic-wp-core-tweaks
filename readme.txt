@@ -34,12 +34,13 @@ Designed as a new "setup assistant", this plug-in should be installed before any
 
 1. Unzip the download
 2. Upload the entire folder: `sc-wp-core-tweaks` to the `/wp-content/plugins/` directory
-3. DEACTIVATE any active plugins before use.
-3. Activate the plugin through the 'Plugins' menu in Wordpress
-4. Set options in SEO Automatic > Core Tweaks for changing the Wordpress preinstalled installation options.
-5. Post Teaser, Page Link Manager, Page Order, Canonical, and Dagon Design Sitemap Generator will automatically be installed with this plugin and can be found in the normal locations and used the same as always.
-6. Be sure to UNCHECK anything you may have already done manually, or anything you don't want changed to our recommendations.
-7. Reactivate other plugins as required.
+3. Log in to your WP as an admin user OTHER THAN the default "admin" user.
+4. DEACTIVATE any active plugins before use.
+5. Activate the plugin through the 'Plugins' menu in Wordpress
+6. Set options in SEO Automatic > Core Tweaks for changing the Wordpress preinstalled installation options.
+7. Post Teaser, Page Link Manager, Page Order, Canonical, and Dagon Design Sitemap Generator will automatically be installed with this plugin and can be found in the normal locations and used the same as always.
+8. Be sure to UNCHECK anything you may have already done manually, or anything you don't want changed to our recommendations.
+9. Reactivate other plugins as required.
 
 == Frequently Asked Questions ==
 
