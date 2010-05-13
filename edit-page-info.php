@@ -18,7 +18,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Change default page name.</li>";
 	}
 } else {
-	$options .= '<li><input name="page_2" type="checkbox" value="ON" /> Change the default page name from \"about\" to: <input name="about_page" type="textbox" value="Home" /></li>';
+	$options .= '<li><input name="page_2" type="checkbox" value="ON" /> Change the default page name from \"about\" to: <input name="about_page" size="15" type="textbox" value="Home" /></li>';
 } 
 
 //Sets frontpage and turns on the static pages
@@ -67,9 +67,5 @@ if ($_REQUEST['action'] == "changecore") {
 	}
 } else {
 	$options .= '<li><input name="news_2" type="checkbox" value="ON" /> Create the page to designate for displaying your blog posts, and name it: <input name="posts_page" type="textbox" value="Company News" /></li>';
-}
-
-if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li>&nbsp;</li>';
 }
 ?>

@@ -52,11 +52,17 @@ include('org-uploads.php');
 //Set feeds to summary
 include('feed-display.php');
 
+//Set permalink structure - SKIPPED, COME BACK AND DO!
+include('permalinks.php');
+
 //Add sitemap page
 include('sitemap-page.php');
 
-//Set permalink structure - SKIPPED, COME BACK AND DO!
-include('permalinks.php');
+//Add privacy policy
+include('privacy-policy.php');
+
+//Add contact page
+include('contact.php');
 
 //Try to create uploads folder and set to 777, uncheck organize by month/year
 include('uploads.php');
@@ -79,8 +85,18 @@ include('edit-page-info.php');
 //Misc items - blogroll, feed summary, blog tagline
 include('misc.php');
 
+//Remote publishing
+include('remote-publishing.php');
+
 //Add robots.txt file
 include('robots.php');
+
+//Add footer info
+include('add-footer.php');
+
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li>&nbsp;</li><li>&nbsp;</li><li><b><br /><font color="#ff0000"><u>Advanced:</u><br /></b></li><li><b>Your theme files must have at least 766 file permission.</font><br />Premium WordPress themes sometimes have programmed "SEO options" that may prevent these items from working properly. Please consult your theme provider for support.</b></li><li>&nbsp;</li>';
+}
 
 //Change Add H1 Hack
 include('h1hack.php');
@@ -109,22 +125,28 @@ count = document.corechanges.elements.length;
 </script>
 
 <?php if ($_REQUEST['action'] != "changecore") { ?>
-<p>These setting and change recommendations are primarily used for new WP setup, and are based on an employee checklist at <a href="http://www.pdxtc.com/wpblog/wordpress/wordpress-checklist-now-a-plug-in/" target="_blank" rel="nofollow">Search Commander, Inc.</a></p><p>It is designed to compliment, not replace, either the <a href="http://wordpress.org/extend/plugins/all-in-one-seo-pack/" target="_blank" rel="nofollow">All in one SEO pack</a> or <a href="http://wordpress.org/extend/plugins/headspace2/" target="_blank" rel="nofollow">Headpace plugin</a>, and should save a lot of time on every installation.</p><p>We recommend that you have <b>no other plugins active</b> while running the Core Tweaks process.</p>
-
+<p>The steps and actions on this page are primarily used for a brand new WP setup, and are based on an employee checklist from <a href="http://www.pdxtc.com/wpblog/wordpress/wordpress-checklist-now-a-plug-in/" target="_blank" rel="nofollow">Search Commander, Inc.</a></p>
+<p>This plugin is designed to compliment, not replace, either the <a href="http://wordpress.org/extend/plugins/all-in-one-seo-pack/" target="_blank" rel="nofollow">All in one SEO pack</a> or <a href="http://wordpress.org/extend/plugins/headspace2/" target="_blank" rel="nofollow">Headspace plugin</a>, but you should have no 
+other plugins active while running the SEO Automatic Core Tweaks process.</p>
 <p>To see a short video of how to use this plugin, <a href="http://www.seoautomatic.com/plugins/wp-core-tweaks/" target="_blank">click here</a> and if you need support, please <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">visit the forum</a>.</p>
-
-<p><b>READ ME FIRST:</b></p>
-
-<p>Your .htaccess file must be writable. To avoid getting an error message, you should ensure that is the case before running our process here. Otherwise, simply UNcheck the "Change Permalinks" option below.</p>
-
-<p>After running, you may also reorder any static pages under the Pages > My Page Order menu item, and you'll be able to choose pages to exclude from your navigation under Tools > Page Links</p>
-
-<p>Note that the THEME SPECIFIC changes are UNchecked by default. If you plan to use them, the permissions of your themes .php files must be 766.</p>
-<p>You can always come back here later after choosing your theme - UNCHECK ALL (since you've already done it all once) then scroll to the bottom and run the H1 stuff, which allows you to change your header in two ways:</p>
-<ul>
-<li>&bull; Have that headline be an H1 instead of an H2</li>
-<li>&bull; Have a different headline on the page than it says on the menu item</li>
-</ul>
+<p>
+<b>READ ME FIRST:</b>
+<p>After running these processes, there will be a couple of new things added the WordPress admin screen that you'll find handy.</p>
+<ol>
+	<li>Reorder your static page menu pages and sub pages. Look under Pages &gt; My Page Order on the menu to drag and drop as needed.</li>
+	<li>Exclude any pages you wish from main navigation. Look in the Tools &gt; Page Links menu item and check / uncheck as desired.</li>
+	<li>A new page navigation widget will be added. Look in the widget options for checkbox page selection to include or remove.</li>
+	<li>Enhanced RSS widget - Under Appearance &gt; Widgets you'll notice that we have enhanced it, allowing you to nofollow the links or to open them in a new window.</li>
+	<li>There will be a static sitemap page automatically added, but there are additional options are under Settings &gt; DDsitemapGen</li>
+	<li>You'll see that the Post Teaser options are available under Settings &gt; Post Teaser</li>
+	<li>If you create contact or privacy pages, future edits will be done in the pages &gt; edit screen as usual.</li>
+	<li>Permalink structure:
+	<p>One of the most important things you'll want to do is change the default permalink structure. In order for our plug-in to be able to do that for you, the .htaccess file must be writable.</p>
+	<p>To avoid getting an error message, if you cannot change the permissions for .htaccess, then simply UNcheck the &quot;Change Permalinks&quot; option below.</p></li>
+</ol>
+<p><b>Unchecked Options:<br>
+</b>There are many options below that are not checked by default, but may be something you plan to do anyway, so they have been added here for your convenience.</p>
+<p>Note that at the very bottom, there are several THEME SPECIFIC changes, which are UNchecked by default. If you plan to use them, the permissions of your theme files must be 766.</p>
 
 <p><!--<a href="javascript: CheckAll();">Select All</a> | --><a href="javascript: UncheckAll();">Deselect All</a></p>
 
@@ -137,7 +159,7 @@ count = document.corechanges.elements.length;
 
 </form>
 
-<p><!--<a href="javascript: CheckAll();">Select All</a> | --><a href="javascript: UncheckAll();">Deselect All</a></p>
+<p><!--<a href="javascript: CheckAll();">Select All</a> |--><a href="javascript: UncheckAll();">Deselect All</a></p>
 </div></div>
 
 <?php } else { ?>
@@ -172,7 +194,7 @@ count = document.corechanges.elements.length;
 <div id="about-plugins" class="postbox " >
 <h3><span>About</span></h3>
 <div class="inside">
-<a href="http://www.seoautomatic.com/plugins/" target="_blank"><img src="http://www.seoautomatic.com/plugin-home/images/logo-2010.jpg" alt="SEO Automatic" width="259" height="175" /></a>
+<a href="http://www.seoautomatic.com/plugins/" target="_blank"><img src="http://www.seoautomatic.com/plugin-home/images/logo-2010.jpg" alt="SEO Automatic" width="262" height="166" /></a>
 <br />
 <ul>
 	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/pricing-plans/white-label/" target="_blank"> White Label Options</a></li>

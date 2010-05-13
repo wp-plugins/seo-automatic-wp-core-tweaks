@@ -1,6 +1,6 @@
 <?php
 if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li>&nbsp;</li><li><b>Successful implementation requires a writable .htaccess file in root.</b></li>';
+	$options .= '<li>&nbsp;</li><li><b><font color="#ff0000">We\'ve left this on by default, so if you cannot make your .htaccess file writable, then simply UNcheck the "Change Permalinks" option below and DO deal with that later. If you do get the error message, there\'s no harm done, but your permalinks will not be changed. </font></b></li>';
 }
 
 $parent_file = 'options-general.php';

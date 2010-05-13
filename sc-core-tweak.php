@@ -1,9 +1,11 @@
 <?php
 /*
-Plugin Name: SEO Automatic WP Core Tweaks
+Plugin Name: Core Tweaks WordPress Setup
 Plugin URI: http://www.seoautomatic.com/plugins/wp-core-tweaks/
 Description: Conceived by Scott Hendison and programmed by Heather Barger for Search Commander, Inc. to automate proper WP setup. It also extends the built-in features of WordPress menu management, an and combines several common plugins into one.  See <a href="admin.php?page=seo-automatic-wp-core-tweaks/settings.php">SEO Automatic > Core Tweaks</a> for options.
-Version: 2.73
+Version: 3.0
+Author: Scott Hendison
+Author URI: http://www.searchcommander.com/contact/
 */
 error_reporting(E_ALL);
 if(!function_exists('myErrorHandler')){
@@ -71,7 +73,7 @@ add_action('admin_menu', 'core_menu');
 
 $current_plugins = get_option('active_plugins');
 
-include('page-order.php'); //updated to version 2.8.3
+include('page-order.php'); //updated to version 2.9.1
 include('page-link.php'); //v1.0b
 include('post-teaser.php'); //updated to version 4.0.1
 include('rss-extend.php');
@@ -92,5 +94,28 @@ function remove_generator() {
 }
 
 add_filter('the_generator', 'remove_generator');
-//
+
+// show footer info if turned on
+function seoauto_footer() {
+	if (get_option('seo_core_footer_copy') == 'on' || get_option('seo_core_footer_login') == 'on' || get_option('seo_core_footer_sitemap') == 'on') {
+		echo '<p class="scauto-footer"><small>';
+	}
+	if (get_option('seo_core_footer_copy') == 'on') {
+		echo '&#169; '.date("Y");
+	}
+	if (get_option('seo_core_footer_login') == 'on') {
+		echo ' <a href="'.wp_login_url(get_permalink()).'" title="Login">Admin</a> - <a href="'. get_edit_post_link().'">Edit</a>';
+	}
+	if (get_option('seo_core_footer_sitemap') == 'on') {
+		echo ' <a href="'.get_permalink(get_option('seoauto_core_smid')).'">Sitemap</a>';
+	}
+	if (get_option('seo_core_footer_privacy') == 'on') {
+		echo ' <a href="'.get_permalink(get_option('seoauto_core_ppid')).' rel="nofollow" ">Privacy Policy</a>';
+	}
+	if (get_option('seo_core_footer_copy') == 'on' || get_option('seo_core_footer_login') == 'on' || get_option('seo_core_footer_sitemap') == 'on') {
+		echo '</small></p>';
+	}
+}
+
+add_action('wp_footer', 'seoauto_footer');
 ?>

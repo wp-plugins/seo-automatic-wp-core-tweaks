@@ -1,10 +1,10 @@
-=== SEO Automatic WP_CORE_TWEAKS ===
+=== Core Tweaks WordPress Setup ===
 Contributors: Scott Hendison & Heather Barger
-Donate link: 
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NP7SVRQX6J9RS
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
 Requires at least: 2.7
-Tested up to: 2.9.2
-Stable tag: 2.73
+Tested up to: 3.0
+Stable tag: 3.0
 
 Extends built-in features of Wordpress and combines common plugins into one.
 
@@ -18,15 +18,38 @@ Almost everything is covered, from changing the permalink structure to deleting 
 
 It also extends the built-in features of Wordpress and combines 4 other useful plugins into this one...
 
-1. Page Order Lets you define the order in which pages appear on the menu.
-2. Page Link Manager Lets you define which pages appear on your menu, and which do not. 
-3. Post teaser Shows only the title and a snippet on your category and archive pages, rather than the whole post.
-4. Dagon Design Sitemap Generator Creates and maintains a static sitemap page.
-
-
 This plug-in is designed to be a companion to other plugins like All in one SEO or Headspace, and is not intended as a replacement.
 
 This plug-in should be installed before any others, because it automates the proper setup of Word press. To be sure things work properly, it's best to deactivate any plugins that you may have already activated.
+
+= Features =
+From one admin screen, click a button and make any or all of these changes...
+
+1. Integrates the Page Order plugin - now the WP menu may be ordered
+2. Integrates the Page Link Manager plugin - allows the choice to not display any page on the menu and allows for independent options in the menu widget.
+3. Integrates the Post Teaser plugin - allows you to show snippets of posts on category, archive and main pages
+4. Integrates Dagon Design Site Map Generator - allows a snippit of code to be added, in order to create a static sitemap.
+5. Adds nofollow and open in new tab options to the RSS widget.
+6. Enhanced the RSS widget - WP-admin >Appearance > Widgets you’ll notice that we have enhanced it, allowing you to nofollow the links or to open them in a new window.
+7. Create privacy page at setup – All future edits will be done in the pages > edit screen as usual.
+8. Create contact page at setup – All future edits will be done in the pages > edit screen as usual.
+9. Add info to footer option for Privacy, admin login,  site-map and copyright information
+10. Enable the Atom Publishing Protocol
+11. Enable the XML-RPC publishing protocols for WP, Movable Type, MetaWeblog and Blogger
+12. Change default post category name from "Uncategorized"
+13. Changes the default blogroll category name from "Blogroll"
+14. Delete default "Hello World" post
+15. Delete default comment on the Hello World post
+16. Change permalink structure to custom setting
+17. Sets the Main Blog Email
+18. Sets the Admin User's Email
+19. Change the name of the default page that Wordpress adds from "About" .
+20. Set that default page to the static front page of the blog if using WP as a CMS
+21. Add and sets the page for displaying the posts for convenience
+22. Change the article feed to summary
+23. Remove all the blogroll links that are auto-installed by Wordpress
+
+= "There may be even more features, so look at the screen shot" =
 
 == Installation ==
 
@@ -71,31 +94,12 @@ Please visit the Core Tweaks <a href="http://www.seoautomatic.com/forum/wp-tweak
 
 1. Core Tweaks Admin Area
 
-== Features ==
-Integrates the Page Order plugin - now the WP menu may be ordered
+== Other Notes ==
 
-Integrates the Page Link Manager plugin - allows the choice to not display any page on the menu and allows for independent options in the menu widget.
+1. We recommend disabling any other plugins before running the process to minimize potential confilcts. There will be no conflicts when you re-enable them.
 
-Integrates the Post Teaser plugin - allows you to show snippets of posts on category, archive and main pages
+2. Your .htaccess file should be writable for your permalinks to change.
 
-Integrates Dagon site Map generator - allows a snippit of code to be added, in order to create a static sitemap.
-
-Adds nofollow and open in new tab options to the RSS widget.
-
-= From one admin screen, click a button and make any or all of these changes... =
-
-1. Change default post category name from "Uncategorized"
-2. Changes the default blogroll category name from "Blogroll"
-3. Delete default "Hello World" post
-4. Delete default comment on the Hello World post
-5. Change permalink structure to custom setting
-6. Sets the Main Blog Email
-7. Sets the Admin User's Email
-8. Change the name of the default page that Wordpress adds from "About" .
-9. Set that default page to the static front page of the blog if using WP as a CMS
-10. Add and sets the page for displaying the posts for convenience
-11. Change the article feed to summary
-12. Remove all the blogroll links that are auto-installed by Wordpress
 
 [SEO Automatic Plugins](http://www.seoautomatic.com/plugins/ "Other plugins from SEO Automatic") 
 [SEO Automatic Core Tweaks](http://www.seoautomatic.com/plugins/wp-core-tweaks/ "Core Tweaks Homepage") 

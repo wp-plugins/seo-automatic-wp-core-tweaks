@@ -35,7 +35,7 @@ wp_insert_post($info);
 		$excludedPages = get_option('gdm_excluded_pages');
 		$excludedPages[] = $post_id;
 		update_option('gdm_excluded_pages', $excludedPages);
-
+		update_option('seoauto_core_smid', $post_id);
 		wp_cache_delete('all_page_ids', 'pages');
 		//$wp_rewrite->flush_rules();
 		$success .= "<li>The sitemap was created.</li>";
@@ -46,6 +46,6 @@ wp_insert_post($info);
 		$notused .= "<li>Create sitemap.</li>";
 	}
 } else {
-	$options .= '<li><input name="add_sitemap" type="checkbox" value="ON" checked /> Add the SiteMap page for DDSiteMap Generator.</li>';
+	$options .= '<li><input name="add_sitemap" type="checkbox" value="ON" checked /> Add the SiteMap page for DDSiteMap Generator.<br /><small><b>(Not an XML sitemap)</b></small></li>';
 } 
 ?>

@@ -11,6 +11,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Turn off comment posting.</li>";
 	}
 } else {
-	$options .= '<li><input name="default_comment_status" type="checkbox" value="ON" /> Do not allow people to post comments on articles.</li>';
+	$options .= '<li><input name="default_comment_status" type="checkbox" value="ON" /> Do not allow people to post comments on articles. <small><b>(May be overridden at post/page level edit screens)</b></small></li>';
 }
 ?>

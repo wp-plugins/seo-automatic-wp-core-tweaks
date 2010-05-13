@@ -22,11 +22,6 @@ if ($_REQUEST['action'] == "changecore") {
 	$options .= '<li><input name="taglinecheck" type="checkbox" value="ON" /> Change the blog description tagline. <input name="tagline" type="text" id="tagline" value="'.$tagline.'" /></li>';
 } 
 
-//Empty blogroll that wp installs
-if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li></li><li><b>Keep in mind this is meant for new installs. Checking the box below will delete all links in the blogroll category. If you have already added links, you will want to manually delete the ones that WordPress auto-installs.</b></li>';
-}
-
 if ($_REQUEST['action'] == "changecore") {
 	 if ($_REQUEST['empty_blogroll'] == "ON") {
 		if ( (!$wpdb->query("DELETE FROM $wpdb->links WHERE link_id != ''")) ) {
@@ -38,12 +33,8 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Blogroll has not been changed.</li>";
 	}
 } else {
-	$options .= '<li><input name="empty_blogroll" type="checkbox" value="ON" /> Delete <b>all</b> links in blogroll.</li>';
+	$options .= '<li><input name="empty_blogroll" type="checkbox" value="ON" /> Delete <b>all</b> links in blogroll. <b>(Cannot be undone.)</b></li>';
 } 
-
-if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li>&nbsp;</li>';
-}
 
 //Notify that wordpress version meta tag is removed
 if ($_REQUEST['action'] == "changecore") {

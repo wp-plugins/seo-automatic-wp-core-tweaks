@@ -12,6 +12,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Organization of uploads folders.</li>";
 	} 
 } else {
-	$options .= "<li><input name=\"yr_mnth\" type=\"checkbox\" value=\"ON\" checked /> Turn the organization of my uploads into month- and year-based folders off.</li>";
+	$options .= "<li><input name=\"yr_mnth\" type=\"checkbox\" value=\"ON\" checked /> Turn OFF organization of uploads into month and year-based folders.</li>";
 }
 ?>

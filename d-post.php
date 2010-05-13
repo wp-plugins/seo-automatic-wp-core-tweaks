@@ -22,6 +22,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Default post removal.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" name=\"helloworldpost\" value=\"ON\"> Delete default \"Hello World\" post.</li>";
+	$options .= "<li><input type=\"checkbox\" name=\"helloworldpost\" value=\"ON\"> Delete default \"Hello World\" post. <small><b>(Cannot be undone.)</b></small></li>";
 }
 ?>

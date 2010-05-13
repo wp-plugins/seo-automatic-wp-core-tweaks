@@ -1,5 +1,13 @@
 Change Log
 
+05/03/10
+1. Updated Page Order to version 2.9.1
+2. Added privacy policy creation
+3. Added contact page creation with option for a google map
+4. Added remote publishing options.
+5. Added hook to footer for date, admin login, editing, privacy policy, and sitemap.
+6. Wording edits for clarification.
+
 01/27/10
 1. Unchecked many options to get users to be more careful with settings.
 2. Updated messages and information to help users understand the results better.

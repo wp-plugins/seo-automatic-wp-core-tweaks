@@ -18,6 +18,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Creation of uploads folder.</li>";
 	}
 } else {
-	$options .= "<li><input name=\"uploads_folder\" type=\"checkbox\" value=\"ON\" /> Try to create the uploads folder and set to 777 permissions. <b>(Checking this box requires you to have writable permission on your wp-content folder. Please note that note all servers will allow the creation of the directory, so you may still need to create it manually.)</b></li>";
+	$options .= "<li><input name=\"uploads_folder\" type=\"checkbox\" value=\"ON\" /> Attempt to create the uploads folder and set the permission to writable.<br /><small><b>You will need to have writable permission in the /wp-content folder for this to work. Otherwise, you will need to manually add the uploads folder so users can upload pictures into posts, etc.</b></small></li>";
 } 
 ?>
