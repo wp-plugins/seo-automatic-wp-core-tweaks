@@ -6,15 +6,15 @@ Requires at least: 2.7
 Tested up to: 3.0
 Stable tag: 3.0
 
-Extends built-in features of Wordpress and combines common plugins into one.
+Extends built in features of Wordpress and combines common plugins into one.
 
 == Description ==
 
-This plug-in completely automates the "proper" setup of your WordPress blog for search engine optimization.
+This plug-in completely automates the proper setup of your WordPress blog for search engine optimization.
 
 Primarily for use in new WP installations, the steps are based on an employee checklist from Search Commander, Inc. for setting up new blogs.
 
-Almost everything is covered, from changing the permalink structure to deleting the "Hello World" sample post & comment, and all the options are accessible from one single page.
+Almost everything is covered, from changing the permalink structure to deleting the Hello World sample post & comment, and all the options are accessible from one single page.
 
 It also extends the built-in features of Wordpress and combines 4 other useful plugins into this one...
 
@@ -36,28 +36,28 @@ From one admin screen, click a button and make any or all of these changes...
 9. Add info to footer option for Privacy, admin login,  site-map and copyright information
 10. Enable the Atom Publishing Protocol
 11. Enable the XML-RPC publishing protocols for WP, Movable Type, MetaWeblog and Blogger
-12. Change default post category name from "Uncategorized"
-13. Changes the default blogroll category name from "Blogroll"
-14. Delete default "Hello World" post
+12. Change default post category name from Uncategorized
+13. Changes the default blogroll category name from Blogroll
+14. Delete default Hello World post
 15. Delete default comment on the Hello World post
 16. Change permalink structure to custom setting
 17. Sets the Main Blog Email
 18. Sets the Admin User's Email
-19. Change the name of the default page that Wordpress adds from "About" .
+19. Change the name of the default page that Wordpress adds from About .
 20. Set that default page to the static front page of the blog if using WP as a CMS
 21. Add and sets the page for displaying the posts for convenience
 22. Change the article feed to summary
 23. Remove all the blogroll links that are auto-installed by Wordpress
 
-= "There may be even more features, so look at the screen shot" =
+= There may be even more features, so look at the screen shot =
 
 == Installation ==
 
-Designed as a new "setup assistant", this plug-in should be installed before any others. If you've added other plugins, be sure to deactivate them to avoid potential conflicts.
+Designed as a new setup assistant, this plug-in should be installed before any others. If you've added other plugins, be sure to deactivate them to avoid potential conflicts.
 
 1. Unzip the download
 2. Upload the entire folder: `sc-wp-core-tweaks` to the `/wp-content/plugins/` directory
-3. Log in to your WP as an admin user OTHER THAN the default "admin" user.
+3. Log in to your WP as an admin user OTHER THAN the default admin user.
 4. DEACTIVATE any active plugins before use.
 5. Activate the plugin through the 'Plugins' menu in Wordpress
 6. Set options in SEO Automatic > Core Tweaks for changing the Wordpress preinstalled installation options.
@@ -69,7 +69,7 @@ Designed as a new "setup assistant", this plug-in should be installed before any
 
 = What is this plugin for? =
 
-It will add a new Admin menu item, "SEO Automatic", with a sub-menu named "Core Tweaks".
+It will add a new Admin menu item, SEO Automatic, with a sub-menu named Core Tweaks.
 
 This plugin saves a lot of time properly setting up a new Wordpress installation by allowing one page access for the things that must be changed for every installation, and combines functionality of several other plugins.
 
@@ -88,7 +88,7 @@ You should find a plugin name in the error. Deactivate it and try activating Cor
 Windows server's are not currently supported.
 
 = What if I need more help? =
-Please visit the Core Tweaks <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">Support Forum</a>.
+Please visit the Core Tweaks <a href=http://www.seoautomatic.com/forum/wp-tweak-plugin/ target=_blank>Support Forum</a>.
 
 == Screenshots ==
 
@@ -102,5 +102,5 @@ Please visit the Core Tweaks <a href="http://www.seoautomatic.com/forum/wp-tweak
 2. Your .htaccess file should be writable for your permalinks to change.
 
 
-[SEO Automatic Plugins](http://www.seoautomatic.com/plugins/ "Other plugins from SEO Automatic") 
-[SEO Automatic Core Tweaks](http://www.seoautomatic.com/plugins/wp-core-tweaks/ "Core Tweaks Homepage") 
+[SEO Automatic Plugins](http://www.seoautomatic.com/plugins/ Other plugins from SEO Automatic) 
+[SEO Automatic Core Tweaks](http://www.seoautomatic.com/plugins/wp-core-tweaks/ Core Tweaks Homepage) 
