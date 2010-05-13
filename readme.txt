@@ -6,8 +6,6 @@ Requires at least: 2.7
 Tested up to: 3.0
 Stable tag: 3.0
 
-Extends built-in features of Wordpress and combines common plugins into one.
-
 == Description ==
 
 This plug-in completely automates the "proper" setup of your WordPress blog for search engine optimization.
