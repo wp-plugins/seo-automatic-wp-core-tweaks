@@ -30,7 +30,7 @@ From one admin screen, click a button and make any or all of these changes...
 3. Integrates the Post Teaser plugin - allows you to show snippets of posts on category, archive and main pages
 4. Integrates Dagon Design Site Map Generator - allows a snippit of code to be added, in order to create a static sitemap.
 5. Adds nofollow and open in new tab options to the RSS widget.
-6. Enhanced the RSS widget - WP-admin >Appearance > Widgets you’ll notice that we have enhanced it, allowing you to nofollow the links or to open them in a new window.
+6. Enhanced the RSS widget - WP-admin >Appearance > Widgets you'll notice that we have enhanced it, allowing you to nofollow the links or to open them in a new window.
 7. Create privacy page at setup – All future edits will be done in the pages > edit screen as usual.
 8. Create contact page at setup – All future edits will be done in the pages > edit screen as usual.
 9. Add info to footer option for Privacy, admin login,  site-map and copyright information
