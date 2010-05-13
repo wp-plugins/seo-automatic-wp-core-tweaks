@@ -1,6 +1,6 @@
 === Core Tweaks WordPress Setup ===
 Contributors: Scott Hendison & Heather Barger
-Donate link:
+Donate link: http://www.dzynit.net/coretweak-donate/
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
 Requires at least: 2.7
 Tested up to: 3.0
@@ -14,7 +14,7 @@ This plug-in completely automates the proper setup of your WordPress blog for se
 
 Primarily for use in new WP installations, the steps are based on an employee checklist from Search Commander, Inc. for setting up new blogs.
 
-Almost everything is covered, from changing the permalink structure to deleting the Hello World sample post & comment, and all the options are accessible from one single page.
+Almost everything is covered, from changing the permalink structure to deleting the Hello World sample post and comment, and all the options are accessible from one single page.
 
 It also extends the built-in features of Wordpress and combines 4 other useful plugins into this one...
 
