@@ -56,7 +56,7 @@ From one admin screen, click a button and make any or all of these changes...
 Designed as a new setup assistant, this plug-in should be installed before any others. If you've added other plugins, be sure to deactivate them to avoid potential conflicts.
 
 1. Unzip the download
-2. Upload the entire folder: `sc-wp-core-tweaks` to the `/wp-content/plugins/` directory
+2. Upload the entire folder: 'sc-wp-core-tweaks' to the '/wp-content/plugins/' directory
 3. Log in to your WP as an admin user OTHER THAN the default admin user.
 4. DEACTIVATE any active plugins before use.
 5. Activate the plugin through the 'Plugins' menu in Wordpress
