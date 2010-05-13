@@ -92,6 +92,7 @@ Please visit the Core Tweaks <a href="http://www.seoautomatic.com/forum/wp-tweak
 
 == Screenshots ==
 
+1. Core Tweaks Admin Area
 2. Core Tweaks Admin Area
 
 == Other Notes ==
