@@ -88,7 +88,7 @@ You should find a plugin name in the error. Deactivate it and try activating Cor
 Windows server's are not currently supported.
 
 = What if I need more help? =
-Please visit the Core Tweaks [Support Forum](a href=http://www.seoautomatic.com/forum/wp-tweak-plugin/ target=_blank).
+Please visit the Core Tweaks [Support Forum](a href=http://www.seoautomatic.com/forum/wp-tweak-plugin/).
 
 == Screenshots ==
 
@@ -97,9 +97,11 @@ Please visit the Core Tweaks [Support Forum](a href=http://www.seoautomatic.com/
 
 == Other Notes ==
 
-1. We recommend disabling any other plugins before running the process to minimize potential confilcts. There will be no conflicts when you re-enable them.
+1. For security purposes, please create a new admin user and log in with that name.
 
-2. Your .htaccess file should be writable for your permalinks to change.
+2. We recommend disabling any other plugins before running the process to minimize potential confilcts. There will be no conflicts when you re-enable them.
+
+3. Your .htaccess file should be writable for your permalinks to change.
 
 [SEO Automatic Plugins](http://www.seoautomatic.com/plugins/ Other plugins from SEO Automatic) 
 [SEO Automatic Core Tweaks](http://www.seoautomatic.com/plugins/wp-core-tweaks/ Core Tweaks Homepage) 
