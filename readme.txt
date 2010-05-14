@@ -1,4 +1,4 @@
-=== SEO Automatic WP_CORE_TWEAKS ===
+=== Core Tweaks WordPress Setup ===
 Contributors: Scott Hendison & Heather Barger
 Donate link: http://www.dzynit.net/coretweak-donate/
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
@@ -92,8 +92,7 @@ Please visit the Core Tweaks <a href='http://www.seoautomatic.com/forum/wp-tweak
 
 == Screenshots ==
 
-1. Core Tweaks Admin Area
-2. Core Tweaks Admin Area 2
+[youtube http://www.youtube.com/v/UTXrUAccCts&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6]
 
 == Other Notes ==
 
