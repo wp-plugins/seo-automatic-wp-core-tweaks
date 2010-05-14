@@ -49,8 +49,6 @@ From one admin screen, click a button and make any or all of these changes...
 22. Change the article feed to summary
 23. Remove all the blogroll links that are auto-installed by Wordpress
 
-[youtube http://www.youtube.com/v/UTXrUAccCts&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6]
-
 == Installation ==
 
 Designed as a new setup assistant, this plug-in should be installed before any others. If you've added other plugins, be sure to deactivate them to avoid potential conflicts.
