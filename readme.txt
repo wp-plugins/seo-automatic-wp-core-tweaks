@@ -22,7 +22,7 @@ This plug-in is designed to be a companion to other plugins like All in one SEO 
 
 This plug-in should be installed before any others, because it automates the proper setup of Word press. To be sure things work properly, it's best to deactivate any plugins that you may have already activated.
 
-= Features =
+** Features **
 From one admin screen, click a button and make any or all of these changes...
 
 1. Integrates the Page Order plugin: now the WP menu may be ordered
@@ -49,7 +49,7 @@ From one admin screen, click a button and make any or all of these changes...
 22. Change the article feed to summary
 23. Remove all the blogroll links that are auto-installed by Wordpress
 
-= There may be even more features, so look at the screen shot =
+** There may be even more features, so look at the screen shot **
 
 == Installation ==
 

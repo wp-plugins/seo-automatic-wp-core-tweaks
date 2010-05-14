@@ -33,13 +33,13 @@ $info = array(
 	if (wp_insert_post($info)) {
 
 	  $wpdb->query($sql);
-	  $post_id = $wpdb->insert_id;
-	  $wpdb->query("UPDATE $wpdb->posts SET guid = '" . get_permalink($post_id) . "' WHERE ID = '$post_id'");
+	  $post_idpp = $wpdb->insert_id;
+	  $wpdb->query("UPDATE $wpdb->posts SET guid = '" . get_permalink($post_idpp) . "' WHERE ID = '$post_idpp'");
 
 		$excludedPages = get_option('gdm_excluded_pages');
-		$excludedPages[] = $post_id;
+		$excludedPages[] = $post_idpp;
 		update_option('gdm_excluded_pages', $excludedPages);
-		update_option('seoauto_core_ppid', $post_id);
+		update_option('seoauto_core_ppid', $post_idpp);
 		wp_cache_delete('all_page_ids', 'pages');
 		$success .= "<li>The privacy policy was created.</li>";
 	} else {
