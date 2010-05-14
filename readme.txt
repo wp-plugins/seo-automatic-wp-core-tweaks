@@ -88,7 +88,7 @@ You should find a plugin name in the error. Deactivate it and try activating Cor
 Windows server's are not currently supported.
 
 = What if I need more help? =
-Please visit the Core Tweaks [Support Forum](a href=http://www.seoautomatic.com/forum/wp-tweak-plugin/).
+Please visit the Core Tweaks <a href='http://www.seoautomatic.com/forum/wp-tweak-plugin/'>Support Forum</a>.
 
 == Screenshots ==
 
