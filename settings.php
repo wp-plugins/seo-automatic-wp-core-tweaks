@@ -40,7 +40,7 @@ if (get_bloginfo('version') < 2.8) {
 
 global $current_user;
 get_currentuserinfo();
-	if ( !($current_user->user_level > 6) )
+	if (!current_user_can('level_10'))
 		wp_die(__('<p>Using the username "admin" is unwise, and in fact so dangerous, that we at SEOAutomatic.com simply can\'t allow you to continue to our "perfect setup" from here without a warning.</p><p>For security purposes, please create a new admin user and log in with that name. If you\'re SMART, then you\'ll delete the user "admin" altogether so you don\'t get your site hacked.</p><p>If you skip this step, and blow off use of our plugin, don\'t say we didn\'t warn you!</p>'));
 
 //Set category names
