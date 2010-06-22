@@ -42,6 +42,6 @@ if ($_REQUEST['action'] == "changecore") {
 			$notused .= "<li>Create robots.txt file.</li>";
 		}
 } else {
-	$options .= '<li><input name="add_robots" type="checkbox" value="ON" /> Add a robots.txt file to your blog root. (Highly Recommended!)</li>';
+	$options .= '<li><input name="add_robots" type="checkbox" value="ON" /> Add a robots.txt file to your blog root. (Highly Recommended!) <small><b>(Cannot be undone (aside from manual FTP).)</b></small></li>';
 }
 ?>

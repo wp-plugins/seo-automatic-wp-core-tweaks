@@ -91,8 +91,18 @@ include('remote-publishing.php');
 //Add robots.txt file
 include('robots.php');
 
+//Add google sitemaps
+include('sitemap-xml.php');
+
 //Add footer info
 include('add-footer.php');
+
+//Add error reporting
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li>&nbsp;</li><li><b><font color="#ff0000"><u>Error Reporting:</u></font></b> <small><b>(Off by default.)</b></small></li>';
+	$options .= '<li><b>(If turned on, this will force showing <font color="#ff0000"><u>ALL</u></font> errors caused by <font color="#ff0000"><u>ALL</u></font> plugins and theme functions.<br />This is best used in debugging situations.)</b></li>';
+}
+include('error-report.php');
 
 if ($_REQUEST['action'] != "changecore") {
 	$options .= '<li>&nbsp;</li><li>&nbsp;</li><li><b><br /><font color="#ff0000"><u>Advanced:</u><br /></b></li><li><b>Your theme files must have at least 766 file permission.</font><br />Premium WordPress themes sometimes have programmed "SEO options" that may prevent these items from working properly. Please consult your theme provider for support.</b></li><li>&nbsp;</li>';
@@ -136,9 +146,9 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 	<li>Reorder your static page menu pages and sub pages. Look under Pages &gt; My Page Order on the menu to drag and drop as needed.</li>
 	<li>Exclude any pages you wish from main navigation. Look in the Tools &gt; Page Links menu item and check / uncheck as desired.</li>
 	<li>A new page navigation widget will be added. Look in the widget options for checkbox page selection to include or remove.</li>
-	<li>Enhanced RSS widget - Under Appearance &gt; Widgets you'll notice that we have enhanced it, allowing you to nofollow the links or to open them in a new window.</li>
+	<li>SEO Automatic RSS Widget - Under Appearance &gt; Widgets you'll notice that we have enhanced it, allowing you to nofollow the links or to open them in a new window.</li>
 	<li>There will be a static sitemap page automatically added, but there are additional options are under Settings &gt; DDsitemapGen</li>
-	<li>You'll see that the Post Teaser options are available under Settings &gt; Post Teaser</li>
+	<li>You'll see that the Post Teaser options are available under Settings &gt; Post Teaser so you can raise or lower your displayed word count as desired.</li>
 	<li>If you create contact or privacy pages, future edits will be done in the pages &gt; edit screen as usual.</li>
 	<li>Permalink structure:
 	<p>One of the most important things you'll want to do is change the default permalink structure. In order for our plug-in to be able to do that for you, the .htaccess file must be writable.</p>
@@ -147,6 +157,7 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 <p><b>Unchecked Options:<br>
 </b>There are many options below that are not checked by default, but may be something you plan to do anyway, so they have been added here for your convenience.</p>
 <p>Note that at the very bottom, there are several THEME SPECIFIC changes, which are UNchecked by default. If you plan to use them, the permissions of your theme files must be 766.</p>
+<p style="color: #009900;"><b>Unless otherwise noted, most items may still be edited in their normal WordPress admin section.</b></font>
 
 <p><!--<a href="javascript: CheckAll();">Select All</a> | --><a href="javascript: UncheckAll();">Deselect All</a></p>
 

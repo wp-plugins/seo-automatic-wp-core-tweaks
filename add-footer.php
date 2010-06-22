@@ -43,7 +43,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Add sitemap link to footer.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" name=\"add_footer_sitemap\" value=\"ON\"> Add the static sitemap link to the footer.</li>";
+	$options .= "<li><input type=\"checkbox\" name=\"add_footer_sitemap\" value=\"ON\"> Add the static sitemap link to the footer.<br /><small><b>(This is to be used along with the sitemap page added above.<br />If you did not choose that option, this footer link will not function.)</b></small></li>";
 }
 
 if ($_REQUEST['action'] == "changecore") {
@@ -57,7 +57,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Add privacy policy link to footer.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" name=\"add_footer_privacy\" value=\"ON\"> Add the privacy policy link to the footer.</li>";
+	$options .= "<li><input type=\"checkbox\" name=\"add_footer_privacy\" value=\"ON\"> Add the privacy policy link to the footer.<br /><small><b>(This is to be used along with the privacy page added above.<br />If you did not choose that option, this footer link will not function.)</b></small></li>";
 }
 
 //undo

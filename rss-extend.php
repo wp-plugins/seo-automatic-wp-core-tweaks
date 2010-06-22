@@ -337,7 +337,7 @@ function wp_tabbed_rss_register() {
 		$options = array();
 	$widget_ops = array('classname' => 'tabbed_rss', 'description' => __( 'RSS/Atom Feeds - Extended version' ));
 	$control_ops = array('width' => 400, 'height' => 200, 'id_base' => 'rss');
-	$name = __('RSS(Extended)');
+	$name = __('SEO Automatic RSS Widget');
 
 	$id = false;
 	foreach ( array_keys($options) as $o ) {

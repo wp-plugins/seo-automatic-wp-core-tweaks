@@ -1,13 +1,14 @@
 <?php
 /*
-Plugin Name: Core Tweaks WordPress Setup
+Plugin Name: SEO Automatic Core Tweaks - Instant WP Setup
 Plugin URI: http://www.seoautomatic.com/plugins/wp-core-tweaks/
 Description: Conceived by Scott Hendison and programmed by Heather Barger for Search Commander, Inc. to automate proper WP setup. It also extends the built-in features of WordPress menu management, an and combines several common plugins into one.  See <a href="admin.php?page=seo-automatic-wp-core-tweaks/settings.php">SEO Automatic > Core Tweaks</a> for options.
-Version: 3.0
+Version: 3.1
 Author: Scott Hendison
 Author URI: http://www.searchcommander.com/contact/
 */
-error_reporting(E_ALL);
+if (get_option('seoauto_core_e_report') == 'on') { $er = 'E_ALL'; } else { $er = 0; }
+error_reporting($er);
 if(!function_exists('myErrorHandler')){
 function myErrorHandler($errno, $errstr, $errfile, $errline) {
 	switch ($errno) {
@@ -51,7 +52,7 @@ function sc_settings() {
 	include('settings.php');
 }
 
-function core_menu() {
+function sc_core_menu() {
 	global $menu;
 	foreach ($menu as $i) {
 		$key = array_search('toplevel_page_seo-automatic-options', $i);
@@ -69,11 +70,11 @@ function core_menu() {
 }
 
 do_action('admin_print_scripts-seo-automatic-wp-core-tweaks');
-add_action('admin_menu', 'core_menu');
+add_action('admin_menu', 'sc_core_menu');
 
 $current_plugins = get_option('active_plugins');
 
-include('page-order.php'); //updated to version 2.9.1
+include('mypageorder.php'); //updated to version 3.0a
 include('page-link.php'); //v1.0b
 include('post-teaser.php'); //updated to version 4.0.1
 include('rss-extend.php');
@@ -96,7 +97,7 @@ function remove_generator() {
 add_filter('the_generator', 'remove_generator');
 
 // show footer info if turned on
-function seoauto_footer() {
+function sc_seoauto_footer() {
 	if (get_option('seo_core_footer_copy') == 'on' || get_option('seo_core_footer_login') == 'on' || get_option('seo_core_footer_sitemap') == 'on') {
 		echo '<p class="scauto-footer"><small>';
 	}
@@ -117,5 +118,5 @@ function seoauto_footer() {
 	}
 }
 
-add_action('wp_footer', 'seoauto_footer');
+add_action('wp_footer', 'sc_seoauto_footer');
 ?>

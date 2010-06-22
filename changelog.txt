@@ -1,5 +1,14 @@
 Change Log
 
+06/15/10
+1. Corrected some function naming to avoid conflicts.
+2. Added details on how the footer links work.
+3. Changed plugin name back to original.
+4. Added creation and try to set permissions on Google XML sitemap files.
+5. Added option to turn on and off full error reporting.
+6. Removed contact page pre-fill on the settings page.
+7. Added notation on how to increase post teasers.
+
 05/03/10
 1. Updated Page Order to version 2.9.1
 2. Added privacy policy creation
@@ -25,7 +34,6 @@ Change Log
 4. Updated Post Teaser to version 4.0.1.
 5. Updated Sitemap Generator to version 3.17.
 6. Fixed the permission errors that were being seen.
-
 
 07/07/09
 1. Update admin area to display properly in WP 2.8.

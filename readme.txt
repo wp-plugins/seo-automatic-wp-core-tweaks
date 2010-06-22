@@ -1,10 +1,10 @@
-=== Core Tweaks WordPress Setup ===
+=== SEO Automatic Core Tweaks - Instant WP Setup ===
 Contributors: Scott Hendison & Heather Barger
 Donate link: http://www.dzynit.net/coretweak-donate/
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 3.0
+Stable tag: 3.1
 
 Extends built in features of Wordpress and combines common plugins into one.
 
@@ -80,6 +80,13 @@ Then this plugin won't save you nearly as much time, but will combine several us
 Then you are probably getting a fatal error when trying to activate. Read the error note details.
 
 You should find a plugin name in the error. Deactivate it and try activating Core Tweaks again. Core Tweaks cannot automatically deactivate them for you for security reasons.
+
+= The footer links are not working. =
+
+First, the footer links will only work if you have created the sitemap and/or privacy page directly through Core Tweaks. If you didn't, the footer links will not know which page they need to refer to and you will have to manually add your links in your theme.
+
+Second possibility: if you did create the pages through Core Tweaks. Check your page list (wp-admin > Pages) and be sure that you have them in the list. If you already checked that and found that there were more than one of either or both of the pages, did you delete any?
+To correct, the simplest method is to delete them (all sitemap and privacy pages created by core tweaks), then go back to core tweaks and use the Add option for those pages again. Now your footer links should work correctly regardless of how many times you turn the links on or off.
 
 = Does core tweaks work with Windows servers? =
 
