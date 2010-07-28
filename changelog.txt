@@ -1,5 +1,22 @@
 Change Log
 
+07/27/10
+1. Added on/off option for Post Teaser Plugin.
+
+07/22/10
+1. Changed included image on privacy policy to a local image instead of external.
+2. Added FAQ on why image suddenly stopped working before 3.2.
+3. Edited wording on results page after running settings to clarify certain items better.
+
+06/15/10
+1. Corrected some function naming to avoid conflicts.
+2. Added details on how the footer links work.
+3. Changed plugin name back to original.
+4. Added creation and try to set permissions on Google XML sitemap files.
+5. Added option to turn on and off full error reporting.
+6. Removed contact page pre-fill on the settings page.
+7. Added notation on how to increase post teasers.
+
 05/03/10
 1. Updated Page Order to version 2.9.1
 2. Added privacy policy creation

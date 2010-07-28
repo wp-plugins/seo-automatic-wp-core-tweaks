@@ -4,7 +4,7 @@ Donate link: http://www.dzynit.net/coretweak-donate/
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 3.0
+Stable tag: 3.2
 
 Extends built in features of Wordpress and combines common plugins into one.
 
@@ -80,6 +80,10 @@ Then this plugin won't save you nearly as much time, but will combine several us
 Then you are probably getting a fatal error when trying to activate. Read the error note details.
 
 You should find a plugin name in the error. Deactivate it and try activating Core Tweaks again. Core Tweaks cannot automatically deactivate them for you for security reasons.
+
+= There is a missing/broken image on the privacy policy page created by Core Tweaks =
+
+This has been corrected starting with version 3.2. The previous image supplied by freeprivacypolicy.com is no longer accessible. If you have not edited your privacy policy after creation, either delete and use core tweaks to add it again after you have upgraded to 3.2 or higher, or manually edit your page to remove the broken image.
 
 = Does core tweaks work with Windows servers? =
 

@@ -1,6 +1,6 @@
 <?php
 if ($_REQUEST['action'] != "changecore") {
-	$options .= "<li></li><li><b>If you're using this installation of WordPress as an entire site, and not just a blog, using wordPress \"pages\" as well as \"posts\", then you need to define which \"page\" to use as the home page, and which page to display your posts.</b></li>";
+	$options .= "<li></li><li><b style=\"color: #009900;\">If you're using this installation of WordPress as an entire site, and not just a blog, then you need to define which \"page\" to use as the home page, and which page WP should use to display your blog posts. Change the name of the existing default page, and create your posts page here.</b></li>";
 }
 
 //Set install about page to Home

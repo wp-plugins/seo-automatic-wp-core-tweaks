@@ -1,12 +1,12 @@
 <?php
 //Add footer info
 if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li><b>ADD footer information:</b></li>';
+	$options .= '<li><b>ADD footer information: <small>(This adds through a hook and not through your theme footer.php. If you are not able to control the look you want using the class .scauto-footer in your style.css, just re-run core tweaks, desellect all options, and select the footer undo options.)</small></b></li>';
 }
 if ($_REQUEST['action'] == "changecore") {
 	if ($_REQUEST['add_footer_copy'] == "ON") {
 		if (!update_option('seo_core_footer_copy', 'on')) {
-			$fail .= "<li>Footer information could not be added.</li>";
+			$fail .= "<li>Footer information could not be added. Perhaps it's already added.</li>";
 		} else {
 			$success .= "<li>Copyright date was added to the footer.</li>";
 		}
@@ -21,7 +21,7 @@ if ($_REQUEST['action'] == "changecore") {
 if ($_REQUEST['action'] == "changecore") {
 	if ($_REQUEST['add_footer_login'] == "ON") {
 		if (!update_option('seo_core_footer_login', 'on')) {
-			$fail .= "<li>Admin login could not be added to the footer.</li>";
+			$fail .= "<li>Admin login could not be added to the footer. Perhaps it's already added.</li>";
 		} else {
 			$success .= "<li>Admin login has been added to the footer.</li>";
 		}
@@ -35,7 +35,7 @@ if ($_REQUEST['action'] == "changecore") {
 if ($_REQUEST['action'] == "changecore") {
 	if ($_REQUEST['add_footer_sitemap'] == "ON") {
 		if (!update_option('seo_core_footer_sitemap', 'on')) {
-			$fail .= "<li>Sitemap link could not be added to the footer.</li>";
+			$fail .= "<li>Sitemap link could not be added to the footer. Perhaps it's already added.</li>";
 		} else {
 			$success .= "<li>Sitemap link has been added to the footer.</li>";
 		}
@@ -49,7 +49,7 @@ if ($_REQUEST['action'] == "changecore") {
 if ($_REQUEST['action'] == "changecore") {
 	if ($_REQUEST['add_footer_privacy'] == "ON") {
 		if (!update_option('seo_core_footer_privacy', 'on')) {
-			$fail .= "<li>Privacy policy could not be added to the footer.</li>";
+			$fail .= "<li>Privacy policy could not be added to the footer. Perhaps it's already added.</li>";
 		} else {
 			$success .= "<li>Privacy policy link has been added to the footer.</li>";
 		}

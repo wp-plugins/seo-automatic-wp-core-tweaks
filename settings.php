@@ -64,9 +64,6 @@ include('privacy-policy.php');
 //Add contact page
 include('contact.php');
 
-//Try to create uploads folder and set to 777, uncheck organize by month/year
-include('uploads.php');
-
 //Remove default post
 include('d-post.php');
 
@@ -94,8 +91,22 @@ include('robots.php');
 //Add footer info
 include('add-footer.php');
 
+//Turn post teaser on or off
 if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li>&nbsp;</li><li>&nbsp;</li><li><b><br /><font color="#ff0000"><u>Advanced:</u><br /></b></li><li><b>Your theme files must have at least 766 file permission.</font><br />Premium WordPress themes sometimes have programmed "SEO options" that may prevent these items from working properly. Please consult your theme provider for support.</b></li><li>&nbsp;</li>';
+	$options .= '<li>&nbsp;</li><li><b><font color="#ff0000"><u>Post Teaser Plugin:</u></font></b> <small><b>(On by default.)</b></small></li>';
+}
+include('post-teaser-onoff.php');
+
+//Add error reporting
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li>&nbsp;</li><li>&nbsp;</li><li><b><br /><font color="#ff0000"><u>Advanced:</u></font><br /></b></li>';
+}
+
+//Try to create uploads folder and set to 777, uncheck organize by month/year
+include('uploads.php');
+
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li>&nbsp;</li><li><b>H1 Hack:</b> <b><font color="#ff0000">Your theme files must have at least 766 file permission.</font><br />Premium WordPress themes sometimes have programmed "SEO options" that may prevent these items from working properly. Please consult your theme provider for support.</b></li>';
 }
 
 //Change Add H1 Hack
@@ -131,7 +142,7 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 <p>To see a short video of how to use this plugin, <a href="http://www.seoautomatic.com/plugins/wp-core-tweaks/" target="_blank">click here</a> and if you need support, please <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">visit the forum</a>.</p>
 <p>
 <b>READ ME FIRST:</b>
-<p>After running these processes, there will be a couple of new things added the WordPress admin screen that you'll find handy.</p>
+<p>After running these processes, there will be a couple of new things added to the WordPress admin screen that you'll find handy.</p>
 <ol>
 	<li>Reorder your static page menu pages and sub pages. Look under Pages &gt; My Page Order on the menu to drag and drop as needed.</li>
 	<li>Exclude any pages you wish from main navigation. Look in the Tools &gt; Page Links menu item and check / uncheck as desired.</li>
