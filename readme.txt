@@ -2,9 +2,9 @@
 Contributors: Scott Hendison & Heather Barger
 Donate link: http://www.dzynit.net/coretweak-donate/
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
-Requires at least: 2.7
-Tested up to: 3.0
-Stable tag: 3.2
+Requires at least: 2.8
+Tested up to: 3.0.1
+Stable tag: 3.3
 
 Extends built in features of Wordpress and combines common plugins into one.
 
