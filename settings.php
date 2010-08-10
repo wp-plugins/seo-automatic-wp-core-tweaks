@@ -99,6 +99,12 @@ include('post-teaser-onoff.php');
 
 //Add error reporting
 if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li>&nbsp;</li><li><b><font color="#ff0000"><u>Error Reporting:</u></font></b> <small><b>(Off by default.)</b></small></li>';
+	$options .= '<li><b>(If turned on, this will force showing <font color="#ff0000"><u>ALL</u></font> errors caused by <font color="#ff0000"><u>ALL</u></font> plugins and theme functions.<br />This is best used in debugging situations.)</b></li>';
+}
+include('error-report.php');
+
+if ($_REQUEST['action'] != "changecore") {
 	$options .= '<li>&nbsp;</li><li>&nbsp;</li><li><b><br /><font color="#ff0000"><u>Advanced:</u></font><br /></b></li>';
 }
 
