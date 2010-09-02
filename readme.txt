@@ -16,7 +16,7 @@ Primarily for use in new WP installations, the steps are based on an employee ch
 
 Almost everything is covered, from changing the permalink structure to deleting the Hello World sample post and comment. All the options are accessible from one single page.
 
-It also extends the built-in features of Wordpress and combines 4 other useful plugins into this one...
+It also extends the built-in features of Wordpress and combines 4 other useful plugins into this one....
 
 This plug-in is designed to be a companion to other plugins like All in one SEO or Headspace, and is not intended as a replacement.
 
