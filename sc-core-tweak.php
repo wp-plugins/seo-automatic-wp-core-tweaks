@@ -102,22 +102,25 @@ add_filter('the_generator', 'remove_generator');
 // show footer info if turned on
 function seoauto_footer() {
 	if (get_option('seo_core_footer_copy') == 'on' || get_option('seo_core_footer_login') == 'on' || get_option('seo_core_footer_sitemap') == 'on') {
-		echo '<p class="scauto-footer"><small>';
+		echo '<span class="scauto-footer"><small>';
 	}
 	if (get_option('seo_core_footer_copy') == 'on') {
 		echo '&#169; '.date("Y");
 	}
 	if (get_option('seo_core_footer_login') == 'on') {
-		echo ' <a href="'.wp_login_url(get_permalink()).'" title="Login">Admin</a> - <a href="'. get_edit_post_link().'">Edit</a>';
+		echo ' <a href="'.wp_login_url(get_permalink()).'" title="Login">Admin</a>';
+		if ( is_user_logged_in() ) { 
+			echo ' - <a href="'. get_edit_post_link().'">Edit</a>';
+		}
 	}
 	if (get_option('seo_core_footer_sitemap') == 'on') {
-		echo ' <a href="'.get_permalink(get_option('seoauto_core_smid')).'">Sitemap</a>';
+		echo ' - <a href="'.get_permalink(get_option('seoauto_core_smid')).'">Sitemap</a>';
 	}
 	if (get_option('seo_core_footer_privacy') == 'on') {
-		echo ' <a href="'.get_permalink(get_option('seoauto_core_ppid')).'" rel="nofollow">Privacy Policy</a>';
+		echo ' - <a href="'.get_permalink(get_option('seoauto_core_ppid')).'" rel="nofollow">Privacy Policy</a>';
 	}
 	if (get_option('seo_core_footer_copy') == 'on' || get_option('seo_core_footer_login') == 'on' || get_option('seo_core_footer_sitemap') == 'on') {
-		echo '</small></p>';
+		echo '</small></span>';
 	}
 }
 
