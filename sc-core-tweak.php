@@ -2,46 +2,13 @@
 /*
 Plugin Name: Core Tweaks WordPress Setup
 Plugin URI: http://www.seoautomatic.com/plugins/wp-core-tweaks/
-Description: Conceived by Scott Hendison and programmed by Heather Barger for Search Commander, Inc. to automate proper WP setup. It also extends the built-in features of WordPress menu management, an and combines several common plugins into one.  See <a href="admin.php?page=seo-automatic-wp-core-tweaks/settings.php">SEO Automatic > Core Tweaks</a> for options.
-Version: 3.3
+Description: SEO Automatic WordPress setup programmed by Heather Barger for Search Commander, Inc. It also extends the built-in features of WordPress menu management, an and combines several common plugins into one.  See <a href="admin.php?page=seo-automatic-wp-core-tweaks/settings.php">SEO Automatic > Core Tweaks</a> for options.
+Version: 3.4
 Author: Scott Hendison
 Author URI: http://www.searchcommander.com/contact/
 */
-error_reporting(E_ALL);
-if(!function_exists('myErrorHandler')){
-function myErrorHandler($errno, $errstr, $errfile, $errline) {
-	switch ($errno) {
-//	case E_USER_ERROR:
-//		echo "<b>My ERROR</b> [$errno] $errstr<br />\n";
-//		echo "  Fatal error on line $errline in file $errfile";
-//		echo ", PHP " . PHP_VERSION . " (" . PHP_OS . ")<br />\n";
-//		echo "Aborting...<br />\n";
-//		exit(1);
-//		break;
-//
-//	case E_USER_WARNING:
-//		echo "<b>My WARNING</b> [$errno] $errstr<br />\n";
-//		break;
-//
-//	case E_USER_NOTICE:
-//		echo "<b>My NOTICE</b> [$errno] $errstr<br />\n";
-//		break;
-
-	default:
-		if (substr_count($errstr, "ob_end_") > 0) {
-		} elseif (substr_count($errstr, "Undefined index") > 0) {
-		} elseif (substr_count($errstr, "Undefined offset") > 0) {
-		} elseif (substr_count($errstr, "Use of undefined constant") > 0) {
-		} else {
-			//echo "Unknown error type: [$errno] $errstr<br />\n";
-		}
-    }
-
-    /* Don't execute PHP internal error handler */
-    return true;
-}
-}
-$old_error_handler = set_error_handler("myErrorHandler");
+if (get_option('seoauto_core_e_report') == 'on') { $err_is = 'E_ALL'; } else { $err_is = 0; }
+error_reporting($err_is);
 
 function sc_index() {
 	include('home.php');
@@ -107,20 +74,22 @@ function seoauto_footer() {
 	if (get_option('seo_core_footer_copy') == 'on') {
 		echo '&#169; '.date("Y");
 	}
-	if (get_option('seo_core_footer_login') == 'on') {
-		echo ' <a href="'.wp_login_url(get_permalink()).'" title="Login">Admin</a>';
-		if ( is_user_logged_in() ) { 
-			echo ' - <a href="'. get_edit_post_link().'">Edit</a>';
-		}
-	}
 	if (get_option('seo_core_footer_sitemap') == 'on') {
 		echo ' - <a href="'.get_permalink(get_option('seoauto_core_smid')).'">Sitemap</a>';
 	}
 	if (get_option('seo_core_footer_privacy') == 'on') {
 		echo ' - <a href="'.get_permalink(get_option('seoauto_core_ppid')).'" rel="nofollow">Privacy Policy</a>';
 	}
+
 	if (get_option('seo_core_footer_copy') == 'on' || get_option('seo_core_footer_login') == 'on' || get_option('seo_core_footer_sitemap') == 'on') {
 		echo '</small></span>';
+	}
+	if (get_option('seo_core_footer_login') == 'on') {
+		echo '<div style="clear: top;" class="scauto-footer-login"><small><a href="'.wp_login_url(get_permalink()).'" title="Login">Admin</a>';
+		if ( is_user_logged_in() ) { 
+			echo ' - <a href="'. get_edit_post_link().'">Edit</a>';
+		}
+		echo '</small></div>';
 	}
 }
 

@@ -45,6 +45,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Change default blogroll category name.</li>";
 	} 
 } else {
-	$options .= "<li><input type=\"checkbox\" name=\"d_blogroll\" value=\"ON\" checked> Change default blogroll category name from \"blogroll\" to:<br /><input type=\"text\" name=\"cat_2\" size=\"20\" value=\"Related\" /></li>";
+	$options .= "<li><input type=\"checkbox\" name=\"d_blogroll\" value=\"ON\" checked> Change default blogroll category name from \"blogroll\" to: <input type=\"text\" name=\"cat_2\" size=\"20\" value=\"Related\" /></li>";
 }
 ?>

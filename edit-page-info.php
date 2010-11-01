@@ -1,6 +1,6 @@
 <?php
 if ($_REQUEST['action'] != "changecore") {
-	$options .= "<li></li><li><b style=\"color: #009900;\">If you're using this installation of WordPress as an entire site, and not just a blog, then you need to define which \"page\" to use as the home page, and which page WP should use to display your blog posts. Change the name of the existing default page, and create your posts page here.</b></li>";
+	$options .= "<li></li><li><small><b style=\"color: #009900;\">If you're using this installation of WordPress as an entire site, and not just a blog, then you need to define which \"page\" to use as the home page, and which page WP should use to display your blog posts. Change the name of the existing default page, and create your posts page here.</b></small></li>";
 }
 
 //Set install about page to Home
@@ -18,7 +18,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Change default page name.</li>";
 	}
 } else {
-	$options .= '<li><input name="page_2" type="checkbox" value="ON" /> Change the default page name from \"about\" to: <input name="about_page" size="15" type="textbox" value="Home" /></li>';
+	$options .= '<li><input name="page_2" type="checkbox" value="ON" /> Change the default page name from "about" to: <input name="about_page" size="15" type="textbox" value="Home" /></li>';
 } 
 
 //Sets frontpage and turns on the static pages

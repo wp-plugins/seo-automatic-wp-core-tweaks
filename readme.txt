@@ -1,14 +1,15 @@
 === Core Tweaks WordPress Setup ===
-Contributors: Scott Hendison & Heather Barger
-Donate link: http://www.dzynit.net/coretweak-donate/
+Contributors: Scott Hendison
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FC2PBBP6BY8QC
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
 Requires at least: 2.8
 Tested up to: 3.0.1
-Stable tag: 3.3
+Stable tag: 3.4
 
 Extends built in features of Wordpress and combines common plugins into one.
 
 == Description ==
+<a href="http://www.seoautomatic.com/plugins/wp-core-tweaks/" target="_blank">Plugin Page</a> | <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">Plugin Support</a>
 
 This plug-in completely automates the proper setup of your WordPress blog for search engine optimization.
 

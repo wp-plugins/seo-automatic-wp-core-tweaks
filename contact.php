@@ -57,14 +57,12 @@ $info = array(
 		$notused .= "<li>Create contact page.</li>";
 	}
 } else {
-	$options .= '<li><br /><input name="contact_page" type="checkbox" value="ON" /> Add a Contact Page using the following information:<br /><small><b>* Do not use double quotes</b></small>
-	<p>	Name <input type="text" name="contact_name" size="20" value="Name">
-	<br />Company Name <input type="text" name="contact_co_name" size="20" value="Company Name"></p>
-	<p>Address <input type="text" name="contact_address" size="55" value="Address">
-	<br />City <input type="text" name="contact_city" size="20" value="City">, State <input type="text" name="contact_state" size="5" value="State"> Zip <input type="text" name="contact_zip" size="10" value="Zip">
-	<br /><input type="checkbox" name="contact_map" value="ON"> Add a Google Map to this address</p>
-	<p>Phone <input type="text" name="contact_phone" size="20" value="Phone">
-	<br />Fax <input type="text" name="contact_fax" size="20" value="Fax">
-	<br />Email <input type="text" name="contact_email" size="20" value="Email"></p></li>';
+	$options .= '<li><br /><input name="contact_page" type="checkbox" value="ON" /> Add a Contact Page using the following information:<br /> <small><b>* Do not use double quotes</b></small>
+	<p>	Name <input type="text" name="contact_name" size="20" value=""> Company Name <input type="text" name="contact_co_name" size="20" value=""></p>
+	<p>Address <input type="text" name="contact_address" size="55" value="">
+	<br />City <input type="text" name="contact_city" size="20" value="">, State <input type="text" name="contact_state" size="5" value=""> Zip <input type="text" name="contact_zip" size="10" value="">
+	<br /><input type="checkbox" name="contact_map" value="ON"> <small><b>Add a Google Map to this address</b></small></p>
+	<p>Phone <input type="text" name="contact_phone" size="20" value=""> Fax <input type="text" name="contact_fax" size="20" value="">
+	<br />Email <input type="text" name="contact_email" size="20" value=""></p></li>';
 } 
 ?>

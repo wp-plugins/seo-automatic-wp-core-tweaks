@@ -55,7 +55,7 @@ if ($_REQUEST['action'] == "changecore") {
 // Change H1 tags back to H2 in the current theme.
 
 if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li><b>If selecting the option above changes your font to a size you dislike, the adjustment must be made in your sytlesheet.<br />Ex: <code>h1 { font-size: 12px; }</code><br />Or use this option to change back.</b></li>';
+	$options .= '<li><small><b>If selecting the option above changes your font to a size you dislike, the adjustment must be made in your sytlesheet.<br />Ex: <code>h1 { font-size: 12px; }</code></b></small></li>';
 }
 
 if ($_REQUEST['action'] == "changecore") {
@@ -106,5 +106,5 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Undo Change H2 to H1</li>";
 	}
 } else {
-	$options .= '<li><input name="change_h1_h2" type="checkbox" value="ON" /> Undo change of H2 tags to H1</li><li>&nbsp;</li>';
+	$options .= '<li><br /></li><li><small><b>Or use this option to change back:</b></small></li><li><input name="change_h1_h2" type="checkbox" value="ON" /> Undo change of H2 tags to H1</li><li>&nbsp;</li>';
 }

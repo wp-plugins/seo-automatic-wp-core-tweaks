@@ -17,8 +17,8 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Post Teaser is on by default.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"radio\" name=\"post_teaser_use\" value=\"on\"> Turn Post Teaser on.</li>";
-	$options .= "<li><input type=\"radio\" name=\"post_teaser_use\" value=\"off\" checked> Turn Post Teaser off.</li>";
+	$options .= "<li><input type=\"radio\" name=\"post_teaser_use\" value=\"on\" checked> Turn Post Teaser on.</li>";
+	$options .= "<li><input type=\"radio\" name=\"post_teaser_use\" value=\"off\"> Turn Post Teaser off.</li>";
 }
 
 ?>

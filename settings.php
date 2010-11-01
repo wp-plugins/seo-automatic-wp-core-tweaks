@@ -52,11 +52,19 @@ include('org-uploads.php');
 //Set feeds to summary
 include('feed-display.php');
 
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li><br /></li>';
+}
+
 //Set permalink structure - SKIPPED, COME BACK AND DO!
 include('permalinks.php');
 
 //Add sitemap page
 include('sitemap-page.php');
+
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li><br /></li>';
+}
 
 //Add privacy policy
 include('privacy-policy.php');
@@ -64,29 +72,63 @@ include('privacy-policy.php');
 //Add contact page
 include('contact.php');
 
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li><br /></li>';
+}
+
 //Remove default post
 include('d-post.php');
-
-//Remove default comment
-include('d-comment.php');
 
 //Set to not allow people to comment
 include('user-comments.php');
 
+//Remove default comment
+include('d-comment.php');
+
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li><br /></li>';
+}
+
 //Change blog email and admin user email
 include('emails.php');
+
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li><br /></li>';
+}
 
 //Change blog email and admin user email
 include('edit-page-info.php');
 
-//Misc items - blogroll, feed summary, blog tagline
-include('misc.php');
+//Blog tagline
+include('tagline.php');
+
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li><br /></li>';
+}
+
+//Blogroll
+include('blogroll.php');
+
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li><br /></li>';
+}
+
+//Meta version
+include('metaversion.php');
 
 //Remote publishing
 include('remote-publishing.php');
 
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li><br /></li>';
+}
+
 //Add robots.txt file
 include('robots.php');
+
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li><br /></li>';
+}
 
 //Add footer info
 include('add-footer.php');
@@ -100,7 +142,7 @@ include('post-teaser-onoff.php');
 //Add error reporting
 if ($_REQUEST['action'] != "changecore") {
 	$options .= '<li>&nbsp;</li><li><b><font color="#ff0000"><u>Error Reporting:</u></font></b> <small><b>(Off by default.)</b></small></li>';
-	$options .= '<li><b>(If turned on, this will force showing <font color="#ff0000"><u>ALL</u></font> errors caused by <font color="#ff0000"><u>ALL</u></font> plugins and theme functions.<br />This is best used in debugging situations.)</b></li>';
+	$options .= '<li><small><b>(If turned on, this will force showing <font color="#ff0000"><u>ALL</u></font> errors caused by <font color="#ff0000"><u>ALL</u></font> plugins and theme functions.<br />This is best used in debugging situations.)</b></small></li>';
 }
 include('error-report.php');
 
@@ -111,12 +153,12 @@ if ($_REQUEST['action'] != "changecore") {
 //Try to create uploads folder and set to 777, uncheck organize by month/year
 include('uploads.php');
 
-if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li>&nbsp;</li><li><b>H1 Hack:</b> <b><font color="#ff0000">Your theme files must have at least 766 file permission.</font><br />Premium WordPress themes sometimes have programmed "SEO options" that may prevent these items from working properly. Please consult your theme provider for support.</b></li>';
-}
-
 //Change Add H1 Hack
-include('h1hack.php');
+if ($_REQUEST['action'] != "changecore") {
+	$options .= '<li>&nbsp;</li><li><b>H1 Hack: <small><font color="#ff0000">As of November 2010 we have removed the ability to change your H1 tag for a page or post, due to incompatibilities with the default WP 2010 theme. However, this can now be accomplished easily through use of WordPress custom menus.</font></small></b></li><li><br /></li>';
+	//<b><font color="#ff0000">Your theme files must have at least 766 file permission.</font><br />Premium WordPress themes sometimes have programmed "SEO options" that may prevent these items from working properly. Please consult your theme provider for support.</b></li>
+}
+//include('h1hack.php');
 
 //Change H2 to H1 in current theme
 include('h2toh1.php');
@@ -152,7 +194,7 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 <ol>
 	<li>Reorder your static page menu pages and sub pages. Look under Pages &gt; My Page Order on the menu to drag and drop as needed.</li>
 	<li>Exclude any pages you wish from main navigation. Look in the Tools &gt; Page Links menu item and check / uncheck as desired.</li>
-	<li>A new page navigation widget will be added. Look in the widget options for checkbox page selection to include or remove.</li>
+	<li>A new page navigation widget will be added. Look in the widget options for the "My Page Order" widget, containing checkboxes for page selection.</li>
 	<li>Enhanced RSS widget - Under Appearance &gt; Widgets you'll notice that we have enhanced it, allowing you to nofollow the links or to open them in a new window.</li>
 	<li>There will be a static sitemap page automatically added, but there are additional options are under Settings &gt; DDsitemapGen</li>
 	<li>You'll see that the Post Teaser options are available under Settings &gt; Post Teaser</li>
@@ -163,7 +205,7 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 </ol>
 <p><b>Unchecked Options:<br>
 </b>There are many options below that are not checked by default, but may be something you plan to do anyway, so they have been added here for your convenience.</p>
-<p>Note that at the very bottom, there are several THEME SPECIFIC changes, which are UNchecked by default. If you plan to use them, the permissions of your theme files must be 766.</p>
+<p>Note that at the very bottom, there is one THEME SPECIFIC change available, which is UNchecked by default. If you plan to use it, the permissions of your theme files must be 766.</p>
 
 <p><!--<a href="javascript: CheckAll();">Select All</a> | --><a href="javascript: UncheckAll();">Deselect All</a></p>
 
@@ -214,7 +256,6 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 <a href="http://www.seoautomatic.com/plugins/" target="_blank"><img src="http://www.seoautomatic.com/plugin-home/images/logo-2010.jpg" alt="SEO Automatic" width="262" height="166" /></a>
 <br />
 <ul>
-	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/pricing-plans/white-label/" target="_blank"> White Label Options</a></li>
 	<li style="margin-left: -4px;"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="5701868">
@@ -232,8 +273,35 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 <ul>
 	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="" /> <a href="http://www.seoautomatic.ourtoolbar.com/" target="_blank">Search Commander, Inc. Toolbar</a></li>
 	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/unique-tools/" target="_blank"> SEO Automatic Tools</a></li>
-	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="" /> <a href="http://www.getwordpressed.com/about/" target="_blank">Site Matched WP Themes</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/pricing-plans/white-label/" target="_blank"> White Label Options</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/tip-of-the-week/" target="_blank"> Automation Tip of the Week</a></li>
 </ul>
+</div></div>
+
+<div id="resources" class="postbox" >
+<h3><span>Recommended Affiliates</span></h3>
+<div class="inside">
+<ul>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="" /> <a href="http://www.seoautomatic.com/linkvana/" target="_blank"> LinkVana</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/wptwin/" target="_blank"> WordPress Backup &amp; Cloning</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/icontact/" target="_blank"> iContact</a></li>
+	<li><img src="http://www.seoautomatic.com/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/spamarrest/" target="_blank"> Spamarrest</a></li>
+</ul>
+</div></div>
+
+<div id="seoautofeed" class="postbox" >
+<h3><span>Latest news from the SEO Automatic blog ...</span></h3>
+<div class="inside">
+<p><div>
+	<?php 
+			$url=plugins_url()."/seo-automatic-seo-tools/feedcommander/rssread.php?src=http://www.seoautomatic.com/feed&title=n&lines=5&boxpadding=10&b_width=0&b_height=0&h_bar=n&v_bar=n&mq=n&mq_di=DOWN&mq_n=3&mq_dy=200&b_color=none&b_style=none&b_b_color=ffffff&b_b_weight=thin&t_font=&t_s_bold=y&t_s_italic=n&t_s_underline=y&t_s_marquee=n&t_size=16&t_align=center&t_color=&i_max_char=0&i_font=&i_s_bold=y&i_s_italic=n&i_s_underline=n&i_s_marquee=n&i_size=11&i_color=&c_max_char=200&c_font=&c_s_bold=n&c_s_italic=n&c_s_underline=n&c_s_marquee=n&c_size=11&c_align=left&c_color=&html=y"; 
+			$ch = curl_init($url); 
+			curl_setopt($ch, CURLOPT_HEADER, 0); 
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+			$results=curl_exec($ch); 
+			curl_close($ch); 
+			print("$results"); 
+	?></div></p>
 </div></div>
 
 </div></div>

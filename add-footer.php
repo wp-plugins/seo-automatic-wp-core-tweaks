@@ -1,7 +1,7 @@
 <?php
 //Add footer info
 if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li><b>ADD footer information: <small>(This adds through a hook and not through your theme footer.php. If you are not able to control the look you want using the class .scauto-footer in your style.css, just re-run core tweaks, desellect all options, and select the footer undo options.)</small></b></li>';
+	$options .= '<li><b>ADD footer:<br /><small>(Changes here are controlled through hooks, NOT through your themes footer.php.  You may control the exact styling look you want using the class .scauto-footer and .scauto-footer-login in your style.css, - OR - Just re-run core tweaks, deselect ALL options on this page, and then select the UNDO option here for the footer links.)</small></b></li>';
 }
 if ($_REQUEST['action'] == "changecore") {
 	if ($_REQUEST['add_footer_copy'] == "ON") {
@@ -62,7 +62,7 @@ if ($_REQUEST['action'] == "changecore") {
 
 //undo
 if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li><b>UNDO footer additions:</b></li>';
+	$options .= '<li><br /><b>UNDO footer additions:</b></li>';
 }
 
 if ($_REQUEST['action'] == "changecore") {

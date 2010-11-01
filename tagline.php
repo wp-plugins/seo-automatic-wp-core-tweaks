@@ -22,24 +22,4 @@ if ($_REQUEST['action'] == "changecore") {
 	$options .= '<li><input name="taglinecheck" type="checkbox" value="ON" /> Change the blog description tagline. <input name="tagline" type="text" id="tagline" value="'.$tagline.'" /></li>';
 } 
 
-if ($_REQUEST['action'] == "changecore") {
-	 if ($_REQUEST['empty_blogroll'] == "ON") {
-		if ( (!$wpdb->query("DELETE FROM $wpdb->links WHERE link_id != ''")) ) {
-			$fail .= "<li>Blogroll links could not be deleted.</li>";
-		} else {
-			$success .= "<li>All Blogroll links have been deleted.</li>";
-		}
-	} else {
-		$notused .= "<li>Blogroll has not been changed.</li>";
-	}
-} else {
-	$options .= '<li><input name="empty_blogroll" type="checkbox" value="ON" /> Delete <b>all</b> links in blogroll. <b>(Cannot be undone.)</b></li>';
-} 
-
-//Notify that wordpress version meta tag is removed
-if ($_REQUEST['action'] == "changecore") {
-	$success .= "<li>Meta tag for Wordpress Version number is removed. (Automatic removal when plugin is activated.)</li>";
-}
-
-
 ?>
