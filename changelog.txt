@@ -1,5 +1,9 @@
 Change Log
 
+11/18/10
+1. Added icons and images to plugin folder.
+2. Changed feeds from feedcommander to built-in wordpress rss.
+
 08/10/10
 1. Updated Page Order plugin to 3.0a.
 
