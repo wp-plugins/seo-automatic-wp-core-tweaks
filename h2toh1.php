@@ -49,7 +49,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Change H2 to H1.</li>";
 	}
 } else {
-	$options .= '<li><input name="change_h2_h1" type="checkbox" value="ON" /> Change H2 tags to H1</li>';
+	$options .= '<li><font color="#ff0000"><b><u>Theme specific:</u></b></font></li><li><input name="change_h2_h1" type="checkbox" value="ON" /> Change H2 tags to H1</li>';
 }
 
 // Change H1 tags back to H2 in the current theme.
