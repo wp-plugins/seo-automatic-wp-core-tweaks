@@ -6,12 +6,12 @@ Requires at least: 2.8
 Tested up to: 3.1.2
 Stable tag: 3.7.2
 
-This plug-in completely automates the proper setup of your WordPress blog and will save 20 to 40 minutes of post-install time.
+Primarily for use in new WP installations, the steps are based on an employee checklist from Search Commander, Inc. for setting up sites.
 
 == Description ==
 <a href="http://www.seoautomatic.com/plugins/wp-core-tweaks/" target="_blank">Plugin Page</a> | <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">Plugin Support</a>
 
-Primarily for use in new WP installations, the steps are based on an employee checklist from Search Commander, Inc. for setting up sites.
+This plug-in completely automates the proper setup of your WordPress blog and will save 20 to 40 minutes of post-install time.
 
 [youtube http://www.youtube.com/v/UTXrUAccCts&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6]
 
