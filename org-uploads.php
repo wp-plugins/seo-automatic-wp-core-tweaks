@@ -8,7 +8,7 @@ if ($_REQUEST['action'] == "changecore") {
 			$success .= "<li>Organizing uploads into month- and year-based folders is turned off.</li>";
 		}
 	} else {
-		update_option('uploads_use_yearmonth_folders','1');
+		//update_option('uploads_use_yearmonth_folders','1');
 		$notused .= "<li>Organization of uploads folders.</li>";
 	} 
 } else {

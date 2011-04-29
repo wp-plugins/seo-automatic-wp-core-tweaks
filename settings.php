@@ -1,4 +1,5 @@
 <?php
+include('thisplugin.php');
 if (function_exists('plugins_url')) {
 	$path=trailingslashit(plugins_url(basename(dirname(__FILE__))));
 	} else {
@@ -133,12 +134,6 @@ if ($_REQUEST['action'] != "changecore") {
 //Add footer info
 include('add-footer.php');
 
-//Turn post teaser on or off
-if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li>&nbsp;</li><li><b><font color="#ff0000"><u>Post Teaser Plugin:</u></font></b> <small><b>(On by default.)</b></small></li>';
-}
-include('post-teaser-onoff.php');
-
 //Add error reporting
 if ($_REQUEST['action'] != "changecore") {
 	$options .= '<li>&nbsp;</li><li><b><font color="#ff0000"><u>Error Reporting:</u></font></b> <small><b>(Off by default.)</b></small></li>';
@@ -163,6 +158,11 @@ if ($_REQUEST['action'] != "changecore") {
 //Change H2 to H1 in current theme
 include('h2toh1.php');
 
+
+//Turn plugins on or off
+include('plugins-on-off.php');
+
+
 ?>
 
 <script> 
@@ -183,29 +183,24 @@ count = document.corechanges.elements.length;
 }
 </script>
 
-<?php if ($_REQUEST['action'] != "changecore") { ?>
+<?php if (($_REQUEST['action'] != "changecore") && ($_REQUEST['action'] != "pluginsonoff")) { ?>
 <p>The steps and actions on this page are primarily used for a brand new WP setup, and are based on an employee checklist from <a href="http://www.pdxtc.com/wpblog/wordpress/wordpress-checklist-now-a-plug-in/" target="_blank" rel="nofollow">Search Commander, Inc.</a></p>
 <p>This plugin is designed to compliment, not replace, either the <a href="http://wordpress.org/extend/plugins/all-in-one-seo-pack/" target="_blank" rel="nofollow">All in one SEO pack</a> or <a href="http://wordpress.org/extend/plugins/headspace2/" target="_blank" rel="nofollow">Headspace plugin</a>, but you should have no 
 other plugins active while running the SEO Automatic Core Tweaks process.</p>
-<p>To see a short video of how to use this plugin, <a href="http://www.seoautomatic.com/plugins/wp-core-tweaks/" target="_blank">click here</a> and if you need support, please <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">visit the forum</a>.</p>
+<p>We also work very well with the definitive plugin for professional SEOs by Joost de Valk, his <a href="http://wordpress.org/extend/plugins/wordpress-seo/" target="_blank">"Wordpress SEO plugin"</a>.</p>
+<p>To see a short video of how to use this plugin, <a href="http://www.seoautomatic.com/plugins/wp-core-tweaks/" target="_blank">click here</a> and if you need support, please <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">visit the forum</a> (which should be pretty empty since our stuff works).</p>
 <p>
 <b>READ ME FIRST:</b>
 <p>After running these processes, there will be a couple of new things added to the WordPress admin screen that you'll find handy.</p>
 <ol>
-	<li>Reorder your static page menu pages and sub pages. Look under Pages &gt; My Page Order on the menu to drag and drop as needed.</li>
-	<li>Exclude any pages you wish from main navigation. Look in the Tools &gt; Page Links menu item and check / uncheck as desired.</li>
-	<li>A new page navigation widget will be added. Look in the widget options for the "My Page Order" widget, containing checkboxes for page selection.</li>
-	<li>Enhanced RSS widget - Under Appearance &gt; Widgets you'll notice that we have enhanced it, allowing you to nofollow the links or to open them in a new window.</li>
-	<li>There will be a static sitemap page automatically added, but there are additional options are under Settings &gt; DDsitemapGen</li>
-	<li>You'll see that the Post Teaser options are available under Settings &gt; Post Teaser</li>
-	<li>If you create contact or privacy pages, future edits will be done in the pages &gt; edit screen as usual.</li>
+	<li>Your RSS widget - Under Appearance &gt; Widgets you'll notice that we have enhanced it, allowing you to nofollow the links or to open them in a new window.</li>
+	<li>If you use the options below to create contact or privacy pages, any future edits will be done in the pages &gt; edit screen as usual.</li>
 	<li>Permalink structure:
-	<p>One of the most important things you'll want to do is change the default permalink structure. In order for our plug-in to be able to do that for you, the .htaccess file must be writable.</p>
-	<p>To avoid getting an error message, if you cannot change the permissions for .htaccess, then simply UNcheck the &quot;Change Permalinks&quot; option below.</p></li>
+	<p>One of the important things you'll want to do is change the default permalink structure so we've left it on by default. In order for our plug-in to be able to do that for you, the .htaccess file must be writable, so if you get a permalinks error message, and do not know how to change your permissions for .htaccess, then ask your webhost. No harm is done with an error message.</p></li>
 </ol>
-<p><b>Unchecked Options:<br>
-</b>There are many options below that are not checked by default, but may be something you plan to do anyway, so they have been added here for your convenience.</p>
-<p>Note that at the very bottom, there is one THEME SPECIFIC change available, which is UNchecked by default. If you plan to use it, the permissions of your theme files must be 766.</p>
+<p><b>Unchecked Default Options:<br>
+</b>There are many options below that are not checked, but if you know what you're doing, many are likely something you plan to do anyway.</p>
+<p>Note at the very bottom, there is one THEME SPECIFIC change available to change your H2 tags to H1's. This is UNchecked by default, because most new themes will allow this. However, if you need to use it, note the the permissions of your theme pages: single.php and page.php files must be 766.</p>
 
 <p><!--<a href="javascript: CheckAll();">Select All</a> | --><a href="javascript: UncheckAll();">Deselect All</a></p>
 
@@ -219,6 +214,19 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 </form>
 
 <p><!--<a href="javascript: CheckAll();">Select All</a> |--><a href="javascript: UncheckAll();">Deselect All</a></p>
+</div></div>
+
+<div id="main-admin-box" class="postbox">
+<h3><span><img src="<?php echo plugins_url(); ?>/seo-automatic-wp-core-tweaks/images/favicon.ico" alt="SEO Automatic" /> Activate or Deactivate Included Plugins</span></h3>
+<div class="inside">
+<p><form name="pluginsonoff" id="pluginsonoff" method="post" action="" class="validate">
+<input type="hidden" name="action" value="pluginsonoff" />
+
+<ul><?php echo $options2; ?></ul>
+
+<p><input type="submit" class="button" name="submit" value="Set Plugins" /></p>
+
+</form>
 </div></div>
 
 <?php } else { ?>
@@ -238,97 +246,19 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 <p>If you don't understand what this means, <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">please report it...</a></p>
 </div></div>
 
+<?php if ($_REQUEST['action'] != "pluginsonoff") { ?>
 <div id="unused" class="postbox">
 <h3><span>Options not chosen:</span></h3>
 <div class="inside">
 <ul><?php echo $notused; ?></ul>
 </div></div>
 <?php } ?>
+<?php } ?>
 
 </div></div>
 
-<div class='postbox-container' style='width:35%;'>
-<div id='side-sortables' class='meta-box-sortables'>
+<?php include('seoauto-sidebar.php'); ?>
 
-<div id="about-plugins" class="postbox " >
-<h3><span>About</span></h3>
-<div class="inside">
-<a href="http://www.seoautomatic.com/plugins/" target="_blank"><img src="<?php echo plugins_url(); ?>/seo-automatic-wp-core-tweaks/images/logo-2010.jpg" alt="SEO Automatic" width="262" height="166" /></a>
-<br />
-<ul>
-	<li style="margin-left: -4px;"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="5701868">
-<input type="image" src="<?php echo plugins_url(); ?>/seo-automatic-wp-core-tweaks/images/donate.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" onclick="this.form.target='_blank';return true;">
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-</li>
-</ul>
-
-</div></div>
-
-<div id="resources" class="postbox" >
-<h3><span>Resources</span></h3>
-<div class="inside">
-<ul>
-	<li><img src="<?php echo plugins_url(); ?>/seo-automatic-wp-core-tweaks/images/favicon.ico" height="16" width="16" alt="" /> <a href="http://www.seoautomatic.ourtoolbar.com/" target="_blank">Search Commander, Inc. Toolbar</a></li>
-	<li><img src="<?php echo plugins_url(); ?>/seo-automatic-wp-core-tweaks/images/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/unique-tools/" target="_blank"> SEO Automatic Tools</a></li>
-	<li><img src="<?php echo plugins_url(); ?>/seo-automatic-wp-core-tweaks/images/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/pricing-plans/white-label/" target="_blank"> White Label Options</a></li>
-	<li><img src="<?php echo plugins_url(); ?>/seo-automatic-wp-core-tweaks/images/favicon.ico" height="16" width="16" alt="SEO Automatic" /> <a href="http://www.seoautomatic.com/tip-of-the-week/" target="_blank"> Automation Tip of the Week</a></li>
-</ul>
-</div></div>
-
-<div id="resources" class="postbox" >
-<h3><span>Recommended Affiliates</span></h3>
-<div class="inside">
-<?php
-include_once(ABSPATH . WPINC . '/feed.php');
-$rss = fetch_feed('http://www.seoautomatic.com/category/rec/feed');
-if (!is_wp_error( $rss ) ) : 
-    $maxitems = $rss->get_item_quantity(5); 
-    $rss_items = $rss->get_items(0, $maxitems); 
-endif;
-?>
-
-<ul>
-    <?php if ($maxitems == 0) echo '<li>No items.</li>';
-    else
-    foreach ( $rss_items as $item ) : ?>
-    <li>
-        <a href='<?php echo $item->get_permalink(); ?>' target='_blank' title='<?php echo 'Posted '.$item->get_date('j F Y | g:i a'); ?>'>
-        <?php echo $item->get_title(); ?></a><br />
-    </li>
-    <?php endforeach; ?>
-</ul>
-</div></div>
-
-<div id="seoautofeed" class="postbox" >
-<h3><span>Latest news from the SEO Automatic blog ...</span></h3>
-<div class="inside">
-<?php
-include_once(ABSPATH . WPINC . '/feed.php');
-$rss = fetch_feed('http://www.seoautomatic.com/feed');
-if (!is_wp_error( $rss ) ) : 
-    $maxitems = $rss->get_item_quantity(5); 
-    $rss_items = $rss->get_items(0, $maxitems); 
-endif;
-?>
-
-<ul>
-    <?php if ($maxitems == 0) echo '<li>No items.</li>';
-    else
-    foreach ( $rss_items as $item ) : ?>
-    <li>
-        <a href='<?php echo $item->get_permalink(); ?>'
-        title='<?php echo 'Posted '.$item->get_date('j F Y | g:i a'); ?>'>
-        <?php echo $item->get_title(); ?></a><br />
-		<?php echo $item->get_description(); ?>
-    </li>
-    <?php endforeach; ?>
-</ul>
-</div></div>
-
-</div></div>
 <div class="clear"></div>
 </div><!-- dashboard-widgets-wrap -->
 

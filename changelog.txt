@@ -1,4 +1,10 @@
 Change Log
+04/28/11
+1. Updated Post Teaser to 4.1.1.
+2. Separated all included plugins to be active or deactivated.
+3. Corrected uploads organization option to no reset on second run of core tweaks.
+4. Fixed privacy policy again.
+5. Revamped core tweaks admin home page and sidebars to be easier to edit between all SEO Automatic plugins.
 
 11/18/10
 1. Added icons and images to plugin folder.

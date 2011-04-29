@@ -2,7 +2,7 @@
 $parent_file = 'options-general.php';
 $home_path = get_home_path();
 global $wp_rewrite;
-	if ((isset($_POST['submit'])) && ($_REQUEST['permchange'] == "ON")) :
+	if (($_REQUEST['action'] == "changecore") && ($_REQUEST['permchange'] == "ON")) :
 	if ( isset($_POST['permalink_structure']) ) {
 		//check_admin_referer('update-permalink');
 
@@ -30,7 +30,7 @@ global $wp_rewrite;
 endif; 
 ?>
 
-<?php if ((isset($_POST['submit'])) && ($_REQUEST['permchange'] == "ON")) : ?>
+<?php if (($_REQUEST['action'] == "changecore") && ($_REQUEST['permchange'] == "ON")) : ?>
 <div id="message"><p><?php
 $perm_ran = "YES";
 if ( $permalink_structure && !$usingpi && !$writable )
@@ -55,7 +55,7 @@ $structures = array(
 	);
 ?>
 
-<?php if (!isset($_POST['submit'])) :  
+<?php if ($_REQUEST['action'] != "changecore") :  
 	$options .= '<li><input type="hidden" name="selection" value="custom" class="tog" checked /><input type="checkbox" name="permchange" value="ON" checked> Change permalink structure to custom setting: <input type="text" size="40" name="permalink_structure" value="/%category%/%postname%/" /></li>';
 	$options .= '<li><small><b><font color="#ff0000">We\'ve checked this permalink box by default because it\'s important, but if your .htaccess file is not writable, then you\'ll get an error message telling you so. If you do get the error message, there\'s no harm done, but your permalinks will not be changed and you should make the file writable and try again.</font></b></small></li>';
 	endif; ?>
@@ -63,7 +63,7 @@ $structures = array(
 	<?php if ( $permalink_structure && !$usingpi && !$writable ) : 
 	  $fail .= '<li>If your <code>.htaccess</code> file were <a href="http://codex.wordpress.org/Changing_File_Permissions">writable</a>, we could do this automatically, but it isn&#8217;t so these are the mod_rewrite rules you should have in your <code>.htaccess</code> file. Click in the field and press <kbd>CTRL + a</kbd> to select all.	<form action="options-permalink.php" method="post">'.wp_nonce_field('update-permalink').'<p><textarea rows="5" style="width: 98%;" name="rules" id="rules">'.wp_specialchars($wp_rewrite->mod_rewrite_rules()).'</textarea></p></form></li>';
 	 endif; ?>
-<?php if ((isset($_POST['submit'])) && ($perm_ran != "YES") && ($_REQUEST['permchange'] != "ON")) { 
+<?php if (($_REQUEST['action'] == "changecore") && ($perm_ran != "YES") && ($_REQUEST['permchange'] != "ON")) { 
 $notused .= "<li>Change permalinks.</li>";
  } 
 

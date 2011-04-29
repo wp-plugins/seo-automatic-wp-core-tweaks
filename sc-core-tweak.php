@@ -3,12 +3,21 @@
 Plugin Name: Core Tweaks WordPress Setup
 Plugin URI: http://www.seoautomatic.com/plugins/wp-core-tweaks/
 Description: SEO Automatic WordPress setup programmed by Heather Barger for Search Commander, Inc. It also extends the built-in features of WordPress menu management, an and combines several common plugins into one.  See <a href="admin.php?page=seo-automatic-wp-core-tweaks/settings.php">SEO Automatic > Core Tweaks</a> for options.
-Version: 3.7
+Version: 3.7.2
 Author: cyber49
 Author URI: http://www.searchcommander.com/contact/
 */
 if (get_option('seoauto_core_e_report') == 'on') { $err_is = 'E_ALL'; } else { $err_is = 0; }
 error_reporting($err_is);
+
+$coretweaksversion = '3.7.2';
+
+register_activation_hook(__FILE__,'seocoretweaks_activate');
+
+function seocoretweaks_activate(){
+	if (!get_option('seocoretweaks_ver'))
+		update_option('seocoretweaks_ver', $coretweaksversion);
+}
 
 function sc_index() {
 	include('home.php');
@@ -28,7 +37,7 @@ function core_menu() {
 	}
 	if ($menu_added) {
 	} else {
-		add_menu_page('SEO Automatic by Search Commander, Inc.', 'SEO Automatic', 'activate_plugins', 'seo-automatic-options', 'sc_index',plugins_url() . '/seo-automatic-wp-core-tweaks/images/favicon.ico');
+		add_menu_page('SEO Automatic by Search Commander, Inc.', 'SEO Automatic', 'activate_plugins', 'seo-automatic-options', 'sc_index',plugins_url() . '/seo-automatic-wp-core-tweaks/images/favicon.png');
 		add_submenu_page('seo-automatic-options', 'Admin', 'Admin', 'activate_plugins', 'seo-automatic-options', 'sc_index');
 	}
 	add_submenu_page('seo-automatic-options', 'Core Tweaks', 'Core Tweaks', 'activate_plugins', dirname(__FILE__) . '/settings.php', 'sc_settings');
@@ -40,16 +49,24 @@ add_action('admin_menu', 'core_menu');
 
 $current_plugins = get_option('active_plugins');
 
-include('page-order.php'); //updated to version 2.9.1
-include('page-link.php'); //v1.0b
-
-if (get_option('seoauto_core_post_teaser_use') != 'off') {
-	include('post-teaser.php'); //updated to version 4.0.1
+if (!get_option('seocoretweaks_ver')) {
+	update_option('seocoretweaks_ver', $coretweaksversion);
+	if (!get_option('seoauto_core_page_order_use')) { update_option('seoauto_core_page_order_use', 'off'); }
+	if (!get_option('seoauto_core_page_link_use')) { update_option('seoauto_core_page_link_use', 'off'); }
+	if (!get_option('seoauto_core_post_teaser_use')) { update_option('seoauto_core_post_teaser_use', 'off'); }
+	if (!get_option('seoauto_core_dd_sitemap_use')) { update_option('seoauto_core_dd_sitemap_use', 'off'); }
+} elseif (get_option('seocoretweaks_ver') != $coretweaksversion) {
+	update_option('seocoretweaks_ver', $coretweaksversion);
 }
+
+if (get_option('seoauto_core_page_order_use') != 'off') { include('page-order.php'); } //updated to version 3.0a
+if (get_option('seoauto_core_page_link_use') != 'off') { include('page-link.php'); } //v1.0b
+if (get_option('seoauto_core_post_teaser_use') != 'off') { include('post-teaser.php'); } //updated to version 4.1.1
+if (get_option('seoauto_core_dd_sitemap_use') != 'off') { include('sitemap-generator.php'); } //updated to version 3.17
+
 
 include('rss-extend.php');
 include('change-header.php');
-include('sitemap-generator.php'); //updated to version 3.17
 include('meta_tags.php');
 
 // HOOK EM UP

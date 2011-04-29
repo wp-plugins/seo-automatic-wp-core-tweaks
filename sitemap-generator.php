@@ -151,7 +151,7 @@ function ddsg_options_page() {
 
 	// Get list of available languages
 	$language_list = array();
-    $handle = opendir(ABSPATH . 'wp-content/plugins/sitemap-generator/lang');
+    $handle = opendir(ABSPATH . 'wp-content/plugins/seo-automatic-wp-core-tweaks/lang');
     while ($file = readdir($handle)) {
         if ($file != '.' && $file != '..')
    	        $language_list[] = $file;
@@ -162,7 +162,7 @@ function ddsg_options_page() {
 	foreach ($language_list as $lang) {
 		echo '<option';
 		if ($lang == ($slang . '.php')) {
-			echo ' selected="selected"';
+			echo ' selected';
 		}
 		echo '>' . substr($lang, 0, strlen($lang)-4) . '</option>';
 	}
