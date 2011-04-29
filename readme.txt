@@ -96,6 +96,8 @@ If you have not edited your privacy policy after creation, either delete it and 
 
 [youtube http://www.youtube.com/v/UTXrUAccCts&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6]
 
+1. Screenshot
+
 == Other Notes ==
 
 1. We recommend disabling any other plugins before running the process to minimize potential confilcts. There will be no conflicts when you re-enable them.
