@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic
 Requires at least: 2.8
 Tested up to: 3.1.2
-Stable tag: 3.7
+Stable tag: 3.7.2
 
 Primarily for use in new WP installations, the steps are based on an employee checklist from Search Commander, Inc. for setting up sites.
 
@@ -93,8 +93,6 @@ This has been corrected starting with version 3.71. The previous image supplied 
 If you have not edited your privacy policy after creation, either delete it and and use core tweaks to add one again after you have upgraded to 3.71 or higher, or much easier, manually edit your page to remove the broken image.
 
 == Screenshots ==
-
-[youtube http://www.youtube.com/v/UTXrUAccCts&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6]
 
 1. Screenshot
 
