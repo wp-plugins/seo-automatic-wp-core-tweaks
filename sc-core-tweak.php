@@ -51,10 +51,10 @@ $current_plugins = get_option('active_plugins');
 
 if (!get_option('seocoretweaks_ver')) {
 	update_option('seocoretweaks_ver', $coretweaksversion);
-	if (!get_option('seoauto_core_page_order_use')) { update_option('seoauto_core_page_order_use', 'off'); }
-	if (!get_option('seoauto_core_page_link_use')) { update_option('seoauto_core_page_link_use', 'off'); }
-	if (!get_option('seoauto_core_post_teaser_use')) { update_option('seoauto_core_post_teaser_use', 'off'); }
-	if (!get_option('seoauto_core_dd_sitemap_use')) { update_option('seoauto_core_dd_sitemap_use', 'off'); }
+	if (!get_option('seoauto_core_page_order_use')) { update_option('seoauto_core_page_order_use', 'on'); }
+	if (!get_option('seoauto_core_page_link_use')) { update_option('seoauto_core_page_link_use', 'on'); }
+	if (!get_option('seoauto_core_post_teaser_use')) { update_option('seoauto_core_post_teaser_use', 'on'); }
+	if (!get_option('seoauto_core_dd_sitemap_use')) { update_option('seoauto_core_dd_sitemap_use', 'on'); }
 } elseif (get_option('seocoretweaks_ver') != $coretweaksversion) {
 	update_option('seocoretweaks_ver', $coretweaksversion);
 }
