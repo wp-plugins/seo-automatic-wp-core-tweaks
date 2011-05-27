@@ -27,6 +27,7 @@ if ($_REQUEST['action'] == "changecore") {
 		Disallow: /feed/
 		Disallow: /trackback/
 		Disallow: /cgi-bin/
+		Disallow: /wp-content/plugins/seo-automatic-seo-tools/
 		Disallow: /ANY-FOLDER-YOU-WANT/";
 
 			fwrite($fh, $stringData);
