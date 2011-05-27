@@ -32,7 +32,7 @@ if (get_bloginfo('version') < 2.8) {
 <div id='normal-sortables' class='meta-box-sortables'>
 
 <div id="main-admin-box" class="postbox">
-<h3><span><img src="<?php echo plugins_url().$thisplugin; ?>/images/favicon.ico" alt="SEO Automatic" /> SEO Automatic Admin</span></h3>
+<h3><span><img src="<?php echo plugins_url().$thisplugin; ?>/images/favicon.ico" alt="SEO Automatic" /> SEO Automatic <?php echo $pro; ?>Admin</span></h3>
 <div class="inside">
 
 <p>SEO Automatic is more than one plugin, it's a proven system for getting the most out of WordPress, that was developed for Search Commander, Inc.</p>
@@ -63,13 +63,18 @@ if (function_exists('seo_tools_admin_pro')) {
 if (function_exists('autoseo_add_pages')){
 	echo "<p><a href=\"?page=seo-automatic-plugin\">SEO Tools URL Review add-on</a></p>";
 }
+if (function_exists('autoseo_add_pages_pro')){
+	echo "<p><a href=\"?page=seo-automatic-plugin\">SEO Tools Pro - URL Checker add-on</a></p>";
+}
 ?>
 
 <p>Clicking on the installed module links above will take you to the respective settings page. To return here, go to the Admin menu option under SEO Automatic.</p>
+<?php if (function_exists('autoseo_add_pages_pro')){ } else { ?>
 <p>Our WordPress plugins and tools are free to use, but you might not want the back end to be seen on client sites, so each of our plugins is available in a branded, or "white label" version.</p>
 
 <p>Find out more more about the white label options here -<br />
 <a href="http://www.seoautomatic.com/pricing-plans/white-label/" target="_blank">http://www.seoautomatic.com/pricing-plans/white-label/</a></p>
+<?php } ?>
 </div></div>
 
 <div id="wpsc_dashboard_widget" class="postbox" >
@@ -77,7 +82,7 @@ if (function_exists('autoseo_add_pages')){
 <div class="inside">
 <?php
 include_once(ABSPATH . WPINC . '/feed.php');
-$rss = fetch_feed('http://www.seoautomatic.com/feed');
+$rss = fetch_feed('http://www.seoautomatic.com/category/rec/feed');
 if (!is_wp_error( $rss ) ) : 
     $maxitems = $rss->get_item_quantity(5); 
     $rss_items = $rss->get_items(0, $maxitems); 

@@ -4,8 +4,9 @@
 <div id="about-plugins" class="postbox " >
 <h3><span>About</span></h3>
 <div class="inside">
-<a href="http://www.seoautomatic.com/plugins/" target="_blank"><img src="<?php echo plugins_url().$thisplugin; ?>/images/logo-2010.jpg" alt="SEO Automatic" width="262" height="166" /></a>
+<div align="left"><a href="http://www.seoautomatic.com/plugins/" target="_blank"><img src="<?php echo plugins_url().$thisplugin; ?>/images/logo-2010.jpg" alt="SEO Automatic" width="262" height="166" style="float: none;" /></a></div>
 <br />
+<?php if (function_exists('autoseo_add_pages_pro')){ } else { ?>
 <ul>
 	<li style="margin-left: -4px;"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
@@ -15,6 +16,7 @@
 </form>
 </li>
 </ul>
+<?php } ?>
 
 </div></div>
 
