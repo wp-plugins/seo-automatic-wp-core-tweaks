@@ -262,4 +262,4 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 <div class="clear"></div>
 </div><!-- dashboard-widgets-wrap -->
 
-</div><!-- wrap -->
+</div></div><!-- wrap -->

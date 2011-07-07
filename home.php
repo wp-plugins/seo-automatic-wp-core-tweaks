@@ -110,4 +110,4 @@ endif;
 <div class="clear"></div>
 </div><!-- dashboard-widgets-wrap -->
 
-</div><!-- wrap -->
+</div></div><!-- wrap -->
