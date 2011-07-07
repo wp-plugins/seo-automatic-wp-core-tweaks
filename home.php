@@ -82,7 +82,7 @@ if (function_exists('autoseo_add_pages_pro')){
 <div class="inside">
 <?php
 include_once(ABSPATH . WPINC . '/feed.php');
-$rss = fetch_feed('http://www.seoautomatic.com/category/rec/feed');
+$rss = fetch_feed('http://feeds.feedburner.com/seoautomatic');
 if (!is_wp_error( $rss ) ) : 
     $maxitems = $rss->get_item_quantity(5); 
     $rss_items = $rss->get_items(0, $maxitems); 
