@@ -3,7 +3,7 @@
 Plugin Name: Core Tweaks WordPress Setup
 Plugin URI: http://www.seoautomatic.com/plugins/wp-core-tweaks/
 Description: SEO Automatic WordPress setup programmed by Heather Barger for Search Commander, Inc. It also extends the built-in features of WordPress menu management, an and combines several common plugins into one.  See <a href="admin.php?page=seo-automatic-wp-core-tweaks/settings.php">SEO Automatic > Core Tweaks</a> for options.
-Version: 3.7.3
+Version: 3.7.4
 Author: cyber49
 Author URI: http://www.searchcommander.com/contact/
 */
@@ -64,6 +64,13 @@ if (get_option('seoauto_core_page_link_use') != 'off') { include('page-link.php'
 if (get_option('seoauto_core_post_teaser_use') != 'off') { include('post-teaser.php'); } //updated to version 4.1.1
 if (get_option('seoauto_core_dd_sitemap_use') != 'off') { include('sitemap-generator.php'); } //updated to version 3.17
 
+//stop html removal of user profile
+if (get_option('seoauto_core_user_profile_html') != 'off') { remove_filter('pre_user_description', 'wp_filter_kses'); } 
+
+include('google-profile-field.php');
+if (!function_exists('yoast_add_google_profile')) {
+	add_filter('user_contactmethods', 'seoauto_add_google_profile', 10, 1);
+}
 
 include('rss-extend.php');
 include('change-header.php');

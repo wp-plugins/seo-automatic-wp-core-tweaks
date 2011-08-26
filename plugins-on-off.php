@@ -102,5 +102,30 @@ if ($_REQUEST['action'] == "pluginsonoff") {
 	$options2 .= '<li><a href="http://www.dagondesign.com/articles/sitemap-generator-plugin-for-wordpress/" target="_blank">Sitemap Generator:</a> <input type="radio" name="dd_sitemap_use" value="on"> On <input type="radio" name="dd_sitemap_use" value="off" checked> Off <small><b>(Off by default.)</b></small><br/>This plugin creates a static sitemap (not to be confused with an XML sitemap) for your WordPress site. Simply placing the shortcode &lt;!-- ddsitemapgen --&gt; in your .html will show the options you\'ve selected in your admin, so the spiders and bots have a path to crawl each page and post.<br />Access under Settings > '.$link4.'DDSitemapGen'.$endlink4.'</li><li>&nbsp;</li>';
 }
 
+// Turn Sitemap Generator on and off
+if ($_REQUEST['action'] == "pluginsonoff") {
+	if ($_REQUEST['user_profile_html'] == "on") {
+		if (!update_option('seoauto_core_user_profile_html', 'on')) {
+			$fail .= "<li>Prevent HTML stripping from user profiles could not be set. Maybe it's already on.</li>";
+		} else {
+			$success .= "<li>Prevent HTML stripping from user profiles is on.</li>";
+		}
+	} elseif ($_REQUEST['user_profile_html'] == "off") {
+		if (!update_option('seoauto_core_user_profile_html', 'off')) {
+			$fail .= "<li>Prevent HTML stripping from user profiles could not be set. Maybe it's already off.</li>";
+		} else {
+			$success .= "<li>Prevent HTML stripping from user profiles is  off.</li>";
+		}
+	} else {
+		$notused .= "<li>Prevent HTML stripping from user profiles is off by default.</li>";
+	}
+} else {
+	if (get_option('seoauto_core_user_profile_html') != 'off') {
+		$link4 = '<a href="profile.php">';
+		$endlink4 = '</a>';
+	}
+	$options2 .= '<li>Prevent HTML stripping from user profiles: <input type="radio" name="user_profile_html" value="on"> On <input type="radio" name="user_profile_html" value="off" checked> Off <small><b>(Off by default.)</b></small><br/><!--This plugin creates a static sitemap (not to be confused with an XML sitemap) for your WordPress site. Simply placing the shortcode &lt;!-- ddsitemapgen --&gt; in your .html will show the options you\'ve selected in your admin, so the spiders and bots have a path to crawl each page and post.<br />--></li><li>&nbsp;</li>';
+}
+
 if ($_REQUEST['action'] != "pluginsonoff") { $options2 .= '</ul>'; }
 ?>

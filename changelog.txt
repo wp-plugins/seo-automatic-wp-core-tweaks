@@ -1,4 +1,9 @@
 Change Log
+08/15/11
+1. Changes to privacy policy.
+2. Prevent HTML stripping from user profiles on/off option added.
+3. Added google profile url field to profile.
+
 04/28/11
 1. Updated Post Teaser to 4.1.1.
 2. Separated all included plugins to be active or deactivated.
