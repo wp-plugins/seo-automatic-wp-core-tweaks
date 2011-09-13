@@ -4,14 +4,14 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic, blog setup
 Requires at least: 2.8
 Tested up to: 3.2.1
-Stable tag: 3.7.4
+Stable tag: 3.7.5
 
-Primarily for use in new WP installations, the steps are based on an employee checklist from Search Commander, Inc. for setting up sites.
+SEO Automatic - Search Commander, Inc. automated setup saves 20 to 40 minutes of post-install time, and does what your other SEO plugin won't.
 
 == Description ==
 <a href="http://www.seoautomatic.com/plugins/wp-core-tweaks/" target="_blank">Plugin Page</a> | <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">Plugin Support</a>
 
-This plug-in completely automates the proper setup of your WordPress blog and will save 20 to 40 minutes of post-install time.
+All of the "little things", from changing permalink structure to deleting the Hello World post, to enabling XML, and more, are all accessible from the admin page
 
 [youtube http://www.youtube.com/v/UTXrUAccCts&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6]
 

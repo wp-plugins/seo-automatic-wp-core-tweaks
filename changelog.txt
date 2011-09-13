@@ -1,4 +1,7 @@
 Change Log
+09/15/11
+1. Wording change.
+
 08/15/11
 1. Changes to privacy policy.
 2. Prevent HTML stripping from user profiles on/off option added.
