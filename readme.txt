@@ -11,7 +11,7 @@ SEO Automatic - Search Commander, Inc. automated setup saves 20 to 40 minutes of
 == Description ==
 <a href="http://www.seoautomatic.com/plugins/wp-core-tweaks/" target="_blank">Plugin Page</a> | <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">Plugin Support</a>
 
-All of the "little things", from changing permalink structure to deleting the Hello World post, to enabling XML, and more, are all accessible from the admin page
+Almost everything you would do manually is covered, from changing permalink structure to deleting the Hello World sample post. All the options are accessible from one single page.
 
 [youtube http://www.youtube.com/v/UTXrUAccCts&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6]
 
