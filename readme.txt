@@ -6,7 +6,7 @@ Requires at least: 2.8
 Tested up to: 3.2.1
 Stable tag: 3.7.5
 
-SEO Automatic - Search Commander, Inc. automated setup saves 20 to 40 minutes of post-install time, and does what your other SEO plugin won't.
+This plug-in completely automates the proper setup of your WordPress blog and will save 20 to 40 minutes of post-install time.
 
 == Description ==
 <a href="http://www.seoautomatic.com/plugins/wp-core-tweaks/" target="_blank">Plugin Page</a> | <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">Plugin Support</a>
