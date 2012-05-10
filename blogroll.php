@@ -12,7 +12,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Blogroll has not been changed.</li>";
 	}
 } else {
-	$options .= '<li><input name="empty_blogroll" type="checkbox" value="ON" /> Delete <b>all</b> links in blogroll. <small><b>(Cannot be undone.)</b></small></li>';
+	$options .= '<li><input id="empty_blogroll" type="checkbox" value="OFF" onclick="setCheckedRight(\'empty_blogroll\')" /> Delete <b>all</b> links in blogroll. <small><b>(Cannot be undone.)</b></small></li>';
 } 
 
 ?>

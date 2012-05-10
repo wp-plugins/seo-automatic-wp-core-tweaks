@@ -14,6 +14,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Default comment removal.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" name=\"d_comment\" value=\"ON\"> Delete default comment.<br /><small><b>(Cannot be undone.)</b></small></li>";
+	$options .= "<li><input type=\"checkbox\" id=\"d_comment\" value=\"OFF\" onclick=\"setCheckedRight('d_comment')\"> Delete default comment.<br /><small><b>(Cannot be undone.)</b></small></li>";
 }
 ?>

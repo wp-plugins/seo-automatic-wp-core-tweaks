@@ -43,6 +43,6 @@ if ($_REQUEST['action'] == "changecore") {
 			$notused .= "<li>Create robots.txt file.</li>";
 		}
 } else {
-	$options .= '<li><input name="add_robots" type="checkbox" value="ON" /> Add a robots.txt file to your blog root.<br /><small><b>(This WILL overwrite any existing robots.txt file and cannot be undone.)</b></small></li>';
+	$options .= '<li><input id="add_robots" type="checkbox" value="OFF" onclick="setCheckedRight(\'add_robots\')" /> Add a robots.txt file to your blog root.<br /><small><b>(This WILL overwrite any existing robots.txt file and cannot be undone.)</b></small></li>';
 }
 ?>

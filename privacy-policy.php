@@ -45,6 +45,6 @@ $post_id = wp_insert_post($info);
 		$notused .= "<li>Create privacy policy.</li>";
 	}
 } else {
-	$options .= '<li><input name="privacy_policy" type="checkbox" value="ON" /> Create a privacy page with your contact information using text provided by FreePrivacyPolicy.com.<p>Company Name <input type="text" name="privacy_contact_name" size="20" value="Company Name"> &nbsp;&nbsp; Email <input type="text" name="privacy_contact_email" size="20" value="Email"></p></li>';
+	$options .= '<li><input id="privacy_policy" type="checkbox" value="OFF" onclick="setCheckedRight(\'privacy_policy\')" /> Create a privacy page with your contact information using text provided by FreePrivacyPolicy.com.<p>Company Name <input type="text" name="privacy_contact_name" size="20" value="Company Name"> &nbsp;&nbsp; Email <input type="text" name="privacy_contact_email" size="20" value="Email"></p></li>';
 } 
 ?>

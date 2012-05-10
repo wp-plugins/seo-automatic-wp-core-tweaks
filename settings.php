@@ -25,7 +25,6 @@ if (get_bloginfo('version') < 2.8) {
 #resources li { clear: both; }
 #about-plugins li { clear: both; }
 </style>
-
 <div class="wrap">
 <br />
 <div id="dashboard-widgets-wrap">
@@ -180,6 +179,17 @@ count = document.corechanges.elements.length;
 	{
 	document.corechanges.elements[i].checked = 0;
 	}
+	var x=document.getElementById('corechanges');
+	for (var i=0;i<x.length;i++)
+	  {
+		if (x.elements[i].value.toLowerCase() == 'on') {
+			document.corechanges.elements[i].checked = 0;
+			document.corechanges.elements[i].value = 'OFF';
+		}
+		if (x.elements[i].value.toLowerCase() == 'off') {
+			document.corechanges.elements[i].checked = 0;
+		}	  
+	}
 }
 </script>
 
@@ -202,6 +212,120 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 </b>There are many options below that are not checked, but if you know what you're doing, many are likely something you plan to do anyway.</p>
 <p>Note at the very bottom, there is one THEME SPECIFIC change available to change your H2 tags to H1's. This is UNchecked by default, because most new themes will allow this. However, if you need to use it, note the the permissions of your theme pages: single.php and page.php files must be 766.</p>
 
+<b>Import your own Core Tweaks Setup File or export the existing settings below.</b><br />
+<div id="nonieimport" style="display: none;"><input type="file" id="nonieimportfile" name="file" /> 
+<span class="readBytesButtons">
+  <button>Import</button>
+</span></div>
+
+<div id="ieimport" style="display: none;"><input type="file" id="ieimportfile" name="file" /> 
+<span class="readIEBytesButtons">
+  <input type="button" value="Import" id="button-ie">
+</span></div>
+
+<script>
+function bindEvent(el, eventName, eventHandler) {
+  if (el.addEventListener){
+    el.addEventListener(eventName, eventHandler, false); 
+  } else if (el.attachEvent){
+    el.attachEvent('on'+eventName, eventHandler);
+  }
+}
+if (window.File && window.FileReader && window.FileList && window.Blob) {
+  function readBlob(opt_startByte, opt_stopByte) {
+
+    var files = document.getElementById('nonieimportfile').files;
+    if (!files.length) {
+      alert('Please select a file!');
+      return;
+    }
+
+    var file = files[0];
+    var start = parseInt(opt_startByte) || 0;
+    var stop = parseInt(opt_stopByte) || file.size - 1;
+
+    var reader = new FileReader();
+
+    // If we use onloadend, we need to check the readyState.
+    reader.onloadend = function(evt) {
+      if (evt.target.readyState == FileReader.DONE) { // DONE == 2
+		var t = new Array();
+		var t = evt.target.result.split(',');
+		var x=document.getElementById('corechanges');
+		for (var i=0;i<x.length;i++)
+		  {
+			x.elements[i].value = t[i];
+			if (x.elements[i].value.toLowerCase() == 'on') {
+				document.corechanges.elements[i].checked = 1;
+			}
+			if (x.elements[i].value.toLowerCase() == 'off') {
+				document.corechanges.elements[i].checked = 0;
+			}
+		  }
+      }
+    };
+    if (file.webkitSlice) {
+      var blob = file.webkitSlice(start, stop + 1);
+    } else if (file.mozSlice) {
+      var blob = file.mozSlice(start, stop + 1);
+    }
+    reader.readAsBinaryString(blob);
+  }
+  
+  document.querySelector('.readBytesButtons').addEventListener('click', function(evt) {
+    if (evt.target.tagName.toLowerCase() == 'button') {
+      var startByte = evt.target.getAttribute('data-startbyte');
+      var endByte = evt.target.getAttribute('data-endbyte');
+      readBlob(startByte, endByte);
+    }
+  }, false);
+  toggle_visibility('nonieimport');
+} else {
+	function readFileInIE(filePath) {
+		try {
+			var fso = new ActiveXObject("Scripting.FileSystemObject");
+			
+			var file = fso.OpenTextFile(filePath, 1);
+			
+			var fileContent = file.ReadAll();
+
+			file.Close();
+
+			var t = new Array();
+			var t = fileContent.split(',');
+			var x=document.getElementById('corechanges');
+
+			for (var i=0;i<x.length;i++)
+			  {
+				x.elements[i].value = t[i];
+				if (x.elements[i].value.toLowerCase() == 'on') {
+					x.elements[i].checked = 1;
+				}
+				if (x.elements[i].value.toLowerCase() == 'off') {
+					x.elements[i].checked = 0;
+				}
+			  }
+		 } catch (e) {
+			if (e.number == -2146827859) {
+				alert('Unable to access local files due to browser security settings. Our suggestion is to use FireFox or Chrome browsers instead. If one of those browsers are unavailable to you, go to Tools->Internet Options->Security->Custom Level. ' + 
+					'Find the setting for "Initialize and script ActiveX controls not marked as safe" and change it to "Enable" or "Prompt"'); 
+			}
+		}
+	}   
+	bindEvent(document.getElementById('button-ie'), 'click', function () {
+	  readFileInIE(document.getElementById('ieimportfile').value);
+	});
+	toggle_visibility('ieimport');
+}
+function toggle_visibility(id) {
+   var e = document.getElementById(id);
+   if(e.style.display == 'block')
+	  e.style.display = 'none';
+   else
+	  e.style.display = 'block';
+}
+</script>
+
 <p><!--<a href="javascript: CheckAll();">Select All</a> | --><a href="javascript: UncheckAll();">Deselect All</a></p>
 
 <p><form name="corechanges" id="corechanges" method="post" action="" class="validate">
@@ -214,11 +338,53 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 </form>
 
 <p><!--<a href="javascript: CheckAll();">Select All</a> |--><a href="javascript: UncheckAll();">Deselect All</a></p>
+<?php 
+$main_dir = wp_upload_dir(); 
+$upload_dir = $main_dir['basedir'];
+$download_dir = $main_dir['baseurl'];
+$dir_writable = substr(sprintf('%o', fileperms($upload_dir)), -4) == "0777" ? "true" : "false";
+if($dir_writable == "false") { 
+	echo '<b><font color="#ff0000">Export Disabled: Your uploads folder must exist and be writable with 777 permission to create an export.</font></b>';
+} else {
+	if ($_GET['type'] == 'export') {
+		$exportFile = $upload_dir.'/seoauto-coretweaks.csv';
+		$fh = fopen($exportFile, 'w') or die("Your uploads folder must exist and be writable to create an export of your settings.");
+		fwrite($fh, $_GET['data']);
+		fclose($fh);
+	?>
+		<a id="downloadLink" href="<?php echo $download_dir; ?>/seoauto-coretweaks.csv"> </a>
+<?php } ?>
+	<script type="text/javascript">
+	var t = new Array();
+	function export_coretweaks() {
+		var x=document.getElementById('corechanges');
+		for (var i=0;i<x.length;i++)
+		  {
+			t.push(x.elements[i].value);
+		  }
+		uriContent = "data:text/csv," + encodeURIComponent(t);
+		location.href = "admin.php?page=seo-automatic-wp-core-tweaks/settings.php&type=export&data=" + encodeURIComponent(t);
+
+	}
+	</script>
+	<form id="coretweaks-export">
+	<input type="button" class="button" value="Export Settings" onclick="export_coretweaks()" /> (Import settings from another site at the top of this page.)
+	</form>
+<?php } ?>
 </div></div>
+<script>
+function setCheckedRight(eid) {
+	if (document.getElementById(eid).value == 'ON') {
+		document.getElementById(eid).value = 'OFF';
+	} else {
+		document.getElementById(eid).value = 'ON';
+	}
+}
+</script>
 
 <div id="main-admin-box" class="postbox">
-<h3><span><img src="<?php echo plugins_url(); ?>/seo-automatic-wp-core-tweaks/images/favicon.ico" alt="SEO Automatic" /> Activate or Deactivate Included Plugins</span></h3>
-<div class="inside">
+<h3><span><img src="<?php echo plugins_url(); ?>/seo-automatic-wp-core-tweaks/images/favicon.ico" alt="SEO Automatic" /> Activate or Deactivate Included Plugins</span><div style="float: right;margin-top: -5px;"><input class="button" type="button" onclick="toggle_visibility('pluginssection');" value="Show/Hide"></div></h3>
+<div class="inside" id="pluginssection" style="display: none;">
 <p><form name="pluginsonoff" id="pluginsonoff" method="post" action="" class="validate">
 <input type="hidden" name="action" value="pluginsonoff" />
 
@@ -263,3 +429,14 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 </div><!-- dashboard-widgets-wrap -->
 
 </div></div><!-- wrap -->
+<?php 
+function send_user_file() {
+	$main_dir = wp_upload_dir(); 
+	$upload_dir = $main_dir['basedir'];
+	$dir_writable = substr(sprintf('%o', fileperms($upload_dir)), -4) == "0777" ? "true" : "false";
+	if($dir_writable == "true" && $_REQUEST['type'] == 'export') { 
+		?><script>document.getElementById('downloadLink').click();</script>
+	<?php }
+}
+add_action(shutdown, 'send_user_file');
+?>

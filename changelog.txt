@@ -1,4 +1,11 @@
 Change Log
+05/10/12
+1. Addition of setting import/export.
+2. Some wording change and set sitemap page creation to off by default.
+
+03/12/12
+1. Banner addition to plugin download page.
+
 09/15/11
 1. Wording change.
 

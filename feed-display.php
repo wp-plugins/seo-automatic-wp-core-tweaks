@@ -11,6 +11,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Set article feed to summary.</li>";
 	}
 } else {
-	$options .= '<li><input name="feed_summary" type="checkbox" value="ON" checked /> Set the RSS feed to display only a summary.</li>';
+	$options .= '<li><input id="feed_summary" type="checkbox" value="ON" checked onclick="setCheckedRight(\'feed_summary\')" /> Set the RSS feed to display only a summary.</li>';
 }
 ?>

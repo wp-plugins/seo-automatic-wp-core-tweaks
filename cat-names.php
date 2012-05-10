@@ -21,7 +21,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Change default post category name.</li>";
 	} 
 } else {
-		$options .= "<li><input type=\"checkbox\" name=\"d_post\" value=\"ON\" checked> Change default post category name from \"uncategorized\" to: <input type=\"text\" name=\"cat_1\" size=\"20\" value=\"General\" /></li>";
+		$options .= "<li><input type=\"checkbox\" id=\"d_post\" name=\"d_post\" value=\"ON\" checked onclick=\"setCheckedRight('d_post')\"> Change default post category name from \"uncategorized\" to: <input type=\"text\" name=\"cat_1\" size=\"20\" value=\"General\" /></li>";
 }
 
 
@@ -45,6 +45,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Change default blogroll category name.</li>";
 	} 
 } else {
-	$options .= "<li><input type=\"checkbox\" name=\"d_blogroll\" value=\"ON\" checked> Change default blogroll category name from \"blogroll\" to: <input type=\"text\" name=\"cat_2\" size=\"20\" value=\"Related\" /></li>";
+	$options .= "<li><input type=\"checkbox\" id=\"d_blogroll\" value=\"ON\" checked onclick=\"setCheckedRight('d_blogroll')\"> Change default blogroll category name from \"blogroll\" to: <input type=\"text\" name=\"cat_2\" size=\"20\" value=\"Related\" /></li>";
 }
 ?>

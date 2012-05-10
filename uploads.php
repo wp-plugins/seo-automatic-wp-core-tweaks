@@ -18,6 +18,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Creation of uploads folder.</li>";
 	}
 } else {
-	$options .= "<li><b>Uploads Folder: <font color=\"#ff0000\"><small>You will need to have writable permission in the /wp-content folder for this to work. Otherwise, you will need to manually add the uploads folder so users can upload pictures into posts, etc.</small></font></b><br /><input name=\"uploads_folder\" type=\"checkbox\" value=\"ON\" /> Attempt to create the uploads folder and set the permission to writable.</li>";
+	$options .= "<li><b>Uploads Folder: <font color=\"#ff0000\"><small>You will need to have writable permission in the /wp-content folder for this to work. Otherwise, you will need to manually add the uploads folder so users can upload pictures into posts, etc.</small></font></b><br /><input id=\"uploads_folder\" type=\"checkbox\" value=\"OFF\" onclick=\"setCheckedRight('uploads_folder')\" /> Attempt to create the uploads folder and set the permission to writable.</li>";
 } 
 ?>

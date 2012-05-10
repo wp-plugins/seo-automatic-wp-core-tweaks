@@ -17,8 +17,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Error reporting is off by default.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"radio\" name=\"e_reporting\" value=\"on\"> Turn error reporting on.</li>";
-	$options .= "<li><input type=\"radio\" name=\"e_reporting\" value=\"off\" checked> Turn error reporting off.</li>";
+	$options .= "<li><input type=\"checkbox\" id=\"e_reporting\" value=\"off\" onclick=\"setCheckedRight('e_reporting')\" /> Turn error reporting on.</li>";
 }
 
 ?>

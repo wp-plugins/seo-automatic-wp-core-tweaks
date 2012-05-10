@@ -19,7 +19,7 @@ if ($_REQUEST['action'] == "changecore") {
 	}
 } else {
 	$tagline = get_bloginfo('description');
-	$options .= '<li><input name="taglinecheck" type="checkbox" value="ON" /> Change the blog description tagline. <input name="tagline" type="text" id="tagline" value="'.$tagline.'" /></li>';
+	$options .= '<li><input id="taglinecheck" type="checkbox" value="OFF" onclick="setCheckedRight(\'taglinecheck\')" /> Change the blog description tagline. <input name="tagline" type="text" id="tagline" value="'.$tagline.'" /></li>';
 } 
 
 ?>

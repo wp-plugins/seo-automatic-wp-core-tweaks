@@ -49,7 +49,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>H1 Hack.</li>";
 	}
 } else {
-	$options .= '<li><input name="add_h1hack" type="checkbox" value="ON" /> Want the ability to change your H1 tag regardless of the page name? We\'ve added an <a href="http://www.getwordpressed.com/seo/h1-hack-for-wordpress-pages/" rel="nofollow" target="_blank">H1 hack</a> - <b>In order for this to work, replace your title tag in header.php with <code>&lt;title&gt;&lt;?php wp_title(\'\'); if (!is_home() &amp;&amp; !is_front_page()) { print(" | "); } bloginfo(\'name\'); ?&gt;&lt;/title&gt;</code> first.</b></li>';
+	$options .= '<li><input id="add_h1hack" type="checkbox" value="OFF" onclick="setCheckedRight(\'add_h1hack\')" /> Want the ability to change your H1 tag regardless of the page name? We\'ve added an <a href="http://www.getwordpressed.com/seo/h1-hack-for-wordpress-pages/" rel="nofollow" target="_blank">H1 hack</a> - <b>In order for this to work, replace your title tag in header.php with <code>&lt;title&gt;&lt;?php wp_title(\'\'); if (!is_home() &amp;&amp; !is_front_page()) { print(" | "); } bloginfo(\'name\'); ?&gt;&lt;/title&gt;</code> first.</b></li>';
 } 
 
 ?>
