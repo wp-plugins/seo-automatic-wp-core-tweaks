@@ -4,20 +4,19 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic, blog setup
 Requires at least: 2.8
 Tested up to: 3.3.2
-Stable tag: 3.7.7
+Stable tag: 3.8
 
 Primarily for use in new WP installations, the steps are based on an employee checklist from Search Commander, Inc. for setting up sites.
 
 == Description ==
-<a href="http://www.seoautomatic.com/plugins/wp-core-tweaks/" target="_blank">Plugin Page</a> | <a href="http://www.seoautomatic.com/forum/wp-tweak-plugin/" target="_blank">Plugin Support</a>
 
-SEO Automatic - Search Commander, Inc. automated setup saves 20 to 40 minutes of post-install time, and does what your other SEO plugin won't.
+Even before you add an SEO plugin, the steps after a WP installation can take 20 to 40 minutes. This plugin eliminates that time, putting all the options on one admin screen.  This plugin does not replace other SEO plugins. It does what they don't do; Properly prepare you for their installation.
 
 [youtube http://www.youtube.com/v/UTXrUAccCts&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6]
 
 All of the "little things", from changing permalink structure to deleting the Hello World post, to enabling XML, and more, are all accessible from the admin page
 
-It also extends the built-in features of WordPress and combines 4 other useful plugins into this one.
+This plugin extends the built-in features of WordPress, and as of May 2012, has an import / export feature, saving you even more time.
 
 This plug-in is designed to be a companion to other plugins like All in one SEO, Headspace, or WordPress SEO, and *is not* intended as a replacement. In fact, as they get better, we have disabled some of our features. 
 
@@ -56,6 +55,7 @@ From one admin screen, click a button and make any or all of these changes...
 26.	Uploads Folder: You will need to have writable permission
 27.	Attempt to create the uploads folder and set the permission to writable.
 28.	Change H2 tags to H1
+29.     Import / export your settings from another site. Once you set preferences the first time, just export. Then import that file on future domains, and you're done.
 
 == Installation ==
 

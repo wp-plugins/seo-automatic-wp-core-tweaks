@@ -3,14 +3,14 @@
 Plugin Name: Core Tweaks WordPress Setup
 Plugin URI: http://www.seoautomatic.com/plugins/wp-core-tweaks/
 Description: SEO Automatic - Search Commander, Inc. automated setup saves 20 to 40 minutes of post-install time, and does what your other SEO plugin won't. All of the "little things", from changing permalink structure to deleting the Hello World post, to enabling XML, and more, are all accessible from the <a href="admin.php?page=seo-automatic-wp-core-tweaks/settings.php">admin page</a>.
-Version: 3.7.7
+Version: 3.8
 Author: cyber49
 Author URI: http://www.searchcommander.com/contact/
 */
 if (get_option('seoauto_core_e_report') == 'on') { $err_is = 'E_ALL'; } else { $err_is = 0; }
 error_reporting($err_is);
 
-$coretweaksversion = '3.7.6';
+$coretweaksversion = '3.8';
 
 register_activation_hook(__FILE__,'seocoretweaks_activate');
 
