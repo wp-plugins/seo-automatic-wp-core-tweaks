@@ -22,6 +22,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Default post removal.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" id=\"helloworldpost\" value=\"OFF\" onclick=\"setCheckedRight('helloworldpost')\"> Delete default \"Hello World\" post.<br /><small><b>(Cannot be undone.)<br />Deleting this post can leave you with no blog posts, indicating a 404 error on your home page. To prevent this, add another blog post to your site, and if desired, select another page to be displayed as your home page in the next step.</b></small></li>";
+	$options .= "<li><input type=\"checkbox\" name=\"helloworldpost\" value=\"ON\"> Delete default \"Hello World\" post.<br /><small><b>(Cannot be undone.)<br />Deleting this post can leave you with no blog posts, indicating a 404 error on your home page. To prevent this, add another blog post to your site, and if desired, select another page to be displayed as your home page in the next step.</b></small></li>";
 }
 ?>

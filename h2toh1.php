@@ -49,7 +49,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Change H2 to H1.</li>";
 	}
 } else {
-	$options .= '<li><font color="#ff0000"><b><u>Theme specific:</u></b></font></li><li><input id="change_h2_h1" type="checkbox" value="OFF" onclick="setCheckedRight(\'change_h2_h1\')" /> Change H2 tags to H1</li>';
+	$options .= '<li><font color="#ff0000"><b><u>Theme specific:</u></b></font></li><li><input name="change_h2_h1" type="checkbox" value="ON" /> Change H2 tags to H1</li>';
 }
 
 // Change H1 tags back to H2 in the current theme.
@@ -106,5 +106,5 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Undo Change H2 to H1</li>";
 	}
 } else {
-	$options .= '<li><br /></li><li><small><b>Or use this option to change back:</b></small></li><li><input id="change_h1_h2" type="checkbox" value="OFF" onclick="setCheckedRight(\'change_h1_h2\')" /> Undo change of H2 tags to H1</li><li>&nbsp;</li>';
+	$options .= '<li><br /></li><li><small><b>Or use this option to change back:</b></small></li><li><input name="change_h1_h2" type="checkbox" value="ON" /> Undo change of H2 tags to H1</li><li>&nbsp;</li>';
 }

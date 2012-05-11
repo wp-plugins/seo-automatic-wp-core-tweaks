@@ -11,7 +11,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Change main blog email.</li>";
 	}
 } else {
-	$options .= '<li><input id="email_1" type="checkbox" value="OFF" onclick="setCheckedRight(\'email_1\')" /> Set the main blog email to: <input name="blog_email" type="textbox" value="'.get_option('admin_email').'" /></li>';
+	$options .= '<li><input name="email_1" type="checkbox" value="ON" /> Set the main blog email to: <input name="blog_email" type="textbox" value="'.get_option('admin_email').'" /></li>';
 }
 
 if ($_REQUEST['action'] == "changecore") {
@@ -26,7 +26,7 @@ if ($_REQUEST['action'] == "changecore") {
 	}
 } else {
 	$original_admin_email = $wpdb->get_row("SELECT * FROM $wpdb->users WHERE id = 1", ARRAY_A);
-	$options .= '<li><input id="email_2" type="checkbox" value="OFF" onclick="setCheckedRight(\'email_2\')" /> Set the admin user\'s blog email to: <input name="admin_email" type="textbox" value="'.$original_admin_email['user_email'].'" /></li>';
+	$options .= '<li><input name="email_2" type="checkbox" value="ON" /> Set the admin user\'s blog email to: <input name="admin_email" type="textbox" value="'.$original_admin_email['user_email'].'" /></li>';
 } 
 
 if ($_REQUEST['action'] == "changecore") {
@@ -47,7 +47,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>New user was not added.</li>";
 	}
 } else {
-	$options .= '<li><input id="new_user" type="checkbox" value="OFF" onclick="setCheckedRight(\'new_user\')" /> Add new user: <br />';
+	$options .= '<li><input name="new_user" type="checkbox" value="ON" /> Add new user: <br />';
 	$options .= 'Username: <input type="text" size="20" name="new_login"> Password: <input type="text" size="20" name="new_pass"><br />Email: <input type="text" size="30" name="new_email"></li>';
 }
 ?>

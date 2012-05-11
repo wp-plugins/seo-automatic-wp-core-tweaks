@@ -14,7 +14,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Add copyright date to footer.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" id=\"add_footer_copy\" value=\"OFF\" onclick=\"setCheckedRight('add_footer_copy')\"> Add the copyright date to the footer.</li>";
+	$options .= "<li><input type=\"checkbox\" name=\"add_footer_copy\" value=\"ON\"> Add the copyright date to the footer.</li>";
 }
 
 
@@ -29,7 +29,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Add admin login to footer.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" id=\"add_footer_login\" value=\"OFF\" onclick=\"setCheckedRight('add_footer_login')\"> Add an admin login to the footer.</li>";
+	$options .= "<li><input type=\"checkbox\" name=\"add_footer_login\" value=\"ON\"> Add an admin login to the footer.</li>";
 }
 
 if ($_REQUEST['action'] == "changecore") {
@@ -43,7 +43,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Add sitemap link to footer.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" id=\"add_footer_sitemap\" value=\"OFF\" onclick=\"setCheckedRight('add_footer_sitemap')\"> Add the static sitemap link to the footer.</li>";
+	$options .= "<li><input type=\"checkbox\" name=\"add_footer_sitemap\" value=\"ON\"> Add the static sitemap link to the footer.</li>";
 }
 
 if ($_REQUEST['action'] == "changecore") {
@@ -57,7 +57,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Add privacy policy link to footer.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" id=\"add_footer_privacy\" value=\"OFF\" onclick=\"setCheckedRight('add_footer_privacy')\"> Add the privacy policy link to the footer.</li>";
+	$options .= "<li><input type=\"checkbox\" name=\"add_footer_privacy\" value=\"ON\"> Add the privacy policy link to the footer.</li>";
 }
 
 //undo
@@ -76,7 +76,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Remove copyright date.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" id=\"remove_footer_copy\" value=\"OFF\" onclick=\"setCheckedRight('remove_footer_copy')\"> Remove the copyright date from the footer. </li>";
+	$options .= "<li><input type=\"checkbox\" name=\"remove_footer_copy\" value=\"ON\"> Remove the copyright date from the footer. </li>";
 }
 
 if ($_REQUEST['action'] == "changecore") {
@@ -90,7 +90,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Remove admin login.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" id=\"remove_footer_login\" value=\"OFF\" onclick=\"setCheckedRight('remove_footer_login')\"> Remove admin login from the footer. </li>";
+	$options .= "<li><input type=\"checkbox\" name=\"remove_footer_login\" value=\"ON\"> Remove admin login from the footer. </li>";
 }
 
 if ($_REQUEST['action'] == "changecore") {
@@ -104,7 +104,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Remove sitemap link.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" id=\"remove_footer_sitemap\" value=\"OFF\" onclick=\"setCheckedRight('remove_footer_sitemap')\"> Remove the static sitemap link from the footer. </li>";
+	$options .= "<li><input type=\"checkbox\" name=\"remove_footer_sitemap\" value=\"ON\"> Remove the static sitemap link from the footer. </li>";
 }
 
 if ($_REQUEST['action'] == "changecore") {
@@ -118,6 +118,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Remove privacy policy link.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" id=\"remove_footer_privacy\" value=\"OFF\" onclick=\"setCheckedRight('remove_footer_privacy')\"> Remove the privacy policy link from the footer. </li>";
+	$options .= "<li><input type=\"checkbox\" name=\"remove_footer_privacy\" value=\"ON\"> Remove the privacy policy link from the footer. </li>";
 }
 ?>

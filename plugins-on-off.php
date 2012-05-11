@@ -81,25 +81,25 @@ if ($_REQUEST['action'] == "pluginsonoff") {
 if ($_REQUEST['action'] == "pluginsonoff") {
 	if ($_REQUEST['dd_sitemap_use'] == "on") {
 		if (!update_option('seoauto_core_dd_sitemap_use', 'on')) {
-			$fail .= "<li>DD Sitemap Generator could not be turned on. Maybe it's already on.</li>";
+			$fail .= "<li>Sitemap Generator could not be turned on. Maybe it's already on.</li>";
 		} else {
-			$success .= "<li>DD Sitemap Generator is turned on.</li>";
+			$success .= "<li>Sitemap Generator is turned on.</li>";
 		}
 	} elseif ($_REQUEST['dd_sitemap_use'] == "off") {
 		if (!update_option('seoauto_core_dd_sitemap_use', 'off')) {
-			$fail .= "<li>DD Sitemap Generator could not be turned off. Maybe it's already off.</li>";
+			$fail .= "<li>Sitemap Generator could not be turned off. Maybe it's already off.</li>";
 		} else {
-			$success .= "<li>DD Sitemap Generator is turned off.</li>";
+			$success .= "<li>Sitemap Generator is turned off.</li>";
 		}
 	} else {
-		$notused .= "<li>DD Sitemap Generator is off by default.</li>";
+		$notused .= "<li>Sitemap Generator is off by default.</li>";
 	}
 } else {
 	if (get_option('seoauto_core_dd_sitemap_use') != 'off') {
 		$link4 = '<a href="options-general.php?page=seo-automatic-wp-core-tweaks/sitemap-generator.php">';
 		$endlink4 = '</a>';
 	}
-	$options2 .= '<li><a href="http://www.dagondesign.com/articles/sitemap-generator-plugin-for-wordpress/" target="_blank">DD Sitemap Generator:</a> <input type="radio" name="dd_sitemap_use" value="on"> On <input type="radio" name="dd_sitemap_use" value="off" checked> Off <small><b>(Off by default.)</b></small><br/>This plugin creates a static sitemap (not to be confused with an XML sitemap) for your WordPress site. Simply placing the shortcode &lt;!-- ddsitemapgen --&gt; in your .html will show the options you\'ve selected in your admin, so the spiders and bots have a path to crawl each page and post.<br />Access under Settings > '.$link4.'DDSitemapGen'.$endlink4.'</li><li>&nbsp;</li>';
+	$options2 .= '<li><a href="http://www.dagondesign.com/articles/sitemap-generator-plugin-for-wordpress/" target="_blank">Sitemap Generator:</a> <input type="radio" name="dd_sitemap_use" value="on"> On <input type="radio" name="dd_sitemap_use" value="off" checked> Off <small><b>(Off by default.)</b></small><br/>This plugin creates a static sitemap (not to be confused with an XML sitemap) for your WordPress site. Simply placing the shortcode &lt;!-- ddsitemapgen --&gt; in your .html will show the options you\'ve selected in your admin, so the spiders and bots have a path to crawl each page and post.<br />Access under Settings > '.$link4.'DDSitemapGen'.$endlink4.'</li><li>&nbsp;</li>';
 }
 
 // Turn Sitemap Generator on and off

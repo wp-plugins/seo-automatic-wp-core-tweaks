@@ -360,6 +360,14 @@ if($dir_writable == "false") {
 		var x=document.getElementById('corechanges');
 		for (var i=0;i<x.length;i++)
 		  {
+			if (x.elements[i].value == "ON" || x.elements[i].value == "OFF") {
+				if (x.elements[i].checked == true) {
+					x.elements[i].value = "ON";
+				}
+				if (x.elements[i].checked == false) {
+					x.elements[i].value = "OFF";
+				}
+			}
 			t.push(x.elements[i].value);
 		  }
 		uriContent = "data:text/csv," + encodeURIComponent(t);

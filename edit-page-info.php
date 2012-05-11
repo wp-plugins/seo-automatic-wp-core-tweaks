@@ -18,7 +18,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Change default page name.</li>";
 	}
 } else {
-	$options .= '<li><input id="page_2" type="checkbox" value="OFF" onclick="setCheckedRight(\'page_2\')" /> Change the default page name from "about" to: <input name="about_page" size="15" type="textbox" value="Home" /></li>';
+	$options .= '<li><input name="page_2" type="checkbox" value="ON" /> Change the default page name from "about" to: <input name="about_page" size="15" type="textbox" value="Home" /></li>';
 } 
 
 //Sets frontpage and turns on the static pages
@@ -36,7 +36,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Set front page.</li>";
 	}
 } else {
-	$options .= '<li><input id="set_home" type="checkbox" value="OFF" onclick="setCheckedRight(\'set_home\')" /> Set the default page above as the front page.</li>';
+	$options .= '<li><input name="set_home" type="checkbox" value="ON" /> Set the default page above as the front page.</li>';
 } 
 
 //Creates the blog posts page and set the static show post page to it. Also turns on static pages in case it's not on.
@@ -66,6 +66,6 @@ if ($_REQUEST['action'] == "changecore") {
 	$notused .= "<li>Add or change posts page.</li>";
 	}
 } else {
-	$options .= '<li><input id="news_2" type="checkbox" value="OFF" onclick="setCheckedRight(\'news_2\')" /> Create the page to designate for displaying your blog posts, and name it: <input name="posts_page" type="textbox" value="Company News" /></li>';
+	$options .= '<li><input name="news_2" type="checkbox" value="ON" /> Create the page to designate for displaying your blog posts, and name it: <input name="posts_page" type="textbox" value="Company News" /></li>';
 }
 ?>
