@@ -3,7 +3,7 @@
 if ($_REQUEST['action'] == "changecore") {
 	 if ($_REQUEST['yr_mnth'] == "ON") {
 		if ( (!update_option('uploads_use_yearmonth_folders','')) ) {
-			$fail .= "<li>Could not uncheck organize my uploads into month- and year-based folders.</li>";
+			$fail .= "<li>The uploads folder was not changed, since it was already set to *not* be organized by month and year.</li>";
 		} else {
 			$success .= "<li>Organizing uploads into month- and year-based folders is turned off.</li>";
 		}

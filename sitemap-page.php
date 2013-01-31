@@ -38,6 +38,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Create sitemap.</li>";
 	}
 } else {
-	$options .= '<li><input name="add_sitemap" type="checkbox" value="ON" checked /> Add the page and shortcode for the integrated <a href="http://www.dagondesign.com/articles/sitemap-generator-plugin-for-wordpress/" target="_blank">DDSiteMap Generator</a>, giving you a static sitemap that changes as you add content. Look under WP Admin > Settings for additional DDSiteMap options.<br /><small><b>(Not an XML sitemap)</b></small></li>';
+	$options .= '<li><input name="add_sitemap" type="checkbox" value="ON" /> Add the page and shortcode for the integrated <a href="http://www.dagondesign.com/articles/sitemap-generator-plugin-for-wordpress/" target="_blank">DDSiteMap Generator</a>, giving you a static sitemap that changes as you add content. Look under WP Admin > Settings for additional DDSiteMap options.<br /><small><b>(Not an XML sitemap)</b></small></li>';
 } 
 ?>

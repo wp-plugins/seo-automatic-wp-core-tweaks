@@ -41,7 +41,7 @@ function wp_tabbed_rss($args, $widget_args = 1) {
 		$icon = str_replace(ABSPATH, site_url() . '/', dirname(__FILE__)) . '/rss.png';
 	else
 		$icon = includes_url('images/rss.png');
-	$title = "<a class='rsswidget' href='$url' title='" . attribute_escape(__('Syndicate this content')) ."'><img style='background:orange;color:white;border:none;' width='14' height='14' src='$icon' alt='RSS' /></a> <a class='rsswidget' href='$link' title='$desc'>$title</a>";
+	$title = "<a class='rsswidget' href='$url' target='_blank' title='" . attribute_escape(__('Syndicate this content')) ."'><img style='background:orange;color:white;border:none;' width='14' height='14' src='$icon' alt='RSS' /></a> <a class='rsswidget' href='$link' target='_blank' title='$desc'>$title</a>";
 
 	echo $before_widget;
 	echo $before_title . $title . $after_title;
@@ -71,6 +71,7 @@ function wp_tabbed_rss_output( $rss, $args = array() ) {
 	if ( $items < 1 || 20 < $items )
 		$items = 10;
 	$show_summary  = (int) $show_summary;
+	$summary_chars = (int) $summary_chars;
 	$show_author   = (int) $show_author;
 	$show_date     = (int) $show_date;
 	$open_new_tab   = (int) $open_new_tab;
@@ -108,6 +109,9 @@ function wp_tabbed_rss_output( $rss, $args = array() ) {
 			if ( $show_summary ) {
 				$desc = '';
 				$summary = wp_specialchars( $summary );
+				if ( $summary_chars != '' && $summary_chars != 0 ) {
+					$summary = substr($summary, 0, $summary_chars);
+				}
 				$summary = "<div class='rssSummary'>$summary</div>";
 			} else {
 				$summary = '';
@@ -202,6 +206,7 @@ function wp_tabbed_rss_control($widget_args) {
 		$error = false;
 		$number = '%i%';
 		$show_summary = 0;
+		$summary_chars = 0;
 		$show_author = 0;
 		$show_date = 0;
 		$open_new_tab = 0;
@@ -210,11 +215,11 @@ function wp_tabbed_rss_control($widget_args) {
 		extract( (array) $options[$number] );
 	}
 
-	wp_tabbed_rss_form( compact( 'number', 'title', 'url', 'items', 'error', 'show_summary', 'show_author', 'show_date', 'open_new_tab', 'dont_follow' ) );
+	wp_tabbed_rss_form( compact( 'number', 'title', 'url', 'items', 'error', 'show_summary', 'summary_chars', 'show_author', 'show_date', 'open_new_tab', 'dont_follow' ) );
 }
 
 function wp_tabbed_rss_form( $args, $inputs = null ) {
-	$default_inputs = array( 'url' => true, 'title' => true, 'items' => true, 'show_summary' => true, 'show_author' => true, 'show_date' => true, 'open_new_tab' => true, 'dont_follow' => true );
+	$default_inputs = array( 'url' => true, 'title' => true, 'items' => true, 'show_summary' => true, 'summary_chars' => true,  'show_author' => true, 'show_date' => true, 'open_new_tab' => true, 'dont_follow' => true );
 	$inputs = wp_parse_args( $inputs, $default_inputs );
 	extract( $args );
 	$number = attribute_escape( $number );
@@ -224,6 +229,7 @@ function wp_tabbed_rss_form( $args, $inputs = null ) {
 	if ( $items < 1 || 20 < $items )
 		$items  = 10;
 	$show_summary   = (int) $show_summary;
+	$summary_chars  = (int) $summary_chars;
 	$show_author    = (int) $show_author;
 	$show_date      = (int) $show_date;
 	$open_new_tab   = (int) $open_new_tab;
@@ -258,6 +264,13 @@ function wp_tabbed_rss_form( $args, $inputs = null ) {
 		<label for="rss-show-summary-<?php echo $number; ?>">
 			<input id="rss-show-summary-<?php echo $number; ?>" name="widget-rss[<?php echo $number; ?>][show_summary]" type="checkbox" value="1" <?php if ( $show_summary ) echo 'checked="checked"'; ?>/>
 			<?php _e('Display item content?'); ?>
+		</label>
+	</p>
+<?php endif; if ( $inputs['summary_chars'] ) : ?>
+	<p>
+		<label for="rss-summary-chars-<?php echo $number; ?>">
+			<input id="rss-summary-chars-<?php echo $number; ?>" name="widget-rss[<?php echo $number; ?>][summary_chars]" type="textbox" style="width: 25px; height: 10px;" value="<?php if ( $summary_chars ) echo $summary_chars; ?>" />
+			<?php _e('Characters to show in item content? (0 or blank = show all, uncheck the box above for display item summary if you want to hide it.)'); ?>
 		</label>
 	</p>
 <?php endif; if ( $inputs['open_new_tab'] ) : ?>
@@ -309,6 +322,7 @@ function wp_tabbed_rss_process( $tabbed_rss, $check_feed = true ) {
 	$url           = sanitize_url(strip_tags( $tabbed_rss['url'] ));
 	$title         = trim(strip_tags( $tabbed_rss['title'] ));
 	$show_summary  = (int) $tabbed_rss['show_summary'];
+	$summary_chars  = (int) $tabbed_rss['summary_chars'];
 	$show_author   = (int) $tabbed_rss['show_author'];
 	$show_date     = (int) $tabbed_rss['show_date'];
 	$open_new_tab     = (int) $tabbed_rss['open_new_tab'];
@@ -329,7 +343,7 @@ function wp_tabbed_rss_process( $tabbed_rss, $check_feed = true ) {
 		}
 	}
 
-	return compact( 'title', 'url', 'link', 'items', 'error', 'show_summary', 'show_author', 'show_date', 'open_new_tab', 'dont_follow' );
+	return compact( 'title', 'url', 'link', 'items', 'error', 'show_summary', 'summary_chars', 'show_author', 'show_date', 'open_new_tab', 'dont_follow' );
 }
 
 function wp_tabbed_rss_register() {

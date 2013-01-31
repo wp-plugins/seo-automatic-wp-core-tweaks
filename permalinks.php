@@ -57,7 +57,7 @@ $structures = array(
 
 <?php if ($_REQUEST['action'] != "changecore") :  
 	$options .= '<li><input type="hidden" name="selection" value="custom" class="tog" checked /><input type="checkbox" name="permchange" value="ON" checked> Change permalink structure to custom setting: <input type="text" size="40" name="permalink_structure" value="/%category%/%postname%/" /></li>';
-	$options .= '<li><small><b><font color="#ff0000">We\'ve checked this permalink box by default because it\'s important, but if your .htaccess file is not writable, then you\'ll get an error message telling you so. If you do get the error message, there\'s no harm done, but your permalinks will not be changed and you should make the file writable and try again.</font></b></small></li>';
+	$options .= '<li><small><b><font color="#ff0000">Using this option will change existing permalink settings. If you\'ve used it unintentionally, you can change the setting back <a href="options-permalink.php">here</a>. We\'ve checked this box by default because it\'s important, but if your .htaccess file is not writable, then you\'ll get an error message telling you so. If you do get the error message, there\'s no harm done, but your permalinks will not be changed and you should make the file writable and try again.</font></b></small></li>';
 	endif; ?>
 
 	<?php if ( $permalink_structure && !$usingpi && !$writable ) : 
