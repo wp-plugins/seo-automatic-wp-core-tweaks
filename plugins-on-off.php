@@ -1,6 +1,7 @@
 <?php
-if ($_REQUEST['action'] != "pluginsonoff") { $options2 = '<ul><li>These four plugins have been hugely instrumental in the development of wordPress, and we were happy to have collaborated with the authors of these great plugins to include them for you. The default installation is set to off, but we do recommend them.</li><li>&nbsp;</li><li><b style="color: #009900;">
-If you have upgraded Core Tweaks and this is not a first time install, the plugins that are noted "off by default" will remain turned on. This ensures that your settings will not be disrupted. If it is the first installation for you, then the default will remain "off".</b></li><li>&nbsp;</li>'; }
+if ($_REQUEST['action'] != "pluginsonoff") { $options2 = '<ul><li><p>We have removed three of these plugins due to author deprecation and lack of updates, and improved WordPress functionality as of 2012.</p>
+<p>If your site is ALREADY using these options from a previous version of our plugin, they WILL continue to work, but users can no longer change any settings from the wp-admin menu. </p>
+<p>If you are not using them, feel free to permanently deactivate by checking the appropriate checkbox.</p></li><li>&nbsp;</li>'; }
 
 // Turn post teaser on and off
 if ($_REQUEST['action'] == "pluginsonoff") {
@@ -24,7 +25,7 @@ if ($_REQUEST['action'] == "pluginsonoff") {
 		$link = '<a href="options-general.php?page=seo-automatic-wp-core-tweaks/post-teaser.php">';
 		$endlink = '</a>';
 	}
-	$options2 .= '<li><a href="http://wordpress.org/extend/plugins/post-teaser/" target="_blank">Post Teaser:</a> <input type="radio" name="post_teaser_use" value="on"> On <input type="radio" name="post_teaser_use" value="off" checked> Off <small><b>(Off by default.)</b></small> <a href="options-general.php?page=seo-automatic-wp-core-tweaks/post-teaser.php">See the new post teaser options.</a><br />Post Teaser generates excerpts of your posts for the main, archive, and category pages. It also generates a line showing the estimated word count, image count, and reading time. These are all fully editable from the admin.<br />Access under Settings > '.$link.'Post Teaser'.$endlink.'</li><li>&nbsp;</li>';
+	$options2 .= '<li><a href="http://wordpress.org/extend/plugins/post-teaser/" target="_blank">Post Teaser:</a> <span style="color: #ff0000">(Removed in 2/2013)</span><span color: #000;"> - Check to deactivate permanently: <input type="checkbox" name="post_teaser_use" value="off"></span> <span style="color: #dcdad1;"><input type="radio" name="post_teaser_use" value="on" disabled="disabled"> On <input type="radio" name="post_teaser_use" value="off" disabled="disabled"> Off <small><b>(Off by default.)</b></small> <!--<a href="options-general.php?page=seo-automatic-wp-core-tweaks/post-teaser.php">See the new post teaser options.</a>--><br />Post Teaser generates excerpts of your posts for the main, archive, and category pages. It also generates a line showing the estimated word count, image count, and reading time. These are all fully editable from the admin.<br />Access under Settings > '.$link.'Post Teaser'.$endlink.'</span></li><li>&nbsp;</li>';
 }
 
 // Turn page link on and off
@@ -49,7 +50,7 @@ if ($_REQUEST['action'] == "pluginsonoff") {
 		$link2 = '<a href="tools.php?page=seo-automatic-wp-core-tweaks/page-link.php">';
 		$endlink2 = '</a>';
 	}
-	$options2 .= '<li><a href="http://gmurphey.com/2006/10/05/wordpress-plugin-page-link-manager/" target="_blank">Page Link:</a> <input type="radio" name="page_link_use" value="on"> On <input type="radio" name="page_link_use" value="off" checked> Off <small><b>(Off by default.)</b></small><br />Exclude any pages you wish from main navigation. Still amazing for older style themes, this plugin is obsolete for 2011, and the WordPress Twenty-Ten default theme. Instead, use the built in WordPress custom menu options.<br />Access under Tools > '.$link2.'Page Links'.$endlink2.' and check / uncheck as desired.</li><li>&nbsp;</li>';
+	$options2 .= '<li><a href="http://gmurphey.com/2006/10/05/wordpress-plugin-page-link-manager/" target="_blank">Page Link:</a> <span style="color: #ff0000">(Removed in 2/2013)</span><span color: #000;"> - Check to deactivate permanently: <input type="checkbox" name="page_link_use" value="off"></span> <span style="color: #dcdad1;"><input type="radio" name="page_link_use" value="on" disabled="disabled"> On <input type="radio" name="page_link_use" value="off" disabled="disabled"> Off <small><b>(Off by default.)</b></small><br />Exclude any pages you wish from main navigation. Still amazing for older style themes, this plugin is obsolete for 2011, and the WordPress Twenty-Ten default theme. Instead, use the built in WordPress custom menu options.<br />Access under Tools > '.$link2.'Page Links'.$endlink2.' and check / uncheck as desired.</span></li><li>&nbsp;</li>';
 }
 
 // Turn page order on and off
@@ -74,7 +75,7 @@ if ($_REQUEST['action'] == "pluginsonoff") {
 		$link3 = '<a href="edit.php?post_type=page&page=mypageorder">';
 		$endlink3 = '</a>';
 	}
-	$options2 .= '<li><a href="http://wordpress.org/extend/plugins/my-page-order/" target="_blank">Page Order:</a> <input type="radio" name="page_order_use" value="on"> On <input type="radio" name="page_order_use" value="off" checked> Off <small><b>(Off by default.)</b></small><br />Again, an amazing plugin that was ahead of its time, made obsolete buy custom menus. For themes that dont support them, try this!<br />Access under Pages > '.$link3.'My Page Order'.$endlink3.'</li></li>&nbsp;</li></li>';
+	$options2 .= '<li><a href="http://wordpress.org/extend/plugins/my-page-order/" target="_blank">Page Order:</a> <span style="color: #ff0000">(Removed in 2/2013)</span><span color: #000;"> - Check to deactivate permanently: <input type="checkbox" name="page_order_use" value="off"></span> <span style="color: #dcdad1;"><input type="radio" name="page_order_use" value="on" disabled="disabled"> On <input type="radio" name="page_order_use" value="off" disabled="disabled"> Off <small><b>(Off by default.)</b></small><br />Again, an amazing plugin that was ahead of its time, made obsolete buy custom menus. For themes that dont support them, try this!<br />Access under Pages > '.$link3.'My Page Order'.$endlink3.'</span></li></li>&nbsp;</li></li>';
 }
 
 // Turn Sitemap Generator on and off

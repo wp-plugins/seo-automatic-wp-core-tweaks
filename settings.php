@@ -392,7 +392,7 @@ function setCheckedRight(eid) {
 
 <div id="main-admin-box" class="postbox">
 <h3><span><img src="<?php echo plugins_url(); ?>/seo-automatic-wp-core-tweaks/images/favicon.ico" alt="SEO Automatic" /> Activate or Deactivate Included Plugins</span><div style="float: right;margin-top: -5px;"><input class="button" type="button" onclick="toggle_visibility('pluginssection');" value="Show/Hide"></div></h3>
-<div class="inside" id="pluginssection" style="display: none;">
+<div class="inside" id="pluginssection">
 <p><form name="pluginsonoff" id="pluginsonoff" method="post" action="" class="validate">
 <input type="hidden" name="action" value="pluginsonoff" />
 

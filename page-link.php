@@ -260,7 +260,7 @@ function gdmPageLinkActivate() {
 }
 
 register_activation_hook( __FILE__, 'gdmPageLinkActivate');
-add_action('admin_menu', 'gdmAddAdminPages');
+//add_action('admin_menu', 'gdmAddAdminPages');
 add_action('admin_print_scripts', 'gdmAddJs');
 add_action('widgets_init', 'gdmWidgetPageLinkManagerInit', 1);
 add_action('wp_list_pages_excludes', 'gdmPageLinkManagerIncludeExcludes');

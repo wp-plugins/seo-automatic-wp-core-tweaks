@@ -1140,5 +1140,5 @@ $post_teaser = new post_teaser();
 //add_filter('the_content', array(&$post_teaser, 'autopfix')); // Disabled because the associated bug have been fixed
 add_filter('the_content', array(&$post_teaser, 'process'), 20);
 add_filter('the_excerpt', array(&$post_teaser, 'replace_excerpt'), 20); // Because Post Teaser does the same thing, better
-add_action('admin_menu', array(&$post_teaser, 'init_option_page'));
+//add_action('admin_menu', array(&$post_teaser, 'init_option_page'));
 ?>

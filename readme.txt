@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic, blog setup
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 3.8.1
+Stable tag: 3.8.2
 
 Primarily for use in new WP installations, the steps are based on an employee checklist from Search Commander, Inc. for setting up sites.
 
@@ -98,10 +98,16 @@ If you have not edited your privacy policy after creation, either delete it and 
 
 == Changelog ==
 
-Change Log
-= 3.8 =
+= 3.8.2 =
+
+* Removed Page Order, Page link, and Post Teaser. The features of these plugins are now built-in to wordpress in more advanced ways. If you're site is currently using these plugins through Core Tweaks, they will continue to work, although you will not be able to change settings for them from the wp-admin menu. Once you've converted/adjusted from using them to the wordpress features, you can permanently deactivate them from the core tweaks settings page. (Note: once off, then can not be reactivated.)
+
+= 3.8.1 =
 
 * Added target="_blank" to main title of rss extended feed.
+
+= 3.8 =
+
 * Added ability to limit characters of rss extended feed content descriptions.
 * In order to assure compatibility with the Yoast WordPress SEO plugin and eliminate confusion among users, we have removed the WP user field for "Google Profile URL.
 * Changed wording on fail error message for the organize uploads by date option to prevent confusion with the checkbox.

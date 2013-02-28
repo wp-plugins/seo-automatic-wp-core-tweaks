@@ -34,7 +34,7 @@ function mypageorder_set_plugin_meta($links, $file) {
 }
 
 add_filter('plugin_row_meta', 'mypageorder_set_plugin_meta', 10, 2 );
-add_action('admin_menu', 'mypageorder_menu');
+//add_action('admin_menu', 'mypageorder_menu');
 add_action('admin_print_scripts', 'mypageorder_js_libs');
 
 function mypageorder()
