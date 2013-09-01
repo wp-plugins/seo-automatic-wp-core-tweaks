@@ -3,22 +3,23 @@ Contributors: cyber49
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FC2PBBP6BY8QC
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic, blog setup
 Requires at least: 3.5
-Tested up to: 3.5.1
-Stable tag: 3.8.2
+Tested up to: 3.6
+Stable tag: 3.9
 
-Primarily for use in new WP installations, the steps are based on an employee checklist from Search Commander, Inc. for setting up sites.
+Primarily for use in <b>new WP installations</b>, the steps are based on an employee checklist from Search Commander, Inc. for setting up sites.
 
 == Description ==
+You should have no other plugins active while running this setup plugin, since it is primarily for new installations. 
 
 Even before you add an SEO plugin, the steps after a WP installation can take 20 to 40 minutes. This plugin eliminates that time, putting all the options on one admin screen.  This plugin does not replace other SEO plugins. It does what they don't do; Properly prepare you for their installation.
 
 [youtube http://www.youtube.com/v/UTXrUAccCts&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6]
 
-All of the "little things", from changing permalink structure to deleting the Hello World post, to enabling XML, and more, are all accessible from the admin page
+This plugin extends the built-in features of WordPress, and has an import / export feature, saving you even more time for additional installations.
 
-This plugin extends the built-in features of WordPress, and as of May 2012, has an import / export feature, saving you even more time.
+All of the "little things", from changing permalink structure, to deleting the Hello World post, to enabling XML, and lots more, are all accessible from a single admin page. 
 
-This plug-in is designed to be a companion to other plugins like All in one SEO, Headspace, or WordPress SEO, and *is not* intended as a replacement. In fact, as they get better, we have disabled some of our features. 
+This plug-in is designed to be a COMPANION to other plugins like All in one SEO, Headspace 2, or WordPress SEO (our favorite), and *is not* intended as a replacement for those. In fact, as they get better, we have disabled some of our features to avoid conflicts. 
 
 = Features =
 From one admin screen, click a button and make any or all of these changes...
@@ -57,6 +58,9 @@ From one admin screen, click a button and make any or all of these changes...
 28.	Change H2 tags to H1
 29.     Import / export your settings from another site. Once you set preferences the first time, just export. Then import that file on future domains, and you're done.
 
+Note: 
+As of September 2013 we have integrated the <a href="http://wordpress.org/plugins/our-profiles/" target="_blank">"Our Profiles" plugin</a>, adding a new menu item with a profiles page.
+
 == Installation ==
 
 After activation, go to the SEO Automatic > Core Tweaks admin screen and use the default choices or make choices of your own. 
@@ -73,7 +77,10 @@ This plugin saves 20 to 40 minutes of post-installation time, properly setting u
 
 It adds a new Admin menu item, SEO Automatic - with a sub-menu Core Tweaks, giving access on one page to all of the things that savvy programmers change for every installation. 
 
+It also adds a second sub-menu item called "Our Profiles". When the profiles are filled in, users can add a shortcode on any page or post to display the links to their review profiles. 
+
 For older themes that do not support custom menus, it also combines several other WP plugins for theme customization, turned off by default in the bottom of the admin screen.
+
 
 = What if I already have a Wordpress site up and running? =
 
@@ -97,6 +104,10 @@ If you have not edited your privacy policy after creation, either delete it and 
 1. Screenshot
 
 == Changelog ==
+
+= 3.9 =
+
+* Addition of Our Profiles tool.
 
 = 3.8.2 =
 

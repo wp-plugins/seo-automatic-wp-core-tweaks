@@ -3,14 +3,14 @@
 Plugin Name: Core Tweaks WordPress Setup
 Plugin URI: http://www.seoautomatic.com/plugins/wp-core-tweaks/
 Description: SEO Automatic - Search Commander, Inc. automated setup saves 20 to 40 minutes of post-install time, and does what your other SEO plugin won't. All of the "little things", from changing permalink structure to deleting the Hello World post, to enabling XML, and more, are all accessible from the <a href="admin.php?page=seo-automatic-wp-core-tweaks/settings.php">admin page</a>.
-Version: 3.8.2
+Version: 3.9
 Author: cyber49
 Author URI: http://www.searchcommander.com/contact/
 */
 if (get_option('seoauto_core_e_report') == 'on') { $err_is = 'E_ALL'; } else { $err_is = 0; }
 error_reporting($err_is);
 
-$coretweaksversion = '3.8';
+$coretweaksversion = '3.9';
 
 register_activation_hook(__FILE__,'seocoretweaks_activate');
 
@@ -55,14 +55,17 @@ if (!get_option('seocoretweaks_ver')) {
 	//if (!get_option('seoauto_core_page_link_use')) { update_option('seoauto_core_page_link_use', 'on'); }
 	//if (!get_option('seoauto_core_post_teaser_use')) { update_option('seoauto_core_post_teaser_use', 'on'); }
 	if (!get_option('seoauto_core_dd_sitemap_use')) { update_option('seoauto_core_dd_sitemap_use', 'off'); }
+	if (!get_option('seoauto_core_our_profiles')) { update_option('seoauto_core_our_profiles', 'off'); }
 } elseif (get_option('seocoretweaks_ver') != $coretweaksversion) {
 	update_option('seocoretweaks_ver', $coretweaksversion);
+	if (!get_option('seoauto_core_our_profiles')) { update_option('seoauto_core_our_profiles', 'off'); }
 }
 
 if (get_option('seoauto_core_page_order_use') != 'off') { include('page-order.php'); } //updated to version 3.0a
 if (get_option('seoauto_core_page_link_use') != 'off') { include('page-link.php'); } //v1.0b
 if (get_option('seoauto_core_post_teaser_use') != 'off') { include('post-teaser.php'); } //updated to version 4.1.1
 if (get_option('seoauto_core_dd_sitemap_use') != 'off') { include('sitemap-generator.php'); } //updated to version 3.17
+if (get_option('seoauto_core_our_profiles') != 'off' && !function_exists('ourprofiles_init')) { include('our-profiles/our-profiles.php'); } //updated to version 3.17
 
 //stop html removal of user profile
 if (get_option('seoauto_core_user_profile_html') != 'off') { remove_filter('pre_user_description', 'wp_filter_kses'); } 
