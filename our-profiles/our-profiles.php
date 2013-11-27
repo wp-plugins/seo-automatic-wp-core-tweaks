@@ -39,6 +39,7 @@ function ourprofiles_reset(){
         'DemandForce' => '',
         'CustomerLobby' => '',
         'Twitter' => ''
+		'tripadvisor' => ''
     );
 
     $default_ourprofiles_services = array(
@@ -65,6 +66,7 @@ function ourprofiles_reset(){
         'DemandForce' => array('image' => 'DemandForce.png', 'domain' => 'http://www.demandforce.com/'),
         'CustomerLobby' => array('image' => 'CustomerLobby.png', 'domain' => 'http://www.customerlobby.com/'),
         'Twitter' => array('image' => 'Twitter.png', 'domain' => 'http://www.twitter.com/')
+		'tripadvisor' => array('image' => 'tripadvisor.png', 'domain' => 'http://www.tripadvisor.com/')
     );
 
     $default_ourprofiles_options = array(
@@ -129,6 +131,12 @@ function ourprofiles_init(){
     if (   !isset($ourprofiles_services['DemandForce'])
         || !isset($ourprofiles_services['CustomerLobby'])
         || !isset($ourprofiles_services['Twitter'])
+    ){
+        ourprofiles_reset();
+    }
+
+    // 1.0.9.1 update
+    if (   !isset($ourprofiles_services['tripadvisor'])
     ){
         ourprofiles_reset();
     }

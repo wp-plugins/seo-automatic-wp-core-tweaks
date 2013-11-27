@@ -3,8 +3,8 @@ Contributors: cyber49
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FC2PBBP6BY8QC
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic, blog setup
 Requires at least: 3.5
-Tested up to: 3.6
-Stable tag: 3.9
+Tested up to: 3.7.1
+Stable tag: 3.9.1
 
 Primarily for use in <b>new WP installations</b>, the steps are based on an employee checklist from Search Commander, Inc. for setting up sites.
 
@@ -104,6 +104,10 @@ If you have not edited your privacy policy after creation, either delete it and 
 1. Screenshot
 
 == Changelog ==
+
+= 3.9.1 =
+
+* Addition of tripadvisor service in Our Profiles tool.
 
 = 3.9 =
 
