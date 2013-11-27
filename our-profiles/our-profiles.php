@@ -135,7 +135,7 @@ function ourprofiles_init(){
         ourprofiles_reset();
     }
 
-    // 1.0.9.1 update
+    // 1.0.10 update
     if (   !isset($ourprofiles_services['tripadvisor'])
     ){
         ourprofiles_reset();
