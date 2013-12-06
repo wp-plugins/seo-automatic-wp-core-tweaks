@@ -38,7 +38,7 @@ function ourprofiles_reset(){
         'YP.com  ' => '',
         'DemandForce' => '',
         'CustomerLobby' => '',
-        'Twitter' => ''
+        'Twitter' => '',
 		'tripadvisor' => ''
     );
 
@@ -65,7 +65,7 @@ function ourprofiles_reset(){
         'YP.com  ' => array('image' => 'YP.png', 'domain' => 'http://www.yellowpages.com/'),
         'DemandForce' => array('image' => 'DemandForce.png', 'domain' => 'http://www.demandforce.com/'),
         'CustomerLobby' => array('image' => 'CustomerLobby.png', 'domain' => 'http://www.customerlobby.com/'),
-        'Twitter' => array('image' => 'Twitter.png', 'domain' => 'http://www.twitter.com/')
+        'Twitter' => array('image' => 'Twitter.png', 'domain' => 'http://www.twitter.com/'),
 		'tripadvisor' => array('image' => 'tripadvisor.png', 'domain' => 'http://www.tripadvisor.com/')
     );
 
