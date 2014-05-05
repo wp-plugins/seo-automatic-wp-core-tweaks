@@ -2,7 +2,7 @@
 //Delete blogroll links
 
 if ($_REQUEST['action'] == "changecore") {
-	 if ($_REQUEST['empty_blogroll'] == "ON") {
+/*	 if ($_REQUEST['empty_blogroll'] == "ON") {
 		if ( (!$wpdb->query("DELETE FROM $wpdb->links WHERE link_id != ''")) ) {
 			$fail .= "<li>Blogroll links could not be deleted.</li>";
 		} else {
@@ -10,9 +10,9 @@ if ($_REQUEST['action'] == "changecore") {
 		}
 	} else {
 		$notused .= "<li>Blogroll has not been changed.</li>";
-	}
+	}*/
 } else {
-	$options .= '<li><input name="empty_blogroll" type="checkbox" value="ON" /> Delete <b>all</b> links in blogroll. <small><b>(Cannot be undone.)</b></small></li>';
+	$options .= '<!--<li><input name="empty_blogroll" type="checkbox" value="ON" /> Delete <b>all</b> links in blogroll. <small><b>(Cannot be undone.)</b></small></li>-->';
 } 
 
 ?>

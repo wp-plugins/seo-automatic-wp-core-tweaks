@@ -46,7 +46,7 @@ get_currentuserinfo();
 //Set category names
 include('cat-names.php');
 
-//Try to create uploads folder and set to 777, uncheck organize by month/year
+//Uncheck organize by month/year
 include('org-uploads.php');
 
 //Set feeds to summary
@@ -107,6 +107,7 @@ if ($_REQUEST['action'] != "changecore") {
 }
 
 //Blogroll
+//REMOVED, BUT INCLUDED HIDDEN TO ALLOW IMPORT TO CONTINUE WORKING
 include('blogroll.php');
 
 if ($_REQUEST['action'] != "changecore") {
@@ -144,7 +145,8 @@ if ($_REQUEST['action'] != "changecore") {
 	$options .= '<li>&nbsp;</li><li>&nbsp;</li><li><b><br /><font color="#ff0000"><u>Advanced:</u></font><br /></b></li>';
 }
 
-//Try to create uploads folder and set to 777, uncheck organize by month/year
+//Try to create uploads folder and set to 777
+//REMOVE, BUT STILL INCLUDED HIDDEN TO ALLOW IMPORT TO CONTINUE WORKING
 include('uploads.php');
 
 //Change Add H1 Hack
