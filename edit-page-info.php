@@ -18,7 +18,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Change default page name.</li>";
 	}
 } else {
-	$options .= '<li><input name="page_2" type="checkbox" value="ON" /> Change the default page name from "about" to: <input name="about_page" size="15" type="textbox" value="Home" /></li>';
+	$options .= '<li><input name="page_2" type="checkbox" value="ON" /> Change the default page name from "Sample Page" to: <input name="about_page" size="15" type="textbox" value="Home" /></li>';
 } 
 
 //Sets frontpage and turns on the static pages
@@ -38,6 +38,9 @@ if ($_REQUEST['action'] == "changecore") {
 } else {
 	$options .= '<li><input name="set_home" type="checkbox" value="ON" /> Set the default page above as the front page.</li>';
 } 
+
+//Remove default post
+include('d-post.php');
 
 //Creates the blog posts page and set the static show post page to it. Also turns on static pages in case it's not on.
 if ($_REQUEST['action'] == "changecore") {

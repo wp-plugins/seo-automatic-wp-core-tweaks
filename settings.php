@@ -24,6 +24,7 @@ if (get_bloginfo('version') < 2.8) {
 #fail li, #fail h3 {color: #ff0000; }
 #resources li { clear: both; }
 #about-plugins li { clear: both; }
+#corechanges .button { background-color: #009900; color: #ffffff; }
 </style>
 <div class="wrap">
 <br />
@@ -75,9 +76,6 @@ include('contact.php');
 if ($_REQUEST['action'] != "changecore") {
 	$options .= '<li><br /></li>';
 }
-
-//Remove default post
-include('d-post.php');
 
 //Set to not allow people to comment
 include('user-comments.php');
@@ -141,28 +139,7 @@ if ($_REQUEST['action'] != "changecore") {
 }
 include('error-report.php');
 
-if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li>&nbsp;</li><li>&nbsp;</li><li><b><br /><font color="#ff0000"><u>Advanced:</u></font><br /></b></li>';
-}
-
-//Try to create uploads folder and set to 777
-//REMOVE, BUT STILL INCLUDED HIDDEN TO ALLOW IMPORT TO CONTINUE WORKING
-include('uploads.php');
-
-//Change Add H1 Hack
-if ($_REQUEST['action'] != "changecore") {
-	$options .= '<li>&nbsp;</li><li><b>H1 Hack: <small><font color="#ff0000">As of November 2010 we have removed the ability to change your H1 tag for a page or post, due to incompatibilities with the default WP 2010 theme. However, this can now be accomplished easily through use of WordPress custom menus.</font></small></b></li><li><br /></li>';
-	//<b><font color="#ff0000">Your theme files must have at least 766 file permission.</font><br />Premium WordPress themes sometimes have programmed "SEO options" that may prevent these items from working properly. Please consult your theme provider for support.</b></li>
-}
-//include('h1hack.php');
-
-//Change H2 to H1 in current theme
-include('h2toh1.php');
-
-
-//Turn plugins on or off
 include('plugins-on-off.php');
-
 
 ?>
 
@@ -212,7 +189,6 @@ other plugins active while running the SEO Automatic Core Tweaks process.</p>
 </ol>
 <p><b>Unchecked Default Options:<br>
 </b>There are many options below that are not checked, but if you know what you're doing, many are likely something you plan to do anyway.</p>
-<p>Note at the very bottom, there is one THEME SPECIFIC change available to change your H2 tags to H1's. This is UNchecked by default, because most new themes will allow this. However, if you need to use it, note the the permissions of your theme pages: single.php and page.php files must be 766.</p>
 
 <b>Import your own Core Tweaks Setup File or export the existing settings below.</b><br />
 <div id="nonieimport" style="display: none;"><input type="file" id="nonieimportfile" name="file" /> 
@@ -391,6 +367,7 @@ function setCheckedRight(eid) {
 	}
 }
 </script>
+
 
 <div id="main-admin-box" class="postbox">
 <h3><span><img src="<?php echo plugins_url(); ?>/seo-automatic-wp-core-tweaks/images/favicon.ico" alt="SEO Automatic" /> Activate or Deactivate Included Plugins</span><div style="float: right;margin-top: -5px;"><input class="button" type="button" onclick="toggle_visibility('pluginssection');" value="Show/Hide"></div></h3>

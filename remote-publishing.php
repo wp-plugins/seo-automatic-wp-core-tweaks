@@ -12,7 +12,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>Atom publishing protocol.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" name=\"atom_pub\" value=\"ON\"> Enable the Atom Publishing Protocol.</li>";
+	$options .= "<li><input type=\"checkbox\" name=\"atom_pub\" value=\"ON\" checked> Enable the Atom Publishing Protocol.</li>";
 }
 
 if ($_REQUEST['action'] == "changecore") {
@@ -26,6 +26,6 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>WordPress, Movable Type, MetaWeblog and Blogger XML-RPC publishing protocols.</li>";
 	}
 } else {
-	$options .= "<li><input type=\"checkbox\" name=\"xmlrpc_pub\" value=\"ON\"> Enable the WordPress, Movable Type, MetaWeblog and Blogger XML-RPC publishing protocols. </li>";
+	$options .= "<li><input type=\"checkbox\" name=\"xmlrpc_pub\" value=\"ON\" checked> Enable the WordPress, Movable Type, MetaWeblog and Blogger XML-RPC publishing protocols. </li>";
 }
 ?>

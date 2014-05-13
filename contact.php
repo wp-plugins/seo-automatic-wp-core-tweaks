@@ -5,13 +5,22 @@
 if ($_REQUEST['action'] == "changecore") {
 	 if ($_REQUEST['contact_page'] == "ON") {
 $contact_email = str_replace('@', ' (at) ', $_REQUEST['contact_email']);
+
 if ($_REQUEST['contact_name'] != '') { $c_page_data = '<b>'.$_REQUEST['contact_name'].'</b><br />'; }
-if ($_REQUEST['contact_co_name'] != '') { $c_page_data .= '<b>'.$_REQUEST['contact_co_name'].'</b><br />'; }
-if ($_REQUEST['contact_address'] != '') { $c_page_data .= $_REQUEST['contact_address'].'<br />'; }
-if ($_REQUEST['contact_city'] != '') { $c_page_data .= $_REQUEST['contact_city'].', '; }
-if ($_REQUEST['contact_state'] != '') { $c_page_data .= $_REQUEST['contact_state'].' '; }
-if ($_REQUEST['contact_zip'] != '') { $c_page_data .= $_REQUEST['contact_zip'].'<br /><br />'; }
-if ($_REQUEST['contact_phone'] != '') { $c_page_data .= '<b>Phone:</b> '.$_REQUEST['contact_phone'].'<br />'; }
+$c_page_data .= '<div itemscope itemtype="http://schema.org/Organization">';
+if ($_REQUEST['contact_co_name'] != '') { $c_page_data .= '<div itemprop="name"><b>'.$_REQUEST['contact_co_name'].'</b></div><br />'; }
+if ($_REQUEST['contact_address'] != '' || $_REQUEST['contact_city'] != '' || $_REQUEST['contact_state'] != '' || $_REQUEST['contact_zip'] != '') {
+	$c_page_data .= '<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">';
+}
+if ($_REQUEST['contact_address'] != '') { $c_page_data .= '<span itemprop="streetAddress">'.$_REQUEST['contact_address'].'</span><br />'; }
+if ($_REQUEST['contact_city'] != '') { $c_page_data .= '<span itemprop="addressLocality">'.$_REQUEST['contact_city'].'</span>, '; }
+if ($_REQUEST['contact_state'] != '') { $c_page_data .= '<span itemprop="addressRegion">'.$_REQUEST['contact_state'].'</span> '; }
+if ($_REQUEST['contact_zip'] != '') { $c_page_data .= '<span itemprop="postalCode">'.$_REQUEST['contact_zip'].'</div><br /><br />'; }
+if ($_REQUEST['contact_address'] != '' || $_REQUEST['contact_city'] != '' || $_REQUEST['contact_state'] != '' || $_REQUEST['contact_zip'] != '') {
+	$c_page_data .= '</div>';
+}
+if ($_REQUEST['contact_phone'] != '') { $c_page_data .= '<b>Phone:</b> <div itemprop="telephone">'.$_REQUEST['contact_phone'].'</div><br />'; }
+$c_page_data .= '</div>'; //end schema code
 if ($_REQUEST['contact_fax'] != '') { $c_page_data .= '<b>Fax:</b> '.$_REQUEST['contact_fax'].'<br />'; }
 if ($_REQUEST['contact_email'] != '') { $c_page_data .= '<b>Email:</b> '.$contact_email.'<br /><br />'; }
 if ($_REQUEST['contact_map'] == "ON") {
@@ -58,6 +67,7 @@ $info = array(
 	}
 } else {
 	$options .= '<li><br /><input name="contact_page" type="checkbox" value="ON" /> Add a Contact Page using the following information:<br /> <small><b>* Do not use double quotes</b></small>
+	<p><small>(Please note that manually editing the contact page via the WP visual editor will strip the schema code back out, just like it does for all other code. Use the <a href="http://www.seoautomatic.com/rec/raven" target="_blank">Raven Tools</a> free <a href="http://schema-creator.org/organization.php" target="_blank">Schema Creator</a> to recreate if necessary)</small></p>
 	<p>	Name <input type="text" name="contact_name" size="20" value=""> Company Name <input type="text" name="contact_co_name" size="20" value=""></p>
 	<p>Address <input type="text" name="contact_address" size="55" value="">
 	<br />City <input type="text" name="contact_city" size="20" value="">, State <input type="text" name="contact_state" size="5" value=""> Zip <input type="text" name="contact_zip" size="10" value="">

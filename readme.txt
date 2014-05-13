@@ -3,8 +3,8 @@ Contributors: cyber49
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FC2PBBP6BY8QC
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic, blog setup
 Requires at least: 3.5
-Tested up to: 3.9
-Stable tag: 3.9.2.1
+Tested up to: 3.9.1
+Stable tag: 3.9.2.2
 
 Primarily for use in <b>new WP installations</b>, the steps are based on an employee checklist from Search Commander, Inc. for setting up sites.
 
@@ -104,6 +104,16 @@ If you have not edited your privacy policy after creation, either delete it and 
 1. Screenshot
 
 == Changelog ==
+
+= 3.9.2.2 =
+
+* Removed advanced section with the h1 hack.
+* Changed and removed wording on the settings page.
+* Added schema code to the add contact page section.
+* Enable the Atom Publishing Protocol and Enable the WordPress, Movable Type, MetaWeblog and Blogger XML-RPC publishing protocols - checkbox is now checked by default.
+* Made 'Make the Changes' button green for easier visibility.
+* Removed Post Teaser, Page Link, and Page Order plugins.
+* Default page added by wordpress is now Sample Page instead of About. Edit section to rename that page to reflect that.
 
 = 3.9.2.1 =
 

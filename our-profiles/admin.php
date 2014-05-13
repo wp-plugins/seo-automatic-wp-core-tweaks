@@ -1,6 +1,6 @@
 <?php
 function ourprofiles_admin_menu() {
-    $plugin_hook_name = add_submenu_page('seo-automatic-options', 'SEO Automatic by Search Commander, Inc.', 'Our Profiles', 'activate_plugins', 'ourprofiles_config', 'ourprofiles_config_page');
+    $plugin_hook_name = add_submenu_page('seo-automatic-options', 'SEO Automatic by Search Commander, Inc.', 'Our Profiles', 'activate_plugins', 'our-profiles-config', 'ourprofiles_config_page');
     add_action( 'admin_head-' . $plugin_hook_name, 'ourprofiles_admin_head' );
 }
 add_action( 'admin_menu', 'ourprofiles_admin_menu' );

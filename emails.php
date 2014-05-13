@@ -47,7 +47,7 @@ if ($_REQUEST['action'] == "changecore") {
 		$notused .= "<li>New user was not added.</li>";
 	}
 } else {
-	$options .= '<li><input name="new_user" type="checkbox" value="ON" /> Add new user: <br />';
+	$options .= '<li><input name="new_user" type="checkbox" value="ON" /> Add new ADMIN user: <br />';
 	$options .= 'Username: <input type="text" size="20" name="new_login"> Password: <input type="text" size="20" name="new_pass"><br />Email: <input type="text" size="30" name="new_email"></li>';
 }
 ?>
