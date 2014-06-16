@@ -1,0 +1,13 @@
+<p>In order to verify author content with Google, you must have a Google Profile, which you can get <a href="http://www.google.com/profiles" target="_blank">here</a>. To read more about author verification, <a href="http://www.seoautomatic.com/author-images-in-serps" target="_blank">see this</a>.</p>
+
+<p>To show your Google profile URL, simply add this snippet of code to your theme's author.php file where you want the link to display:</p>
+
+<code>
+&lt;?php
+$google_profile = get_the_author_meta( 'google_profile' );<br />
+if ( $google_profile ) {<br />
+	echo '&lt;a href="' . $google_profile . '" rel="me"&gt;Google Profile&lt;/a&gt;';<br />
+}<br />
+?&gt;
+</code>
+<br />
