@@ -54,7 +54,7 @@ if ($_REQUEST['action'] == "pluginsonoff") {
 	if (get_option('seoauto_core_our_profiles') != 'on') {
 		$setopbutoff = ' checked';
 	}
-	echo get_option('seoauto_core_our_profiles');
+	
 	$options2 .= '<li><a href="http://wordpress.org/plugins/our-profiles/" target="_blank">Our Profiles:</a> <input type="radio" name="our_profiles" value="on"'.$setopbutton.'> On <input type="radio" name="our_profiles" value="off"'.$setopbutoff.'> Off <small><b>(Off by default.)</b></small><br/>This plugin lets the user fill in their profile URLs in the admin, then use a shortcode on a page or post to display the logos and links for 23 different services. If the review service allows it, like Yelp, you can copy / paste that URL to link people directly to "Leave a Review".<br />Access SEO Automatic > '.$link4.'Our Profiles'.$endlink4.'</li><li>&nbsp;</li>';
 }
 

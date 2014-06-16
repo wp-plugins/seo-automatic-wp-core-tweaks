@@ -164,9 +164,11 @@ count = document.corechanges.elements.length;
 		if (x.elements[i].value.toLowerCase() == 'on') {
 			document.corechanges.elements[i].checked = 0;
 			document.corechanges.elements[i].value = 'OFF';
+			document.corechanges.elements[i].reset();
 		}
 		if (x.elements[i].value.toLowerCase() == 'off') {
 			document.corechanges.elements[i].checked = 0;
+			document.corechanges.elements[i].reset();
 		}	  
 	}
 }
