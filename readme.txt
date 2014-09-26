@@ -2,9 +2,9 @@
 Contributors: cyber49
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FC2PBBP6BY8QC
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic, blog setup
-Requires at least: 3.5
-Tested up to: 3.9.1
-Stable tag: 3.9.2.3
+Requires at least: 3.8
+Tested up to: 4.0
+Stable tag: 3.9.2.4
 
 Primarily for use in <b>new WP installations</b>, the steps are based on an employee checklist from Search Commander, Inc. for setting up sites.
 
@@ -104,6 +104,12 @@ If you have not edited your privacy policy after creation, either delete it and 
 1. Screenshot
 
 == Changelog ==
+
+= 3.9.2.4 =
+
+* Updated code that prevents removed plugins from being active.
+* Changed wordpress required minimum version.
+* Added search result icon.
 
 = 3.9.2.3 =
 
