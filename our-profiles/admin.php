@@ -49,7 +49,7 @@ function ourprofiles_config_page(){
     <?php if ( !empty($_POST['submit'] ) && $saved_ok ) : ?>
         <div id="message" class="updated fade"><p><strong><?php _e('Settings saved.') ?></strong></p></div>
     <?php endif; ?>
-	<div align="center"><b>3 Minute Video</b><br /><iframe width="350" height="197" src="http://www.youtube.com/embed/E1bupoV_RXI?rel=0" frameborder="0" allowfullscreen></iframe></div>
+	<div align="center"><b>3 Minute Video</b><br /><iframe width="350" height="197" src="https://www.youtube.com/embed/E1bupoV_RXI?rel=0" frameborder="0" allowfullscreen></iframe></div>
     <p style="font-size: 1.1em;">When filling in the URLs, view your profile, and look for "leave a review". Some services will let you link directly to that function, making it easier for your users. Otherwise, just link to your profile page, and select the size of the icon that you wish to use.</p>
 	<p style="font-size: 1.1em;">To make these logos and link display on any page or post, use the shortcode [ourprofiles].</p>
 	<p style="font-size: 1.1em;">You can sort the order of your profiles by left clicking on the profile name below, then dragging it to the desired location and letting go. This will sort both the order of profiles on both the page and in the widget.</p>

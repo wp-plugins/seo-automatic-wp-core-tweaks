@@ -39,7 +39,9 @@ function ourprofiles_reset(){
         'DemandForce' => '',
         'CustomerLobby' => '',
         'Twitter' => '',
-		'tripadvisor' => ''
+		'tripadvisor' => '',
+        'Angie\'s list' => '',
+		'Houzz' => ''		
     );
 
     $default_ourprofiles_services = array(
@@ -66,7 +68,9 @@ function ourprofiles_reset(){
         'DemandForce' => array('image' => 'DemandForce.png', 'domain' => 'http://www.demandforce.com/'),
         'CustomerLobby' => array('image' => 'CustomerLobby.png', 'domain' => 'http://www.customerlobby.com/'),
         'Twitter' => array('image' => 'Twitter.png', 'domain' => 'http://www.twitter.com/'),
-		'tripadvisor' => array('image' => 'tripadvisor.png', 'domain' => 'http://www.tripadvisor.com/')
+		'tripadvisor' => array('image' => 'tripadvisor.png', 'domain' => 'http://www.tripadvisor.com/'),
+        'Angie\'s list' => array('image' => 'angieslist.png', 'domain' => 'http://www.angieslist.com/'),
+		'Houzz' => array('image' => 'houzz.png', 'domain' => 'http://www.houzz.com/')		
     );
 
     $default_ourprofiles_options = array(
@@ -140,6 +144,13 @@ function ourprofiles_init(){
     ){
         ourprofiles_reset();
     }
+    
+    // 1.0.11 update
+    if (  !isset($ourprofiles_services['Angie\'s list'])
+        || !isset($ourprofiles_services['Houzz'])
+    ){
+        ourprofiles_reset();
+    }    
 }
 
 add_action( 'init' , 'ourprofiles_init' );
