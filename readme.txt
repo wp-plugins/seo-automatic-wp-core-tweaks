@@ -3,8 +3,8 @@ Contributors: cyber49
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FC2PBBP6BY8QC
 Tags: google, seo, permalinks, installation, common settings, post teaser, page link, page order, canonical, sitemap, h1, core tweaks, seo automatic, blog setup
 Requires at least: 3.8
-Tested up to: 4.1.1
-Stable tag: 3.9.2.5
+Tested up to: 4.2.2
+Stable tag: 3.9.2.6
 
 Primarily for use in <b>new WP installations</b>, the steps are based on an employee checklist from Search Commander, Inc. for setting up sites.
 
@@ -13,7 +13,7 @@ You should have no other plugins active while running this setup plugin, since i
 
 Even before you add an SEO plugin, the steps after a WP installation can take 20 to 40 minutes. This plugin eliminates that time, putting all the options on one admin screen.  This plugin does not replace other SEO plugins. It does what they don't do; Properly prepare you for their installation.
 
-[youtube http://www.youtube.com/v/UTXrUAccCts&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6]
+[youtube https://www.youtube.com/embed/OUGhscJ6Tgo]
 
 This plugin extends the built-in features of WordPress, and has an import / export feature, saving you even more time for additional installations.
 
@@ -67,7 +67,7 @@ After activation, go to the SEO Automatic > Core Tweaks admin screen and use the
 
 Designed as a new setup assistant, this plug-in is usually installed before any others. If you've added other plugins and have them actice, deactivate them first to avoid potential conflicts, then REactivvate them after you run the setup process. 
 
-[youtube http://www.youtube.com/v/UTXrUAccCts&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6]
+[youtube https://www.youtube.com/embed/OUGhscJ6Tgo]
 
 == Frequently Asked Questions ==
 
@@ -101,9 +101,15 @@ If you have not edited your privacy policy after creation, either delete it and 
 
 == Screenshots ==
 
-1. Screenshot
+1. Screenshot 1
+2. Screenshot 2
+3. Screenshot 3
 
 == Changelog ==
+
+= 3.9.2.6 =
+
+* Updated videos and screenshots
 
 = 3.9.2.5 =
 
