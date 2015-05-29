@@ -13,7 +13,7 @@ You should have no other plugins active while running this setup plugin, since i
 
 Even before you add an SEO plugin, the steps after a WP installation can take 20 to 40 minutes. This plugin eliminates that time, putting all the options on one admin screen.  This plugin does not replace other SEO plugins. It does what they don't do; Properly prepare you for their installation.
 
-[youtube https://www.youtube.com/embed/OUGhscJ6Tgo]
+[youtube https://youtu.be/OUGhscJ6Tgo]
 
 This plugin extends the built-in features of WordPress, and has an import / export feature, saving you even more time for additional installations.
 
@@ -67,7 +67,7 @@ After activation, go to the SEO Automatic > Core Tweaks admin screen and use the
 
 Designed as a new setup assistant, this plug-in is usually installed before any others. If you've added other plugins and have them actice, deactivate them first to avoid potential conflicts, then REactivvate them after you run the setup process. 
 
-[youtube https://www.youtube.com/embed/OUGhscJ6Tgo]
+[youtube https://youtu.be/OUGhscJ6Tgo]
 
 == Frequently Asked Questions ==
 
