@@ -1,0 +1,148 @@
+Change Log
+= 3.8 =
+
+* Added target="_blank" to main title of rss extended feed.
+* Added ability to limit characters of rss extended feed content descriptions.
+* In order to assure compatibility with the Yoast WordPress SEO plugin and eliminate confusion among users, we have removed the WP user field for "Google Profile URL.
+* Changed wording on fail error message for the organize uploads by date option to prevent confusion with the checkbox.
+* Added more information to the permalink setting to warn on existing permalink settings being changed.
+* Readme.txt redone to include changelog correctly.
+* Updated main SEO Automatic admin page with new links for other SEO Automatic plugins.
+
+= 3.7.6 =
+
+* Addition of setting import/export.
+* Some wording change and set sitemap page creation to off by default.
+
+= 3.7.5 =
+
+* Banner addition to plugin download page.
+
+= 3.7.4 =
+
+* Wording change.
+
+= 3.7.3 =
+
+* Changes to privacy policy.
+* Prevent HTML stripping from user profiles on/off option added.
+* Added google profile url field to profile.
+
+= 3.7.1 and 3.7.2 =
+
+* Wording changes
+
+= 3.7 =
+
+* Updated Post Teaser to ***
+* Separated all included plugins to be active or deactivated.
+* Corrected uploads organization option to no reset on second run of core tweaks.
+* Fixed privacy policy again.
+* Revamped core tweaks admin home page and sidebars to be easier to edit between all SEO Automatic plugins.
+
+= 3.6 =
+
+* Added icons and images to plugin folder.
+* Changed feeds from feedcommander to built-in wordpress rss.
+
+= 3.5 =
+
+* Updated Page Order plugin to *0a.
+
+= 3.4 =
+
+* Added on/off option for Post Teaser Plugin.
+
+= 3.3 =
+
+* Changed included image on privacy policy to a local image instead of external.
+* Added FAQ on why image suddenly stopped working before **
+* Edited wording on results page after running settings to clarify certain items better.
+
+= 3.2 =
+
+* Corrected some function naming to avoid conflicts.
+* Added details on how the footer links work.
+* Changed plugin name back to original.
+* Added creation and try to set permissions on Google XML sitemap files.
+* Added option to turn on and off full error reporting.
+* Removed contact page pre-fill on the settings page.
+* Added notation on how to increase post teasers.
+
+= 3.0 =
+
+* Updated Page Order to version *9.1
+* Added privacy policy creation
+* Added contact page creation with option for a google map
+* Added remote publishing options.
+* Added hook to footer for date, admin login, editing, privacy policy, and sitemap.
+* Wording edits for clarification.
+
+= 2.73 =
+
+* Unchecked many options to get users to be more careful with settings.
+* Updated messages and information to help users understand the results better.
+* Changed layout and links.
+* Removed out-dated help page and added more links to the forum.
+* Logo change.
+
+= 2.72 =
+
+* Made a correction to the DD Sitemap Generator.
+
+= 2.6 =
+
+* Removed Canonical plugin since it's now included in All in One SEO plugin.
+* Better Blogroll/Links-extended was removed until it is updated by the original developers. The widget options no longer save to the database.
+* Updated Page Order plugin to version *8.*
+* Updated Post Teaser to version *0.*
+* Updated Sitemap Generator to version *1*
+* Fixed the permission errors that were being seen.
+
+= 2.5 =
+
+* Update admin area to display properly in WP *8.
+
+= 2.4 =
+
+* Added the H2 to H1 theme change back in.
+* Removed better blogroll temporarily until the issue of the links widget being removed and having to be readded is resolved.
+
+= 2.2 =
+
+* Updated robots.txt file contents.
+* Screenshot at repository is working now.
+* Removed all theme related tweaks except the H1 Hack.
+* Updated home page and style of plugin admin area.
+* Reorganized results for easier viewing of success and errored items.
+* Added deselect all checkboxes option.
+
+= 1.9 =
+
+* Page link manager is upgraded to *0b.
+* Cleaning up file structure of plugin zip.
+* New initial admin user can be added.
+* H1 hack now auto changes the_title() to single_post_title() so that the h1 hack of changeH1 in the custom metas will work easily.
+
+= 1.8 =
+
+* Robot meta tag is added to the header.
+* Auto creation of sitemap page for DDSiteMap Gen and removed from navigation menu.
+* Auto creation of a robots.txt file in the blog root.
+
+= 1.7 =
+
+* Added change of H2 to H1 tags for current theme.
+* Canonical Plugin now integrated.
+* Dagon Design Sitemap Generator integrated.
+
+= 1.6 =
+
+* Corrected Cheatin' Huh message, but need more testing by beta testers to be sure since this requires a fresh wordpress install.
+* Added ability to change blog description/tagline.
+* Added attempt to create uploads folder and set permission to 77* (Will work depending on what your hosting server allows.)
+* Added uncheck option for the organize uploads by month/year.
+
+= 0.9 thru 1.3 =
+
+* Development versions and SVN testing
